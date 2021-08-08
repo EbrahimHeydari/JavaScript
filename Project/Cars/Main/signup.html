@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css">
+    <title>فروشــگاه خودرو</title>
+</head>
+
+<body>
+    <header class="head">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="../icon/logo4.png" alt="logo">
+            </a>
+        </div>
+
+        <form method="get" class="search">
+            <input type="image" src="../icon/search.svg" alt="Search" />
+            <input type="search" placeholder="عبارت مورد نظر را وارد کنید" />
+        </form>
+
+        <div class="menu">
+            <img src="../icon/Hamburger_icon.png" alt="menu" id="menu">
+        </div>
+
+        <nav class="navigation" id="mobile">
+            <ul class="nav-list">
+                <li class="list-item close">
+                    <img src="../icon/icon_close_alt.svg" alt="close" id="close">
+                </li>
+                <li class="list-item">
+                    <a href="index.html">صفحه اصلی</a>
+                </li>
+                <li class="list-item">
+                    <a href="signup.html">ثبت نام</a>
+                </li>
+                <li class="list-item">
+                    <a href="login.html">ورود</a>
+                </li>
+                <li class="list-item">
+                    <a href="product.html">محصولات</a>
+                </li>
+                <li class="list-item">
+                    <a href="shop.html">سبد خرید</a>
+                </li>
+                <li class="list-item">
+                    <a href="about-us.html">درباره ما</a>
+                </li>
+                <li class="list-item mode">
+                    <div>
+                        <input id="check" type="checkbox">
+                        <label id="click" for="check"></label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+        <main class="container">
+
+        <article class="part">
+            <section class="content">
+                <h2 class="title-content">فـرم ثـبـت نـام</h2>
+                    <form action="">
+                        <div class="input-box">
+                            <input type="text" id="name"  placeholder="نام " onblur="checkValue(this,0)" required autofocus>
+                            <p class="tip"></p>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" id="Password"  placeholder="رمز عبور" onblur="checkValue(this,1)" required>
+                            <p class="tip"></p>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" id="Phone"  placeholder="تلفن" onblur="checkValue(this,2)" required>
+                            <p class="tip"></p>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" id="Email"  placeholder="ایمیل" onblur="checkValue(this,3)" required>
+                            <p class="tip"></p>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit" class="button form-button">ثبت نام</button>
+                        </div>
+                    </form>
+            </section>
+            
+        </article>
+
+
+        <aside class="side">
+            <section class="content">
+                <h2 class="title-side"></h2>
+            </section>
+        </aside>
+        
+    </main>
+
+
+    <footer class="foot">
+        <div class="copyright">
+            <p>تمامی حقوق مادی و معنوی متعلق به فروشگاه خودرو می باشد &copy;</p>
+        </div>
+        <div class="footer-icon">
+            <a href="https://www.facebook.com">
+                <img src="../icon/social_facebook_circle.svg" alt="Facebook" class="icon" />
+            </a>
+            <a href="https://www.linkedin.com">
+                <img src="../icon/social_linkedin_circle.svg" alt="Linkedin" class="icon" />
+            </a>
+            <a href="https://www.twitter.com">
+                <img src="../icon/social_twitter_circle.svg" alt="Twitter" class="icon" />
+            </a>
+            <a href="https://www.youtube.com">
+                <img src="../icon/social_youtube_circle.svg" alt="Youtube" class="icon" />
+            </a>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/form.js"></script>
+</body>
+
+</html>

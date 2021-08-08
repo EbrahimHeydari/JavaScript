@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+    <script src="00.js"></script>
+    <script>
+
+        // انواع داده ها در جاوااسکریپت
+        // undefined: تعریف می شود ولی مقدار دهی نمی شود
+        // null: هیچ مقداری ندارد
+        // boolean: شامل مقداری شرطی است    // true | false
+        // number: اعداد صحیح و اعشاری
+        // string: توالی و ترکیبی از کاراکترها
+        // object: مجموعه ای از آیتم ها که به صورت کلید و مقدار تعریف می شود
+        // array: مجموعه ای از داده های همنوع و غیر همنوع
+
+
+        // تست نوع متغیر
+        // typeof()
+        // نوع متغیر را نمایش می دهد
+
+        document.write('eh: ' + eh + spc + 'Type: ' + typeof eh + br);
+        document.write('date: ' + date + spc + 'Type: ' + typeof date + br);
+        document.write('friends: ' + friends + spc + 'Type: ' + typeof friends + br);
+        document.write('yes: ' + yes + spc + 'Type: ' + typeof yes + br);
+        document.write('none: ' + none + spc + 'Type: ' + typeof none + br);
+        document.write('PI: ' + PI + spc + 'Type: ' + typeof PI + br);
+        document.write('zero: ' + zero + spc + 'Type: ' + typeof zero + br);
+
+        // تغییر نوع متغیر
+        // Boolean(): تبدیل به مقادیر شرطی
+
+        document.write(br + 'to Boolean: ' + br);
+        document.write('eh is: ' + Boolean(eh) + spc + 'Type: ' + typeof eh + br);
+        document.write('date is: ' + Boolean(date) + spc + 'Type: ' + typeof date + br);
+        document.write('friends is: ' + Boolean(friends) + spc + 'Type: ' + typeof friends + br);
+        document.write('yes is: ' + Boolean(yes) + spc + 'Type: ' + typeof yes + br);
+        document.write('none is: ' + Boolean(none) + spc + 'Type: ' + typeof none + br);
+        document.write('PI is: ' + Boolean(PI) + spc + 'Type: ' + typeof PI + br);
+        document.write('zero is: ' + Boolean(zero) + spc + 'Type: ' + typeof zero + br);
+        
+        // Number(): تبدیل به مقادیر عددی
+        document.write(br + 'to Number: ' + br);
+        document.write('eh is: ' + Number(eh) + spc + 'Type: ' + typeof eh + br);
+        document.write('date is: ' + Number(date) + spc + 'Type: ' + typeof date + br);
+        document.write('friends is: ' + Number(friends) + spc + 'Type: ' + typeof friends + br);
+        document.write('yes is: ' + Number(yes) + spc + 'Type: ' + typeof yes + br);
+        document.write('none is: ' + Number(none) + spc + 'Type: ' + typeof none + br);
+
+        // toString(): تبدیل به مقادیر رشته ای
+        document.write(br + 'to toString: ' + br);
+        document.write('date is: ' + date.toDateString() + spc + typeof date + br);
+        document.write('friends is: ' + friends.toString() + spc + typeof friends + br);
+        document.write('yes is: ' + yes.toString() + spc + typeof yes + br);
+        document.write('PI is: ' + PI.toString() + spc + typeof PI + br);
+        document.write('zero is: ' + zero.toString() + spc + typeof zero + br);
+
+        // parseInt(): تبدیل به اعداد صحیح
+        // parsefloat(): تبدیل به اعداد اعشاری
+        document.write(br + 'parseInt: ' + br);
+        document.write('313person is: ' + parseInt("313person") + spc + 'Type: ' + typeof eh + br);
+        document.write('parseFloat: ' + br);
+        document.write('3.21.90 is: ' + parseInt("3.21.90") + spc + 'Type: ' + typeof yes + br);
+
+        // جاوااسکریپت در صورت نیاز، داده ها را به صورت خودکار تبدیل می کند
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

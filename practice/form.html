@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Login Form</title>
+</head>
+
+<body>
+    <div class="box">
+        <form action="">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Username" onblur="checkValue(this,0)" required>
+                <p class="tip"></p>
+            </div>
+            <div class="input-box">
+                <input type="password" id="Password" placeholder="Password" onblur="checkValue(this,1)" required>
+                <p class="tip"></p>
+            </div>
+            <div class="input-box">
+                <input type="tel" id="Phone" placeholder="Phone Number" onblur="checkValue(this,2)" required>
+                <p class="tip"></p>
+            </div>
+            <div class="input-box">
+                <input type="text" id="Home" placeholder="Home Address" onblur="checkValue(this,3)" required>
+                <p class="tip"></p>
+            </div>
+            <div class="input-box">
+                <input type="email" id="Email" placeholder="Email Address" onblur="checkValue(this,4)" required>
+                <p class="tip"></p>
+            </div>
+            <div class="input-box">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function checkValue(put, index) {
+            var value = put.value;
+            if (!value == '') {
+                document.getElementsByClassName('tip')[index].innerHTML = '';
+            }
+            else {
+                document.getElementsByClassName('tip')[index].innerHTML = 'Required';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+}
+*,*::after,*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family:'Vazir' , sans-serif;
+    text-align: center;
+}
+.box {
+    display: flex;
+    background:#1076a5;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-transform: capitalize;
+    animation: animate 40s linear alternate infinite;
+}
+form {
+    padding: 5%;
+    width: 50%;
+    background:#06374e;
+    border-radius: 10px;
+}
+form P {
+    background-color: transparent;
+    color: #fff;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.input-box input {
+    width: 80%;
+    border: 1px solid #1076a5;
+    border-radius: 5px;
+    background: transparent;
+    padding: 10px;
+    color: #fff;
+    transition: .3s;
+}
+input:focus {
+    width: 100%;
+}
+.input-box img {
+    position: absolute;
+    width: 25px;
+    top: 8px;
+    left: 8px;
+    filter: invert(1);
+}
+button{
+    padding: 10px ;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 80%;
+    border: 1px solid #1076a5;
+    border-radius: 5px;
+    color: #06374e;
+}
+button:hover , button:focus{    
+    color: #fff;
+    background: #06374e;
+}
+button:active {
+    transform: scale(0.9);
+}
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}

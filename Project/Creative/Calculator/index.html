@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body draggable="true">
+
+  <form class="menu">
+
+    <p class="display">
+
+      <label class="Glass">E/O</label>
+      <input type="text" name="sum" id="sum" value="" class="txt1" onFocus="blur()">
+      <input type="text" name="asd" id="ads" value="" class="txt2" onFocus="blur()">
+
+    </p>
+
+    <p class="calc-row">
+
+      <a href="#" id="a"></a>
+
+    </p>
+    <p class="menu-row">
+
+      <button type="button" class="btn-m btn-sm btn-red"
+        onClick="download('result.txt', 'text/plain')">Save</button>
+      <button type="button" class="btn-m btn-sm btn-red" onClick="c('')">Clear</button>
+    </p>
+
+    <p class="menu-row">
+
+      <button type="button" class="btn-m" onClick="a('7')">7</button>
+      <button type="button" class="btn-m" onClick="a('8')">8</button>
+      <button type="button" class="btn-m" onClick="a('9')">9</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="a('*')">X</button>
+
+    </p>
+
+    <p class="menu-row">
+
+      <button type="button" class="btn-m" onClick="a('4')">4</button>
+      <button type="button" class="btn-m" onClick="a('5')">5</button>
+      <button type="button" class="btn-m" onClick="a('6')">6</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="a('-')">-</button>
+
+    </p>
+
+    <p class="menu-row">
+
+      <button type="button" class="btn-m" onClick="a('1')">1</button>
+      <button type="button" class="btn-m" onClick="a('2')">2</button>
+      <button type="button" class="btn-m" onClick="a('3')">3</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="a('+')">+</button>
+
+    </p>
+
+    <p class="menu-row">
+
+      <button type="button" class="btn-m" onClick="a('0')">0</button>
+      <button type="button" class="btn-m" onClick="a('.')">.</button>
+      <button type="button" class="btn-m btn-yellow btn-big" onClick="e()">=</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="a('/')">÷</button>
+
+    </p>
+
+  </form>
+
+  <script>
+    function c(v) {
+      document.getElementById('ads').value = v;
+      document.getElementById('sum').value = v;
+    }
+
+    function a(v) {
+      document.getElementById('ads').value += v;
+    }
+
+    function e() {
+      c(eval(document.getElementById('ads').value));
+      var result = document.getElementById('ads');
+      var even = document.getElementById('sum');
+      if (result.value % 2 == 0) {
+        even.value = "even";
+      } else {
+        even.value = "odd";
+      }
+    }
+
+
+    function download(name, type) {
+      var result = document.getElementById('ads');
+      var text = "";
+      text += result.value;
+      var a = document.getElementById("a");
+      var file = new Blob([text], { type: type });
+      a.innerHTML = "Click For Save";
+      a.href = URL.createObjectURL(file);
+      a.download = name;
+    }
+
+  </script>
+
+
+</body>
+
+</html>

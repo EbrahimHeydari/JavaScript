@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="00.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <form action="#" onsubmit="setInterval(ShowValues , 500)">
+            <div>
+                <input type="text" id="put">
+            </div>
+            <div>
+                <button type="submit" id="send">submit</button>
+                <button type="reset">reset</button>
+            </div>
+        </form>
+
+        <script>
+
+            var float_1 = 5634.43;
+            var float_2 = 645.215;
+            var textInt = '7e6';
+
+
+            // var setI = setInterval(rand, 300);
+
+            // function rand() {
+            //     var rand = Math.random() * 100;
+            //     var ceil = Math.ceil(rand);
+            //     if (ceil % 5 === 0) {
+            //         console.log(ceil);
+            //     }
+            // }
+
+            function ShowValues() {
+                var put  = document.getElementById('put').value;
+                var rand = Math.random() * Number(put);
+                var round = Math.round(rand);
+                console.log(round);
+            }
+
+        </script>
+    </body>
+
+</html>

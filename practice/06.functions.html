@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <script src="00.js"></script>
+    <script>
+        var argument = function (a = 5, b = 10) {
+            c = a ** b;
+            console.log(c);
+        }
+        // var num = argument(2 , 32);
+        // var pow = argument();
+
+        function arg(...num) {
+            console.log(num);
+        }
+        // arg( 4, 16, 64, 128, 3e7);
+
+        // var your = function(...arg) {
+        //     console.log(String(arg), 'CM');
+        // }
+        // your('Ali' , 'Heidary', 19, 180);
+
+        (
+            function(value) {
+                console.log(value)
+            }
+        )
+        ('operator');
+
+        function add() {
+            for(i = 0; i < arguments.length; i++) {
+                arguments[i] += " ";
+            }
+            console.log(arguments);
+        }
+        // add(51, 16, 18);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

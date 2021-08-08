@@ -1,0 +1,30 @@
+{   
+    "used" : false,
+
+    "title" : "SaveData",
+    "car" : {
+        "name": "benz",
+        "year": 2018,
+        "price": "5000$",
+        "nitroActive": true,
+        "Speed": "340Kmh",
+        "engine": "V8"
+    },
+    "phone" : {
+        "name": "Galaxy j6 plus",
+        "year": 2019,
+        "price": "300$",
+        "Network": "4G / H+ / H",
+        "Storage": "8GB",
+        "Memory": "1.5GB"
+    },
+    "person" : {
+        "name": "Ebrahim",
+        "family": "heidary",
+        "eyeColor": "black",
+        "age": 19,
+        "height": 180,
+        "avarage": 20,
+        "rank": 1
+    }
+}

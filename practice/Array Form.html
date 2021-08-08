@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="00.js"></script>
+    <title>Array Form</title>
+</head>
+<body>
+    <form action="#" onsubmit="ShowValues()">
+        <div>
+            <input type="text" class="put" placeholder="Name" value="ali">
+        </div>
+        <div>
+            <input type="text" class="put" placeholder="Family" value="akbari">
+        </div>
+        <div>
+            <input type="number" class="put" placeholder="Age" value="19">
+        </div>
+        <div>
+            <input type="number" class="put" placeholder="Height" value="195">
+        </div>
+        <div>
+            <button type="submit" id="send">submit</button>
+            <button type="reset">reset</button>
+        </div>
+    </form>
+
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <script>
+        var put    = document.getElementsByClassName('put');
+        var button = document.getElementById('send');
+        var para   = document.getElementsByTagName('p');
+
+        function ShowValues() {
+            for(var k = 0; k < put.length; k++ ) {
+                para[k].innerHTML = put[k].value;
+            }
+            
+            var height = document.getElementsByTagName('p')[3];
+            height.innerHTML += ' CM';
+        }
+    </script>
+</body>
+</html>

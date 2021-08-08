@@ -1,0 +1,44 @@
+@import url("reset.css");
+
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+body {
+    background-color: #fff;
+}
+
+.box {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1em;
+    padding: 1em;
+
+}
+.button {
+    padding: 1rem;
+    transition: .33s;
+    color: #fff;
+}
+.one {
+    background-color: orange;
+    border-radius: 50% 5em;
+}
+.one:hover {
+    border-radius: 5em 50%;
+    filter: hue-rotate(40deg);
+}
+.two {
+    background-color: darkcyan;
+    border-radius: 30% 5em 5em 30%;
+}
+.two:hover {
+    border-radius: 5em 30% 30% 5em;
+    filter: 150%;
+}
+.three {
+    background: rgba(220, 220, 220, 0.5);
+    
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tip</title>
+    <script>
+    function showTip(oEvent) {
+        var oDiv = document.getElementById('tip_1');
+        oDiv.style.visibility = 'visible';
+        oDiv.style.left = oEvent.clientX + 15;
+        oDiv.style.top = oEvent.clientY + 15;
+    }
+        function hideTip(oEvent) {
+        var oDiv = document.getElementById('tip_1');
+        oDiv.style.visibility = 'hidden';
+    }
+    </script>
+    <style>
+        #tip_1 {
+            background-color: gold;
+            position: absolute;
+            visibility:hidden;
+            padding: 5px;
+        }
+        #div_1 {
+            background-color: darkcyan;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            border-radius: 25px;
+            font-style: bold;
+        }
+    </style>
+    </head>
+    <body>
+    <p>Move your mouse over the red square.</p>
+    <div id='div_1' onmouseover='showTip(event)' onmouseout='hideTip(event)'></div>
+    <div id='tip_1'>
+    <span>Custom Tooltip</span>
+    More details can go here.
+    </div>
+    </body>
+</html>

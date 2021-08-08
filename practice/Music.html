@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <script>
+        // اجرای خودکار صوت
+        var sound = new Audio('sound.mp3');
+        sound.play();
+    </script>
+</head>
+
+<body onresize="size()">
+    <button onclick="sound.play();">Play Sound</button>
+    <button onclick="sound.pause();">Pause Sound</button>
+
+    <div>
+        <p id="width"></p>
+        <p id="height"></p>
+    </div>
+
+    <script>
+        function size() {
+            document.getElementById('width').innerHTML = window.innerWidth;
+            document.getElementById('height').innerHTML = window.innerHeight;
+        }
+    </script>
+</body>
+
+</html>
