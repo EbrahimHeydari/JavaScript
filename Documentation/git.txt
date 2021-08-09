@@ -64,7 +64,7 @@ git tag -a v1.0 -m 'first version'                  //  ساخت تگ
 
 git tag -d [tag name]                               //  حذف تگ ها
 
-git show [tag name]                             //  نمایش تغییرات در تک مشخص
+git show [tag name]                                 //  نمایش تغییرات در تک مشخص
 
 git config                                          //  تنظیمات پیکربندی
 
