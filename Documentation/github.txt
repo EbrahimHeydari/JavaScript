@@ -2,13 +2,15 @@ git remote add origin [url]             // تعیین مسیر مخزن برای
 
 git remote set-url origin [url]         // تغییر مسیر مخزن پروژه
 
+git config --get remote.origin.url      // نمایش آدرس فعلی مخزن
+
 git clone [url]                         // دریافت یک کلون از پروژه
 
 git pull origin [current branch] 		// دریافت تغییرات از محیط گیت هاب
 
 git push origin [current branch] 		// ذخیره تغییرات در محیط گیت هاب
 
-git remote                              // نمایش ریموت فعلی در گیت هاب
+git remote                              // نمایش ریموت های فعلی در گیت هاب
 
 git push origin -- tags                 // ذخیره تگ ها به محیط گیت هاب
 
