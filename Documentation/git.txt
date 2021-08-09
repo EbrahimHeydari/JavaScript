@@ -38,6 +38,8 @@ git branch                                          //  نمایش شاخه ها
 
 git branch [branch name]                            //  ساخت شاخه جدید
 
+git branch -M [new name]                            //  تغییرنام شاخه فعلی
+
 git checkout [branch name]                          //  جا به جایی بین شاخه ها
 
 git merge [branch name]                             //  ترکیب شاخه ها
