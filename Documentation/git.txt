@@ -58,6 +58,23 @@ mkdir [folder]                                      //  ساخت پوشه
 
 clear                                               //  پاک کردن ترمینال
 
+git tag                                             //  نمایش تگ ها
+
+git tag -a v1.0 -m 'first version'                  //  ساخت تگ
+
+git tag -d [tag name]                               //  حذف تگ ها
+
+git show [tag name]                             //  نمایش تغییرات در تک مشخص
+
+git config                                          //  تنظیمات پیکربندی
+
+git config --global user.name                       //  نمایش نام کاربری در گیت
+
+git config --global user.signingkey                 //  نمایش کلید
+
+git config --global user.signingkey [key]           //  ایجاد کلید برای امضاء
+
+
 * تمامی دستورات محیط گیت با کلمه ی (git) آغاز می شوند *
 
 * بهتر است هر کامیت یک کار را انجام دهد *
