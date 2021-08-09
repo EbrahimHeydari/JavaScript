@@ -38,7 +38,7 @@ git reset                                           //  خارج کردن تما
 
 git reset -- [file.extension]                       //  خارج کردن فایلی مشخص از استیج
 
-git checkout -- [file.extension || folder ]         //  برگرداندن آخرین تغییرات فایل / حتی حذف پوشه
+git checkout -- [file.extension || folder ]         //  برگرداندن آخرین تغییرات فایل || حذف پوشه
 
 git restore --staged [file.extension]               //  خارج کردن فایلی مشخص از استیج
 
