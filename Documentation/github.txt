@@ -1,0 +1,5 @@
+git clone [url]                         // دریافت یک کلون از پروژه
+
+git pull origin [current branch] 		// دریافت تغییرات از محیط گیت هاب
+
+git push origin [current branch] 		// ذخیره تغییرات در محیط گیت هاب

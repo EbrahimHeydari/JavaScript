@@ -1,0 +1,63 @@
+git init                                            //  تعیین گیت برای پروژه
+
+ls                                                  //  لیست پوشه ها و فایل های درون پروژه
+
+ls -ltrh .git                                       //  لیست پوشه ها و فایل های درون گیت
+
+git status                                          //  بررسی وضعیت
+
+touch [file.extension]                              //  ساخت فایل
+
+git add [file.extension]                            //  افزودن فایل به استیج
+
+git commit                                          //  ذخیره ی نهایی (کامیت)
+
+git commit -am "my commit message"                  //  کامیت بدون استیج
+
+git commit -a --allow-empty-message                 //  کامیت بدون مسیج
+
+git commit -m 'message'                             //  ذخیره ی نهایی به همراه کامنت
+
+git log                                             //  نمایش لیست تغییرات کامیت ها
+
+git log -3 --oneline                                //  نمایش تعداد مشخصی از کامیت ها
+
+git diff HEAD                                       //  نمایش لیست تغییرات آخرین کامیت
+
+git diff --staged                                   //  تغییرات فایل ها در استیج
+
+git reset                                           //  خارج کردن تمامی فایل ها از استیج
+
+git reset -- [file.extension]                       //  خارج کردن فایلی مشخص از استیج
+
+git checkout -- [file.extension || folder ]         //  برگرداندن آخرین تغییرات فایل / حتی حذف پوشه
+
+git restore --staged [file.extension]               //  خارج کردن فایلی مشخص از استیج
+
+git branch                                          //  نمایش شاخه فعلی
+
+git branch [branch name]                            //  ساخت شاخه جدید
+
+git checkout [branch name]                          //  جا به جایی بین شاخه ها
+
+git merge [branch name]                             //  ترکیب شاخه ها
+
+git rm  [file.extension || folder]                  //  حذف فایل یا پوشه از گیت و سیستم
+
+git branch -d [branch name]                         //  حذف شاخه
+
+git checkout -b [branch name]                       //  بازیابی شاخه حذف شده
+
+git branch -D [branch name]                         //  حذف شاخه بدون هیچ پرسش
+
+git branch -m [old name] [new name]                 //  تغییر نام شاخه
+
+cat [file.extension]                                // نمایش محتویات یک فایل
+
+mkdir [folder]                                      //  ساخت پوشه
+
+clear                                               //  پاک کردن ترمینال
+
+* تمامی دستورات محیط گیت با کلمه ی (git) آغاز می شوند *
+
+* بهتر است هر کامیت یک کار را انجام دهد *
