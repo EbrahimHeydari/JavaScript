@@ -2,6 +2,8 @@ git remote add origin [url]             // تعیین مسیر مخزن برای
 
 git remote set-url origin [url]         // تغییر مسیر مخزن پروژه
 
+git remote rm [name]                    // حذف ریموت 
+
 git config --get remote.origin.url      // نمایش آدرس فعلی مخزن
 
 git clone [url]                         // دریافت یک کلون از پروژه
