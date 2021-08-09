@@ -1,12 +1,18 @@
-git init                                            //  تعیین گیت برای پروژه
-
 ls                                                  //  لیست پوشه ها و فایل های درون پروژه
 
-ls -ltrh .git                                       //  لیست پوشه ها و فایل های درون گیت
+touch [file.extension]                              //  ساخت فایل
+
+cat [file.extension]                                // نمایش محتویات یک فایل
+
+mkdir [folder]                                      //  ساخت پوشه
+
+clear                                               //  پاک کردن ترمینال
+
+
+
+git init                                            //  تعیین گیت برای پروژه
 
 git status                                          //  بررسی وضعیت
-
-touch [file.extension]                              //  ساخت فایل
 
 git add [file.extension]                            //  افزودن فایل به استیج
 
@@ -22,9 +28,11 @@ git log                                             //  نمایش لیست تغ
 
 git log -3 --oneline                                //  نمایش تعداد مشخصی از کامیت ها
 
-git diff HEAD                                       //  نمایش لیست تغییرات آخرین کامیت
+git diff                                            //  نمایش تغییرات استیج نشده
 
 git diff --staged                                   //  تغییرات فایل ها در استیج
+
+git diff head                                       //  نمایش تغییرات آخرین کامیت
 
 git reset                                           //  خارج کردن تمامی فایل ها از استیج
 
@@ -54,12 +62,6 @@ git branch -D [branch name]                         //  حذف شاخه بدون
 
 git branch -m [old name] [new name]                 //  تغییر نام شاخه
 
-cat [file.extension]                                // نمایش محتویات یک فایل
-
-mkdir [folder]                                      //  ساخت پوشه
-
-clear                                               //  پاک کردن ترمینال
-
 git tag                                             //  نمایش تگ ها
 
 git tag -a v1.0 -m 'first version'                  //  ساخت تگ
@@ -75,6 +77,9 @@ git config --global user.name                       //  نمایش نام کار
 git config --global user.signingkey                 //  نمایش کلید
 
 git config --global user.signingkey [key]           //  ایجاد کلید برای امضاء
+
+
+
 
 * تمامی دستورات محیط گیت با کلمه ی (git) آغاز می شوند *
 
