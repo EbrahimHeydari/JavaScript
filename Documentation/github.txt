@@ -1,5 +1,9 @@
+git remote add origin [url]             // افزودن پروژه به مخزن گیت هاب
+
 git clone [url]                         // دریافت یک کلون از پروژه
 
 git pull origin [current branch] 		// دریافت تغییرات از محیط گیت هاب
 
 git push origin [current branch] 		// ذخیره تغییرات در محیط گیت هاب
+
+git remote                              // نمایش ریموت  فعلی در گیت هاب
