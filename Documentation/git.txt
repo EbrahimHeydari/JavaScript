@@ -74,7 +74,6 @@ git config --global user.signingkey                 //  نمایش کلید
 
 git config --global user.signingkey [key]           //  ایجاد کلید برای امضاء
 
-
 * تمامی دستورات محیط گیت با کلمه ی (git) آغاز می شوند *
 
 * بهتر است هر کامیت یک کار را انجام دهد *
