@@ -1,3 +1,5 @@
+# دستورات لینوکسی
+
 ls                                                  //  لیست پوشه ها و فایل های درون پروژه
 
 touch [file.extension]                              //  ساخت فایل
@@ -9,6 +11,7 @@ mkdir [folder]                                      //  ساخت پوشه
 clear                                               //  پاک کردن ترمینال
 
 
+# دستورات گیت
 
 git init                                            //  تعیین گیت برای پروژه
 
@@ -80,7 +83,31 @@ git config --global user.signingkey [key]           //  ایجاد کلید بر
 
 
 
+# دستورات ریموت
+
+git remote add origin [url]             // تعیین مسیر مخزن برای پروژه
+
+git remote set-url origin [url]         // تغییر مسیر مخزن پروژه
+
+git remote rm [name]                    // حذف ریموت 
+
+git config --get remote.origin.url      // نمایش آدرس فعلی مخزن
+
+git clone [url]                         // دریافت یک کلون از پروژه
+
+git pull origin [current branch] 		// دریافت تغییرات از محیط گیت هاب
+
+git push origin [current branch] 		// ذخیره تغییرات در محیط گیت هاب
+
+git remote                              // نمایش ریموت های فعلی در گیت هاب
+
+git push origin -- tags                 // ذخیره تگ ها به محیط گیت هاب
+
+git push origin [tag name]              // ذخیره تگ مشخص به محیط گیت هاب
+
+git checkout [tag name]                 // برگشتن به تگ مشخص
+
 
 * تمامی دستورات محیط گیت با کلمه ی (git) آغاز می شوند *
 
-* بهتر است هر کامیت یک کار را انجام دهد *
+* بهتر است برای هر کار، یک کامیت جداگانه استفاده کنید *
