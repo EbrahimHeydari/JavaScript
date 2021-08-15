@@ -12,7 +12,7 @@
 <body onload="ShowDir()">
 
     <div class="image">
-        <img src="../../../../Picture/Wallpaper/1.jpg" width="450" height="300" alt="image">
+        <img src="Picture/Wallpaper/1.jpg" width="450" height="300" alt="image">
     </div>
 
     <div class="source">
@@ -74,14 +74,14 @@
             if (index > 690) {
                 index = 1;
             }
-            img.setAttribute('src', '../../../../Picture/Wallpaper/' + index + '.jpg');
+            img.setAttribute('src', 'Picture/Wallpaper/' + index + '.jpg');
             index += value;
         }
 
         // رفتن به عکس بعدی از طریق شماره عکس
         function GoTo() {
             index = Number(goto.value);
-            img.setAttribute('src', '../../../../Picture/Wallpaper/' + index + '.jpg');
+            img.setAttribute('src', 'Picture/Wallpaper/' + index + '.jpg');
             if (index > 690) {
                 alert('This Number Not Valid!');
                 throw 'This Number Not Valid!';

@@ -4,22 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Fata Store</title>
 </head>
 
 <body>
-
     <header class="hdr">
         <h1 class="title-head"><a href="home.html">فـــروشـــگـــاه فــــتــــا</a></h1>
 
         <form method="get" class="search">
-            <input type="image" src="../icon/search.svg" alt="Search" autofocus />
+            <input type="image" src="icon/search.svg" alt="Search" />
             <input type="search" placeholder="جستجو به انگلیسی" />
         </form>
 
         <div class="hamburger">
-            <img src="../icon/Hamburger_icon.png" alt="menu" id="menu">
+            <img src="icon/Hamburger_icon.png" alt="menu" id="menu">
         </div>
 
         <nav class="navigation" id="mobile">
@@ -49,7 +48,7 @@
                     <a href="comment.html">نظرات</a>
                 </li>
                 <li class="list-item">
-                    <img src="../icon/icon_close_alt.svg" alt="close" id="close">
+                    <img src="icon/icon_close_alt.svg" alt="close" id="close">
                 </li>
             </ul>
         </nav>
@@ -57,25 +56,22 @@
     </header>
 
     <main class="container">
-        <article class="content">
-            <h2>تاریخچه فروشگاه</h2>
-            <p>در ابتدا هدف از ایجاد این فروشگاه، فروش محصولات آموزشی در حوزه های مختلف از جمله: طراحی وب ، برنامه نویسی
-                ،تولید محتوا و ... بود اما به دلیل فروش کم محصولات نوع محصولات خود را به مواد خوراکی تغییر دادیم.
-            </p>
-            <p>خلاصه این که نصرفید و زدیم تو کار خواربار :)</p>
-        </article>
-        <article class="content">
-            <h2>مراکز خدمات دهی</h2>
-            <p>در حال حاضر فروشگاه ما فقط در 5 شهر خدمات دهی می کند؛ اما به زودی با افزایش فروش شعبه هایی در شهر های
-                دیگر هم می زنیم</p>
-            <p>به امید روزی که بتوانیم به تمام مناطق کشور خدمات دهی کنیم...</p>
-        </article>
-        <article class="content">
-            <h2>جدید ترین مطالب</h2>
-            <p>با توجه به وضعیت کرونایی برابر شدن آن با ماه رمضان ما برای کاربران خود ماسک رایگان فراهم کرده ایم.</p>
-            <p>کافیست تا وارد <a href="signup.html">حساب کاربری</a> خود شوید و ماسک ها را به سبد خرید خود اضافه کنید</p>
-        </article>
-
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <td>نام</td>
+                        <td>دیدگاه</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="history">
             <button onclick="history.back()">صفحه قبل</button>
             <button onclick="history.forward()">صفحه بعد</button>
@@ -84,9 +80,21 @@
 
     <aside class="side">
         <h1>ارسال نظرات</h1>
-        <div class="tip">
-            <p>برای ارسال نظرات ابتدا باید <a href="signup.html">وارد</a> شوید</p>
-        </div>
+        <form action="#" name="form" class="form4" method="POST">
+            <div class="inbox">
+                <input type="text" name="name" id="name" placeholder="نام" required autofocus>
+            </div>
+            <div class="inbox">
+                <input type="email" name="email" id="mail" placeholder="ایمیل" required>
+            </div>
+            <div class="inbox">
+                <textarea name="comment" id="comment" cols="20" rows="10" placeholder='دیدگاه'></textarea>
+            </div>
+            <div class="inbox">
+                <button type="submit">ارسال</button>
+            </div>
+            <input type="hidden" name="MM_insert" value="form">
+        </form>
     </aside>
 
     <footer class="ftr">
@@ -96,21 +104,21 @@
 
         <div class="contain-icon">
             <a href="https://www.facebook.com">
-                <img src="../icon/social_facebook_circle.svg" alt="social_facebook" class="link-icon" />
+                <img src="icon/social_facebook_circle.svg" alt="social_facebook" class="link-icon" />
             </a>
             <a href="https://www.twitter.com">
-                <img src="../icon/social_twitter_circle.svg" alt="social_twitter" class="link-icon" />
+                <img src="icon/social_twitter_circle.svg" alt="social_twitter" class="link-icon" />
             </a>
             <a href="https://www.youtube.com">
-                <img src="../icon/social_youtube_circle.svg" alt="social_youtube" class="link-icon" />
+                <img src="icon/social_youtube_circle.svg" alt="social_youtube" class="link-icon" />
             </a>
             <a href="https://www.linkedin.com">
-                <img src="../icon/social_linkedin_circle.svg" alt="social_linkedin" class="link-icon" />
+                <img src="icon/social_linkedin_circle.svg" alt="social_linkedin" class="link-icon" />
             </a>
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
