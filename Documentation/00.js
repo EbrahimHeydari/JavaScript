@@ -27,6 +27,7 @@
     var minute  = date.getMinutes();
     var second  = date.getSeconds();
     var bros    = ['Mohammad','Ali','Small'];
+    var binary  = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024];
     var friends = new Array('Hojjat' , 'Ali' , 'Komeil');
     var me      = {
         name: ' Ebrahim',

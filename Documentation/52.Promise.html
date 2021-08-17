@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Promise
+        // برای مدیریت عملیات های ناهمگام استفاده می شود
+
+        // resolve
+        new Promise(function (resolve, reject) {
+            console.log('Hi Promise');
+            setTimeout(() => {
+                console.log('Time out 2s');
+                resolve('ok');
+            }, 3000);
+        }).then(function(yes){console.log(yes)});
+        
+
+        // reject
+        new Promise(function (resolve, reject) {
+            console.log('Hi Promise');
+            setTimeout(() => {
+                console.log('Time out 2s');
+                reject(new Error('NOT Recognized'));
+            }, 3000);
+        }).catch(function(no){console.log(no)});
+    </script>
+</body>
+
+</html>

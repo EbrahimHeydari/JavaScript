@@ -8,9 +8,9 @@
 </head>
 
 <body>
+    <script src="00.js"></script>
     <p id="demo"></p>
 
-    <script src="00.js"></script>
     <script>
         // توابع (functions)
         // مجموعه ای از دستورات و کد ها هستند که یک رفتار یا وظیفه را تعریف می کنند
@@ -55,8 +55,9 @@
 
 
 
-        // پارامتر های اختیاری باید در آخر تابع نوشته شوند
-        function Me(grade, age, name = 'Ebrahim', gender = 'male') {
+        // پارامتر های پیشفرض باید در آخر تابع نوشته شوند
+        // حتی می توانند یک تابع را به عنوان آرگومان بپذیرند
+        function Me(grade, age, name = 'Ebrahim', gender = 'male', func = ReturnExit()) {
             console.log('my name: ', name);
             console.log('my gender: ', gender);
             console.log('my Age: ', age);
@@ -77,11 +78,22 @@
 
 
 
+        // Rest
         // ایجاد پارامتر به دلخواه درون یک تابع
+        // همیشه باید در پایان قرار بگیرد
         function SetNumber(...num) {  // نمی تواتند مقدار دلخواه بپذیرد
             console.log(num);
         }
         // SetNumber(1, 4, 8**3, 16%5, 2**32);
+
+
+
+        // Spread
+        // تعیین مقادیر آرایه برای پارامتر های تابع
+        function showNumber(a, b, c, d, e, f) {
+            console.log(a, b, c, d, e, f);
+        }
+        // showNumber(...binary);
 
 
 
@@ -115,7 +127,7 @@
 
         // تابع خود فراخوان
         // این توابع را فقط یک بار می توان فراخوانی کرد
-        
+
         // (
         //     function () {
         //         console.log('Hello World');
