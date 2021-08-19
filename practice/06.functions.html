@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,14 +27,14 @@
         // your('Ali' , 'Heidary', 19, 180);
 
         (
-            function(value) {
+            function (value) {
                 console.log(value)
             }
         )
         // ('operator');
 
         function add() {
-            for(i = 0; i < arguments.length; i++) {
+            for (i = 0; i < arguments.length; i++) {
                 arguments[i] += " ";
             }
             console.log(arguments);
@@ -42,19 +43,35 @@
 
         // Arrow Funtion
         const showName = (name, friend) => {
-            console.log(name,friend);
+            console.log(name, friend);
         }
         // showName(eh , friends[1]);
+        
+        const showArg = (object) => {
+            for(let key in object) {
+                console.log(key , ':' , object[key]);
+            }
+        }
+        // showArg(languages);
+
+        const showLineArg = (object) => {
+            for(let key in object) {
+                for(let i = 0; i < object[key].length; i++) {
+                    console.log(key , ':' , object[key][i]);
+                }
+            }
+        }
+        // showLineArg(languages);
 
         const showArrayValue = (array) => {
-            for(i = 0; i < array.length; i++) {
-                console.log('value ' + i + ':' + array[i] );
+            for (i = 0; i < array.length; i++) {
+                console.log('value ' + i + ': ' + array[i]);
             }
         }
         // showArrayValue(bros);
 
-        const multiply = (first , second) => {
-            second = ( typeof second !== undefined) ? second : 0;
+        const multiply = (first, second) => {
+            second = (typeof second !== undefined) ? second : 0;
             return first ** second;
         }
         // console.log(multiply(2, 5));
@@ -65,7 +82,9 @@
         // console.log(Math.max(...binary));
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

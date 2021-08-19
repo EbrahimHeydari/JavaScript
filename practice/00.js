@@ -35,14 +35,6 @@
         height: 180,
         age: 19
     };
-    var phones  = {
-        first  : 'Samsung Galaxy j1 ',
-        second : 'Samsung Galaxy j5 ',
-        third  : 'Samsung Galaxy j6 ',
-        Show : function() {
-            return this.first + this.second + this.third;
-        }
-    };
     
     var languages = {
         web     : ['js' , 'php' , 'ruby'],
