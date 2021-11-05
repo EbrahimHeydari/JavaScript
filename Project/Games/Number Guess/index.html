@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guess</title>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::after,
+    *::before {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      border: 0;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      min-width: 100vw;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to left, yellow, orange);
+    }
+
+    button {
+      padding: 10px;
+      transition: .3s;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.9);
+    }
+
+    .message {
+      margin: 20px;
+    }
+
+    .put {
+      width: 60px;
+      height: 60px;
+      margin: 20px 10px;
+      border-radius: 20px;
+      font-size: 2rem;
+      padding-right: 3px;
+    }
+
+    .help {
+      cursor: pointer;
+      width: 25px;
+    }
+
+    .info {
+      position: absolute;
+      top: 22%;
+      left: 40%;
+      color: #fff;
+      display: none;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      background: linear-gradient(to left, #16a2ff, #006eb8);
+    }
+
+    .show {
+      display: block !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="info">
+    <p>Red: ↑</p>
+    <p>Blue: ↓</p>
+    <p>Green: ✔</p>
+  </div>
+  <img src="icon_info.svg" alt="help" class="help" />
+  <div class="message">Guess The Combo</div>
+  <div class="game"></div>
+  <button>Start</button>
+
+
+  <script>
+    const button = document.querySelector('button');
+    const gameArea = document.querySelector('.game');
+    const message = document.querySelector('.message');
+    const help = document.querySelector('.help');
+    const info = document.querySelector('.info');
+
+    let gamePlay = false;
+    let score = 0;
+
+    button.addEventListener('click', function () {
+      if (!gamePlay) {
+        gamePlay = true;
+        gameArea.innerHTML = '';
+        message.innerHTML = `Guess: ${score}`;
+        button.innerHTML = 'Check'
+        maker(5)
+      }
+      else {
+        const numbers = document.querySelectorAll('.put');
+        score++;
+        let winCondition = 0;
+        message.innerHTML = `Guess: ${score}`;
+
+        for (let i = 0; i < numbers.length; i++) {
+
+          if (numbers[i].value == numbers[i].correct) {
+            numbers[i].style.backgroundColor = '#09a34e';
+            numbers[i].style.color = '#fff';
+            winCondition++
+          }
+          else {
+            let color = numbers[i].value < numbers[i].correct ? '#006ed4' : '#dc143c';
+            numbers[i].style.backgroundColor = color;
+            numbers[i].style.color = '#fff';
+          }
+
+          if (winCondition == numbers.length) {
+            message.innerHTML = `Game Over! Your Solved the Combo in ${score} Gusses`;
+            message.style.fontSize = '1rem';
+            gamePlay = false;
+            score = 0;
+            button.innerHTML = "Restart";
+          }
+        }
+      }
+    })
+
+    help.addEventListener('click', function() {
+      info.classList.toggle('show');
+    })
+
+    function maker(length) {
+      for (let i = 0; i < length; i++) {
+        let element = document.createElement('input');
+        element.classList.add('put');
+        element.setAttribute('type', 'number');
+        element.correct = Math.floor(Math.random() * 10);
+        element.max = 9;
+        element.min = 0;
+        element.size = 1;
+        element.value = 0;
+        element.order = i;
+        gameArea.appendChild(element)
+      }
+    }
+  </script>
+</body>
+
+</html>
