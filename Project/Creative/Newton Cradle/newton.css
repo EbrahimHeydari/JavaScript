@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    margin         : 0;
+    padding        : 0;
+    border         : 0;
+    outline        : none;
+    text-decoration: none;
+    font-size      : 100%;
+    box-sizing     : inherit;
+}
+
+body {
+    display        : flex;
+    flex-flow      : column nowrap;
+    align-items    : center;
+    justify-content: center;
+    min-height     : 100vh;
+    min-width      : 100vw;
+    background     : #ececec;
+}
+
+.container {
+    position: relative;
+    width   : 338px;
+    height  : 332px;
+}
+
+.box {
+    display        : flex;
+    flex-flow      : row nowrap;
+    align-items    : center;
+    justify-content: center;
+}
+
+button {
+    align-self   : start;
+    margin       : 20px;
+    padding      : 15px;
+    color        : #fff;
+    cursor       : pointer;
+    border-radius: 20px;
+    transition   : .3s;
+    background   : linear-gradient(cyan, darkblue);
+    background   : linear-gradient(orange, rgb(219, 9, 9));
+}
+
+button:active {
+    transform: scale(.9);
+}
+
+.cradle {
+    z-index: 10;
+    width  : 100%;
+    height : 100%;
+}
+
+.part {
+    position: absolute;
+    height  : 253px;
+    z-index : 5;
+    top     : 18px;
+}
+
+.one {
+    left: 58px;
+}
+
+.two {
+    right: 55px;
+}
+
+#_one {
+    animation: one 1s cubic-bezier(0.4, 1, 0.4, 1) infinite alternate;
+}
+
+#_two {
+    animation: two 1s 1s cubic-bezier(0.4, 1, 0.4, 1) infinite alternate;
+}
+
+@keyframes one {
+    50% {
+        transform: rotate(0deg);
+        top      : 18px;
+        left     : 58px;
+    }
+
+    100% {
+        transform: rotate(30deg);
+        top      : 0;
+        left     : -5px;
+    }
+}
+
+@keyframes two {
+    50% {
+        transform: rotate(0deg);
+        top      : 18px;
+        right    : 55px;
+    }
+
+    100% {
+        transform: rotate(-30deg);
+        top      : 0;
+        right    : -5px;
+    }
+}

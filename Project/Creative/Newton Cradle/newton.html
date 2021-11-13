@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newton.css">
     <title>Newton Cradle</title>
 </head>
 <body>
-    <div class="box">
-        <button onclick="stop()">Stop</button>
-        <button onclick="resume()">Resume</button>
+    <div class="container">
+        <img src="img/cradle.png" class="cradle">
+        <img src="img/part.png" alt="part" class="part one" id="_one">
+        <img src="img/part.png" alt="part" class="part two" id="_two">
+        <div class="box">
+            <button onclick="stop()">Stop</button>
+            <button onclick="resume()">Resume</button>
+        </div>
     </div>
-    <img src="img/part.png" alt="part" class="part one" id="_one">
-    <img src="img/part.png" alt="part" class="part two" id="_two">
 
 
     <script>
-        var one = document.images[0];
-        var two = document.images[1];
+        var one = document.images[1];
+        var two = document.images[2];
 
         function stop() {
             one.removeAttribute('id' , '_one');
