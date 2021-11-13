@@ -16,7 +16,7 @@ html {
     align-items: center;
     min-height: 100vh;
     text-transform: capitalize;
-    animation: animate 40s linear alternate infinite;
+    animation: animate 100s linear alternate infinite;
 }
 form {
     padding: 5%;
