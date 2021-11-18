@@ -1,19 +1,25 @@
 html {
     box-sizing: border-box;
 }
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  text-decoration: none;
-  font-size: 100%;
-  font: inherit;
-  box-sizing: inherit;
+
+*,
+*::after,
+*::before {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font: inherit;
+    font-size: 100%;
+    box-sizing: inherit;
+    text-decoration: none;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Project/Creative/reset.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Vazir, 'Segoe UI', Verdana, sans-serif;
+        }
+
+        .form {
+            width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            background: linear-gradient(0deg, teal, cyan);
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .put {
+            width: 100%;
+            padding: 10px;
+            margin: 50px 0;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: .3s;
+            font-size: 14px;
+        }
+
+        button:active {
+            transform: scale(.9);
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <h1>شعاع مورد نظر را وارد کنید</h1>
+    <form class="form" action="#">
+        <div class="box">
+            <input type="number" placeholder="شعاع" class="put">
+        </div>
+        <div class="box">
+            <button onclick="show()">ارسال</button>
+        </div>
+    </form>
+
+    <div class="result">
+        <p id="space"></p>
+        <p id="perimeter"></p>
+    </div>
+
+    <script>
+        function show() {
+            var radial = document.querySelector('.put');
+            var space = Math.round(radial.value * radial.value * Math.PI);
+            var perimeter = Math.round(radial.value * 2 * Math.PI);
+
+            document.getElementById('space').innerHTML = `مساحت دایره: ${space}`;
+            document.getElementById('perimeter').innerHTML = `محیط دایره: ${perimeter}`;
+        }
+    </script>
+</body>
+
+</html>
