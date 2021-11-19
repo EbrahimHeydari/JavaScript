@@ -44,10 +44,13 @@
             border-radius: 5px;
             transition: .3s;
             font-size: 14px;
+            color: teal;
         }
 
         button:active {
             transform: scale(.9);
+            background: linear-gradient(0deg, cyan, teal);
+            color: #fff;
         }
 
         h1 {
@@ -60,7 +63,7 @@
     <h1>شعاع مورد نظر را وارد کنید</h1>
     <form class="form" action="#">
         <div class="box">
-            <input type="number" placeholder="شعاع" class="put">
+            <input type="number" placeholder="شعاع" class="put" required>
         </div>
         <div class="box">
             <button onclick="factoriel()">ارسال</button>
@@ -76,6 +79,7 @@
     <script>
         var radial = document.querySelector('.put');
 
+
         function show() {
             var space = Math.round(radial.value * radial.value * Math.PI);
             var perimeter = Math.round(radial.value * 2 * Math.PI);
@@ -89,7 +93,7 @@
             for (let i = 1; i < radial.value; i++) {
                 fact *= i;
             }
-            document.getElementById('factoriel').innerHTML = fact;
+            document.getElementById('factoriel').innerHTML = `فاکتوریل ${radial.value}: ${fact}`;
         }
     </script>
 </body>
