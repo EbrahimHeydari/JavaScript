@@ -63,23 +63,33 @@
             <input type="number" placeholder="شعاع" class="put">
         </div>
         <div class="box">
-            <button onclick="show()">ارسال</button>
+            <button onclick="factoriel()">ارسال</button>
         </div>
     </form>
 
     <div class="result">
         <p id="space"></p>
         <p id="perimeter"></p>
+        <p id="factoriel"></p>
     </div>
 
     <script>
+        var radial = document.querySelector('.put');
+
         function show() {
-            var radial = document.querySelector('.put');
             var space = Math.round(radial.value * radial.value * Math.PI);
             var perimeter = Math.round(radial.value * 2 * Math.PI);
 
             document.getElementById('space').innerHTML = `مساحت دایره: ${space}`;
             document.getElementById('perimeter').innerHTML = `محیط دایره: ${perimeter}`;
+        }
+
+        function factoriel() {
+            let fact = 1;
+            for (let i = 1; i < radial.value; i++) {
+                fact *= i;
+            }
+            document.getElementById('factoriel').innerHTML = fact;
         }
     </script>
 </body>
