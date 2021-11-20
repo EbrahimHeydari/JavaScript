@@ -66,26 +66,28 @@
             <input type="number" placeholder="شعاع" class="put" required>
         </div>
         <div class="box">
-            <button onclick="factoriel()">ارسال</button>
+            <button onclick="lengthArray()">ارسال</button>
         </div>
     </form>
 
     <div class="result">
-        <p id="space"></p>
-        <p id="perimeter"></p>
-        <p id="factoriel"></p>
+        <p id="one"></p>
+        <p id="two"></p>
+        <p id="three"></p>
     </div>
 
     <script>
         var radial = document.querySelector('.put');
-
+        var one = document.getElementById('one');
+        var two = document.getElementById('two');
+        var three = document.getElementById('three');
 
         function show() {
             var space = Math.round(radial.value * radial.value * Math.PI);
             var perimeter = Math.round(radial.value * 2 * Math.PI);
 
-            document.getElementById('space').innerHTML = `مساحت دایره: ${space}`;
-            document.getElementById('perimeter').innerHTML = `محیط دایره: ${perimeter}`;
+            one.innerHTML = `مساحت دایره: ${space}`;
+            two.innerHTML = `محیط دایره: ${perimeter}`;
         }
 
         function factoriel() {
@@ -93,7 +95,31 @@
             for (let i = 1; i < radial.value; i++) {
                 fact *= i;
             }
-            document.getElementById('factoriel').innerHTML = `فاکتوریل ${radial.value}: ${fact}`;
+            if (radial.value == '') {
+                three.innerHTML = '';
+            } else {
+                three.innerHTML = `فاکتوریل ${radial.value}: ${fact}`;
+            }
+        }
+
+        function lengthArray() {
+
+            let count = [];
+            let pos = 0;
+            let neg = 0;
+            for (let i = 0; i < radial.value; i++) {
+                count[i] = Math.round(Math.random() * 100);
+                pos += count[i];
+                neg += -count[i];
+            }
+
+            if (radial.value == '') {
+                one.innerHTML , two.innerHTML = '';
+            } else {
+                one.innerHTML = pos;
+                two.innerHTML = neg;
+            }
+            console.log(count)
         }
     </script>
 </body>
