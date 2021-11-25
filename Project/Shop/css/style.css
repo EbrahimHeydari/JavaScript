@@ -1,7 +1,7 @@
 @import url(mode.css);
 
 @font-face {
-    font-family: "Vazir";
+    font-family: Vazir;
     src: url("fonts/Vazir.eot");
     src: url("fonts/Vazir.woff2") format("woff2"),
         url("fonts/Vazir.woff") format("woff"),
@@ -15,12 +15,13 @@ html {
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
+    border: 0;
     margin: 0;
     padding: 0;
     outline: none;
-    border: 0;
-    font-family: "Vazir", "comic Sans MS";
+    direction: rtl;
+    box-sizing: border-box;
+    font-family: Vazir;
 }
 
 ::selection {
@@ -37,7 +38,6 @@ a {
 body {
     text-align: center;
     background: #ccc;
-    direction: rtl;
     width: 100%;
     min-height: 100vh;
     display: grid;
@@ -107,7 +107,6 @@ textarea:focus {
 input[type=search] {
     padding: 10px;
     border-radius: 50px;
-    direction: rtl;
     width: 100%;
 }
 
@@ -450,6 +449,14 @@ form p {
         min-width: 90vw;
     }
 
+    .title-container {
+        justify-content: center;
+    }
+
+    .title-icon {
+        display: none;
+    }
+
     .navigation {
         right: -250px;
         display: none;
@@ -528,6 +535,10 @@ form p {
         display: block;
     }
 
+    .title-icon {
+        margin-left: 200px;
+    }
+
     .search {
         width: 70vw;
     }
@@ -593,6 +604,10 @@ form p {
             " main          side"
             "footer footer footer";
     }
+
+    .title-icon {
+        margin-left: 150px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -600,5 +615,9 @@ form p {
     .container,
     .side {
         width: 90%;
+    }
+
+    .title-icon {
+        margin-left: 300px;
     }
 }
