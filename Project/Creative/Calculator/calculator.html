@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="calculator.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
-  <link rel="stylesheet" href="calculator.css">
 
 </head>
 
@@ -30,7 +30,7 @@
 
       <button type="button" class="btn-m btn-sm btn-red"
         onClick="download('result.txt', 'text/plain')">Save</button>
-      <button type="button" class="btn-m btn-sm btn-red" onClick="c('')">Clear</button>
+      <button type="button" class="btn-m btn-sm btn-red" onClick="caclulate('')">Clear</button>
     </p>
 
     <p class="menu-row">
@@ -38,51 +38,51 @@
       <button type="button" class="btn-m" onClick="a('7')">7</button>
       <button type="button" class="btn-m" onClick="a('8')">8</button>
       <button type="button" class="btn-m" onClick="a('9')">9</button>
-      <button type="button" class="btn-m btn-red btn-big" onClick="a('*')">X</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="add('*')">X</button>
 
     </p>
 
     <p class="menu-row">
 
-      <button type="button" class="btn-m" onClick="a('4')">4</button>
-      <button type="button" class="btn-m" onClick="a('5')">5</button>
-      <button type="button" class="btn-m" onClick="a('6')">6</button>
-      <button type="button" class="btn-m btn-red btn-big" onClick="a('-')">-</button>
+      <button type="button" class="btn-m" onClick="add('4')">4</button>
+      <button type="button" class="btn-m" onClick="add('5')">5</button>
+      <button type="button" class="btn-m" onClick="add('6')">6</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="add('-')">-</button>
 
     </p>
 
     <p class="menu-row">
 
-      <button type="button" class="btn-m" onClick="a('1')">1</button>
-      <button type="button" class="btn-m" onClick="a('2')">2</button>
-      <button type="button" class="btn-m" onClick="a('3')">3</button>
-      <button type="button" class="btn-m btn-red btn-big" onClick="a('+')">+</button>
+      <button type="button" class="btn-m" onClick="add('1')">1</button>
+      <button type="button" class="btn-m" onClick="add('2')">2</button>
+      <button type="button" class="btn-m" onClick="add('3')">3</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="add('+')">+</button>
 
     </p>
 
     <p class="menu-row">
 
-      <button type="button" class="btn-m" onClick="a('0')">0</button>
-      <button type="button" class="btn-m" onClick="a('.')">.</button>
-      <button type="button" class="btn-m btn-yellow btn-big" onClick="e()">=</button>
-      <button type="button" class="btn-m btn-red btn-big" onClick="a('/')">÷</button>
+      <button type="button" class="btn-m" onClick="add('0')">0</button>
+      <button type="button" class="btn-m" onClick="add('.')">.</button>
+      <button type="button" class="btn-m btn-yellow btn-big" onClick="evaluation()">=</button>
+      <button type="button" class="btn-m btn-red btn-big" onClick="add('/')">÷</button>
 
     </p>
 
   </form>
 
   <script>
-    function c(v) {
+    function caclulate(v) {
       document.getElementById('ads').value = v;
       document.getElementById('sum').value = v;
     }
 
-    function a(v) {
+    function add(v) {
       document.getElementById('ads').value += v;
     }
 
-    function e() {
-      c(eval(document.getElementById('ads').value));
+    function evaluation() {
+      caclulate(eval(document.getElementById('ads').value));
       var result = document.getElementById('ads');
       var even = document.getElementById('sum');
       if (result.value % 2 == 0) {
