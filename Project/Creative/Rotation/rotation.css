@@ -23,9 +23,10 @@ body {
 .rotate:hover {
   -webkit-perspective-origin: 50% -100px;
   -moz-perspective-origin: 50% -100px;
+  cursor: pointer;
 }
 
-@-webkit-keyframes spin{
+@keyframes spin{
   from{
     transform: rotateY(0deg);
   }
@@ -39,8 +40,7 @@ body {
   height: 200px;
   width: 200px;
   animation: spin 15s infinite linear ;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 

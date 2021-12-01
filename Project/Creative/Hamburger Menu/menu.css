@@ -48,6 +48,7 @@ body {
 	animation: grow 1s ease forwards;
 	text-align: center;
 	border: 3px solid #fff;
+	border-radius: 10px;
 }
 .nav-list {
 	list-style: none;
@@ -97,7 +98,6 @@ body {
 	font-size: 2rem;
 	align-items: center;
 	justify-content: center;
-	background-color: #174f52;
 	color: #fff;
 	content: "x";
 	cursor: pointer;
