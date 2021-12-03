@@ -167,18 +167,19 @@ input[type=image]:hover {
 .content form {
     padding: 40px 10px;
     border-radius: 10px;
-    background: linear-gradient(120deg, #028db8b0, #066b8a);
+    background: linear-gradient(120deg, #b3babdb0, #c7c3c3);
 }
 .tip {
-    color: #fff;
-    padding: 5px;
+    color: orangered;
+    margin-top: 5px;
+    font-size: 12px;
 }
 .input-box {
     padding: 10px;
 }
 .input-box input , textarea {
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 80%;
 }
 .button {
@@ -190,13 +191,13 @@ input[type=image]:hover {
     cursor: pointer;
 }
 .button:active {
-    background: #005169;
+    background: #808080;
     color: #fff;
     transform: scale(.9);
 }
 .form-button {
     background: #fff;
-    color: #005169;
+    color: #808080;
 }
 
 /* footer */

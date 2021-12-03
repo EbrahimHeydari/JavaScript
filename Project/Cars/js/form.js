@@ -4,6 +4,8 @@ function checkValue(put , index) {
     var tips  = document.getElementsByClassName('tip');
     if(!value == ''){
         tips[index].innerHTML = '';
+        put.border = '1px solid orangered';
+        put.color = 'orangered';
     }
     else {
         tips[index].innerHTML = 'این قسمت ضروری است';
