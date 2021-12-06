@@ -2,7 +2,8 @@
     /* header */
 
     /* main */
-    .part , .side {
+    .part,
+    .side {
         margin: 10px;
     }
 
@@ -12,9 +13,9 @@
     }
 
     /* footer */
-    
+
     .foot {
-        grid-template: "copyright icons" / 1fr 1fr ;
+        grid-template: "copyright icons"/ 1fr 1fr;
     }
 }
 
@@ -25,23 +26,30 @@
     .head {
         grid-template-columns: 7fr 1fr;
         grid-template-areas: "list  logo"
-                             "search search" ;
+            "search search";
     }
+
     .navigation {
         display: block;
         padding: 30px 10px;
     }
+
     .nav-list {
         display: flex;
         flex-flow: row nowrap;
         justify-content: start;
     }
-    .list-mobile, .menu, .close {
+
+    .list-mobile,
+    .menu,
+    .close {
         display: none;
     }
-    .logo img{
+
+    .logo img {
         width: 100px;
     }
+
     input[type=search] {
         width: 60vw;
     }
@@ -50,11 +58,14 @@
 
     .container {
         grid-template: "part part sidebar"
-                       "part part ...." / 1fr 1fr 1fr;
+            "part part ...."/ 1fr 1fr 1fr;
     }
-    .part , .side {
+
+    .part,
+    .side {
         margin: 10px;
     }
+
     .content form {
         margin: 0 auto;
         width: 70%;
@@ -64,10 +75,12 @@
     /* footer */
 
     .foot {
-        grid-template: "copyright icons" / 1fr 1fr ;
+        grid-template: "copyright icons"/ 1fr 1fr;
     }
-    .copyright {
-        font-size: 16px;
+
+
+    .copyright p {
+        font-size: 14px;
     }
 }
 
@@ -78,23 +91,30 @@
     .head {
         grid-template-columns: 7fr 1fr;
         grid-template-areas: "list  logo"
-                             "search search" ;
+            "search search";
     }
+
     .navigation {
         display: block;
         padding: 30px 10px;
     }
+
     .nav-list {
         display: flex;
         flex-flow: row nowrap;
         justify-content: start;
     }
-    .list-mobile, .menu, .close {
+
+    .list-mobile,
+    .menu,
+    .close {
         display: none;
     }
-    .logo img{
+
+    .logo img {
         width: 120px;
     }
+
     input[type=search] {
         width: 40vw;
     }
@@ -105,15 +125,19 @@
         width: 80%;
         margin: 0 auto;
         grid-template: "part part sidebar"
-                       "part part ...." / 1fr 1fr 1fr;
+            "part part ...."/ 1fr 1fr 1fr;
 
     }
-    .part , .side {
+
+    .part,
+    .side {
         margin: 10px;
     }
+
     .title-content {
         font-size: 30px;
     }
+
     .content form {
         margin: 0 auto;
         width: 60%;
@@ -122,10 +146,11 @@
     /* footer */
 
     .foot {
-        grid-template: "copyright icons" / 1fr 1fr ;
+        grid-template: "copyright icons"/ 1fr 1fr;
     }
-    .copyright {
-        font-size: 24px;
+
+    .copyright p {
+        font-size: 20px;
     }
 }
 
@@ -137,38 +162,48 @@
     .head {
         grid-template-columns: 7fr 1fr;
         grid-template-areas: "list  logo"
-                             "search search" ;
+            "search search";
     }
+
     .navigation {
         display: block;
         padding: 30px 10px;
     }
+
     .nav-list {
         display: flex;
         flex-flow: row nowrap;
         justify-content: start;
     }
-    .list-mobile, .menu, .close {
+
+    .list-mobile,
+    .menu,
+    .close {
         display: none;
     }
-    .logo img{
+
+    .logo img {
         width: 100px;
     }
+
     input[type=search] {
         width: 40vw;
     }
-    
+
     /* main */
 
     .container {
         width: 60%;
         margin: 0 auto;
         grid-template: "part part sidebar"
-                       "part part ...." / 1fr 1fr 1fr;
+            "part part ...."/ 1fr 1fr 1fr;
     }
-    .part , .side {
+
+    .part,
+    .side {
         margin: 10px;
     }
+
     .content form {
         margin: 0 auto;
         width: 50%;
@@ -177,9 +212,10 @@
     /* footer */
 
     .foot {
-        grid-template: "copyright icons" / 1fr 1fr ;
+        grid-template: "copyright icons"/ 1fr 1fr;
     }
-    .copyright {
+
+    .copyright p {
         font-size: 30px;
     }
 }
