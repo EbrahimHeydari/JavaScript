@@ -65,8 +65,7 @@
 .dots {
   position: absolute;
   bottom: 8px;
-  margin: auto;
-  right: 45%;
+  width: 100%;
 }
 
 .dot {
@@ -103,8 +102,20 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 576px) {
+  .slider-image {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .slider-image {
     height: 400px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .slider-image {
+    height: 500px;
   }
 }
