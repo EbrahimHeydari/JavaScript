@@ -48,9 +48,10 @@
   font-size: 15px;
   padding: 12px;
   position: absolute;
-  bottom: 8px;
+  top: 8px;
   width: 100%;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .numbertext {
@@ -62,7 +63,10 @@
 }
 
 .dots {
-  text-align: center;
+  position: absolute;
+  bottom: 8px;
+  margin: auto;
+  right: 45%;
 }
 
 .dot {

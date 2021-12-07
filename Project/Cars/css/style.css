@@ -191,11 +191,17 @@ input[type=image]:hover {
     padding: 3rem 10px;
 }
 
-.title-content {
-    color: #e07800;
+h2.title-content {
+    color: orangered;
     padding-bottom: 20px;
-    width: 100%;
     font-size: 2rem;
+}
+
+h3.title-content {
+    color: #df8825;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: right;
 }
 
 .content form {
