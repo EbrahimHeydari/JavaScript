@@ -1,17 +1,18 @@
-.slider-image {
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
-}
-
 .slideshow-container {
   max-width: 1000px;
+  width: 90%;
   position: relative;
   margin: auto 10px;
 }
 
 .mySlides {
   display: none;
+}
+
+.slider-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
 }
 
 .prev,
@@ -99,12 +100,6 @@
 
   to {
     opacity: 1;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .slider-image {
-    height: 200px;
   }
 }
 

@@ -187,7 +187,8 @@ input[type=image]:hover {
 .content {
     display: flex;
     flex-flow: column nowrap;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
     padding: 3rem 10px;
 }
 
@@ -197,12 +198,34 @@ h2.title-content {
     font-size: 2rem;
 }
 
-h3.title-content {
+h3.title-content, .box-title {
+    margin: 20px auto;
     color: #00b1e7;
-    padding-bottom: 10px;
     font-size: 1.5rem;
     text-align: right;
 }
+
+.box-content {
+    padding: 5px 10px;
+    max-width: 400px;
+    height: auto;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+}
+
+.box-title {
+    text-align: center;
+}
+
+.box-image {
+    width: 30%;
+    margin: 20px auto;
+}
+
+.box-text {
+    margin: 0 20px;
+}
+
 
 .content form {
     padding: 40px 10px;
