@@ -198,14 +198,14 @@ h2.title-content {
     font-size: 2rem;
 }
 
-h3.title-content, .box-title {
+h3.title-content, .service-title {
     margin: 20px auto;
     color: #00b1e7;
     font-size: 1.5rem;
     text-align: right;
 }
 
-.box-content {
+.service-content {
     padding: 5px 10px;
     max-width: 400px;
     height: auto;
@@ -213,16 +213,16 @@ h3.title-content, .box-title {
     margin-top: 20px;
 }
 
-.box-title {
+.service-title {
     text-align: center;
 }
 
-.box-image {
+.service-image {
     width: 30%;
     margin: 20px auto;
 }
 
-.box-text {
+.service-text {
     margin: 0 20px;
 }
 
@@ -239,11 +239,11 @@ h3.title-content, .box-title {
     font-size: 12px;
 }
 
-.input-box {
+.input-service {
     padding: 10px;
 }
 
-.input-box input,
+.input-service input,
 textarea {
     padding: 10px;
     border-radius: 50px;
