@@ -26,6 +26,7 @@ body {
     position: relative;
     width   : 338px;
     height  : 332px;
+    margin-bottom: 40px;
 }
 
 .box {

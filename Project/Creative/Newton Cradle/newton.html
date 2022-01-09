@@ -13,13 +13,12 @@
         <img src="img/cradle.png" class="cradle">
         <img src="img/part.png" alt="part" class="part one">
         <img src="img/part.png" alt="part" class="part two">
-        <div class="box">
+    </div>
+<div class="box">
             <button onclick="start(this)">
                 <img src="img/play.svg" class="click">
             </button>
         </div>
-    </div>
-
 
     <script>
         var one = document.images[1];
@@ -30,12 +29,11 @@
             one.classList.toggle('first');
             two.classList.toggle('second');
 
-            if (click.getAttribute('src') == 'img/play.svg') {
+            if (click.getAttribute('src') == 'img/play.svg')
                 click.src = 'img/pause.svg';
-            }
-            else {
+            else
                 click.src = 'img/play.svg'
-            }
+            
         }
     </script>
 </body>
