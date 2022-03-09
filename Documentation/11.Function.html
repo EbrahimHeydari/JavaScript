@@ -145,7 +145,7 @@
 
 
 
-        // کلمه کلیدی arguments
+        // کلمه کلیدی (arguments)
         // آگومان های بدون پارامتر را نمایش می دهد
         function arg() {
             console.log(arguments);
@@ -174,6 +174,75 @@
             return counter;
         }
         // console.log(add());
+
+
+
+        // تابع بازگشتی (Recursive Function)
+        // تابعی است که در درونش، خودش را فراخوانی می کند
+        // الگوریتم تابع مثل یک حلقۀ تکرار است. این تابع را می‌توان با استفاده از حلقه‌های تکرار نیز نوشت
+        // گاهی استفاده از این روش به خواناتر شدن و فهم کد کمک می‌کند و از افزایش حجم کد و پیچیده شدن آن نیز می‌کاهد
+
+        // در این نوع تابع باید حداقل یک حالت ابتدایی وجود داشته باشد. حتی می توان چند حالت ابتدایی در یک تابع داشت
+        // تابع به نحوی خودش را فراخوانی می کند که با هر بار فراخوانی، وضعیت تابع به حالت ابتدایی نزدیک شود
+        // اگر هیچ‌‌گونه حالت ابتدایی وجود نداشته باشد، این تابع تا بی‌نهایت خودش را فراخوانی می‌کند
+
+        // مثال اول
+        function sum(number) {
+            // حالت ابتدایی
+            if (number === 1) return 1
+            // حالت ابتدایی
+
+            else return number + sum(number - 1)
+        }
+        // console.log(sum(4)) 
+
+        // مراحل اجرا
+        // sum(4)
+        // 4 + sum(3)
+        // 4 + (3 + sum(2))
+        // 4 + (3 + (2 + sum(1)))
+        // 4 + (3 + (2 + 1))
+        // 4 + (3 + 3)
+        // 4 + (6)
+        // 10
+
+
+        // مثال دوم
+        function isEmpty(list) {
+            return (list.length === 0)
+        }
+
+        function getFirstElement(list) {
+            return list[0];
+        }
+
+        function removeFirstElement(list) {
+            newList = [];
+            for (i = 1; i < list.length; i++)
+                newList.push(list[i]);
+            return newList;
+        }
+
+        function calculate(list) {
+            // حالت ابتدایی
+            if (isEmpty(list)) return 0
+            // حالت ابتدایی
+
+            else return getFirstElement(list) + calculate(removeFirstElement(list))
+        }
+        console.log(calculate([2, 3, 4, 5, 6]))
+
+        // مراحل اجرا
+        // sum([1, 2, 3, 4])
+        // 1 + sum([2, 3, 4])
+        // 1 + (2 + sum([3, 4]))
+        // 1 + (2 + (3 + sum([4])))
+        // 1 + (2 + (3 + (4 + sum([]))))
+        // 1 + (2 + (3 + (4 + 0)))
+        // 1 + (2 + (3 + 4))
+        // 1 + (2 + 7)
+        // 1 + 9
+        // 10
     </script>
 </body>
 
