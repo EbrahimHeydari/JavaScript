@@ -2,10 +2,12 @@
     background-color: #333 !important;
     color: #fff;
 }
+
 #check {
     position: absolute;
     visibility: hidden;
 }
+
 #click {
     position: relative;
     display: inline-block;
@@ -17,22 +19,24 @@
     user-select: none;
     transition: 0.5s;
 }
+
 #click:after {
-    content:'';
-    position:absolute ;
-    top:5px;
-    right:5px;
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
     width: 15px;
     height: 15px;
     background-color: #000;
     border-radius: 50%;
     transition: 0.5s;
 }
-#check:checked + #click:after {
-    transform:translate(-25px);
+
+#check:checked+#click:after {
+    transform: translate(-25px);
     background-color: #fff;
 }
-#check:checked + #click {
+
+#check:checked+#click {
     background-color: #000;
 }
-
