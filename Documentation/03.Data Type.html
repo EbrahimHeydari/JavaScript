@@ -18,59 +18,91 @@
         // array: مجموعه ای از داده های همنوع و غیر همنوع
 
 
+        // دسته بندی های مختلف داده ها
+
+        // refrence-type (array & object)
+        // داده های این دسته اگر از روی مقدارشان متغییر تعریف شود، به مقدار آن متغیر متصل می شوند
+        // یعنی اگر مقدار متغیر اولیه را تغییر بدیم متغیر دوم هم تغییر می کند
+        // فرقی نمی کند کدام متغیر را تغییر دهیم. هر دو به هم متصل هستند
+
+        var langs = languages;
+        console.log('languages: ', languages);
+
+        const reference = () => {
+            langs.web = ['html', 'css', 'js'];
+            console.log('langs: ', langs);
+            console.log('languages: ', languages);
+        }
+
+
+        // primitive-type (undefined & null & boolean & number & string)
+        // داده های این دسته اگر از روی مقدارشان متغیر تعریف شود، مقدار شان کپی می شود
+        // یعنی اگر مقدار متغیر اولیه را تغییر بدیم متغیر دوم تغییری نمی کند و روی مقدار هم تاثیری ندارند
+
+        var old = age;
+        console.log('age: ', age)
+
+        const primitive= () => {
+            old = 20;
+            console.log('old:', old);
+            console.log('age:', age);
+        }
+
+
+
         // تست نوع متغیر
         // typeof()
         // نوع متغیر را نمایش می دهد
 
-        document.write('eh: ' + eh + spc + 'Type: ' + typeof eh + br);
-        document.write('date: ' + date + spc + 'Type: ' + typeof date + br);
-        document.write('friends: ' + friends + spc + 'Type: ' + typeof friends + br);
-        document.write('yes: ' + yes + spc + 'Type: ' + typeof yes + br);
-        document.write('none: ' + none + spc + 'Type: ' + typeof none + br);
-        document.write('PI: ' + PI + spc + 'Type: ' + typeof PI + br);
-        document.write('zero: ' + zero + spc + 'Type: ' + typeof zero + br);
+        // document.write('eh: ' + eh + spc + 'Type: ' + typeof eh + br);
+        // document.write('date: ' + date + spc + 'Type: ' + typeof date + br);
+        // document.write('friends: ' + friends + spc + 'Type: ' + typeof friends + br);
+        // document.write('yes: ' + yes + spc + 'Type: ' + typeof yes + br);
+        // document.write('none: ' + none + spc + 'Type: ' + typeof none + br);
+        // document.write('PI: ' + PI + spc + 'Type: ' + typeof PI + br);
+        // document.write('zero: ' + zero + spc + 'Type: ' + typeof zero + br);
 
         // تغییر نوع متغیر
         // Boolean(): تبدیل به مقادیر شرطی
+        // document.write(br + 'to Boolean: ' + br);
+        // document.write('eh is: ' + Boolean(eh) + spc + 'Type: ' + typeof eh + br);
+        // document.write('date is: ' + Boolean(date) + spc + 'Type: ' + typeof date + br);
+        // document.write('friends is: ' + Boolean(friends) + spc + 'Type: ' + typeof friends + br);
+        // document.write('yes is: ' + Boolean(yes) + spc + 'Type: ' + typeof yes + br);
+        // document.write('none is: ' + Boolean(none) + spc + 'Type: ' + typeof none + br);
+        // document.write('PI is: ' + Boolean(PI) + spc + 'Type: ' + typeof PI + br);
+        // document.write('zero is: ' + Boolean(zero) + spc + 'Type: ' + typeof zero + br);
 
-        document.write(br + 'to Boolean: ' + br);
-        document.write('eh is: ' + Boolean(eh) + spc + 'Type: ' + typeof eh + br);
-        document.write('date is: ' + Boolean(date) + spc + 'Type: ' + typeof date + br);
-        document.write('friends is: ' + Boolean(friends) + spc + 'Type: ' + typeof friends + br);
-        document.write('yes is: ' + Boolean(yes) + spc + 'Type: ' + typeof yes + br);
-        document.write('none is: ' + Boolean(none) + spc + 'Type: ' + typeof none + br);
-        document.write('PI is: ' + Boolean(PI) + spc + 'Type: ' + typeof PI + br);
-        document.write('zero is: ' + Boolean(zero) + spc + 'Type: ' + typeof zero + br);
-        
         // Number(): تبدیل به مقادیر عددی
-        document.write(br + 'to Number: ' + br);
-        document.write('eh is: ' + Number(eh) + spc + 'Type: ' + typeof eh + br);
-        document.write('date is: ' + Number(date) + spc + 'Type: ' + typeof date + br);
-        document.write('friends is: ' + Number(friends) + spc + 'Type: ' + typeof friends + br);
-        document.write('yes is: ' + Number(yes) + spc + 'Type: ' + typeof yes + br);
-        document.write('none is: ' + Number(none) + spc + 'Type: ' + typeof none + br);
+        // document.write(br + 'to Number: ' + br);
+        // document.write('eh is: ' + Number(eh) + spc + 'Type: ' + typeof eh + br);
+        // document.write('date is: ' + Number(date) + spc + 'Type: ' + typeof date + br);
+        // document.write('friends is: ' + Number(friends) + spc + 'Type: ' + typeof friends + br);
+        // document.write('yes is: ' + Number(yes) + spc + 'Type: ' + typeof yes + br);
+        // document.write('none is: ' + Number(none) + spc + 'Type: ' + typeof none + br);
 
         // toString(): تبدیل به مقادیر رشته ای
-        document.write(br + 'to toString: ' + br);
-        document.write('date is: ' + date.toDateString() + spc + typeof date + br);
-        document.write('friends is: ' + friends.toString() + spc + typeof friends + br);
-        document.write('yes is: ' + yes.toString() + spc + typeof yes + br);
-        document.write('PI is: ' + PI.toString() + spc + typeof PI + br);
-        document.write('zero is: ' + zero.toString() + spc + typeof zero + br);
+        // document.write(br + 'to toString: ' + br);
+        // document.write('date is: ' + date.toDateString() + spc + typeof date + br);
+        // document.write('friends is: ' + friends.toString() + spc + typeof friends + br);
+        // document.write('yes is: ' + yes.toString() + spc + typeof yes + br);
+        // document.write('PI is: ' + PI.toString() + spc + typeof PI + br);
+        // document.write('zero is: ' + zero.toString() + spc + typeof zero + br);
 
         // parseInt(): تبدیل به اعداد صحیح
         // parsefloat(): تبدیل به اعداد اعشاری
-        document.write(br + 'parseInt: ' + br);
-        document.write('313person is: ' + parseInt("313person") + spc + 'Type: ' + typeof eh + br);
-        document.write('parseFloat: ' + br);
-        document.write('3.21.90 is: ' + parseInt("3.21.90") + spc + 'Type: ' + typeof yes + br);
+        // document.write(br + 'parseInt: ' + br);
+        // document.write('313person is: ' + parseInt("313person") + spc + 'Type: ' + typeof eh + br);
+        // document.write('parseFloat: ' + br);
+        // document.write('3.21.90 is: ' + parseInt("3.21.90") + spc + 'Type: ' + typeof yes + br);
 
         // جاوااسکریپت در صورت نیاز، داده ها را به صورت خودکار تبدیل می کند
     </script>
 </head>
 
 <body>
-
+    <button onclick=reference()>Change Reference</button>
+    <button onclick=primitive()>Change Primitive</button>
 </body>
 
 </html>
