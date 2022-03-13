@@ -212,7 +212,6 @@ input[type=image]:hover {
     grid-area: main;
     text-align: right;
     justify-content: space-between;
-    justify-self: center;
 }
 
 .content {
