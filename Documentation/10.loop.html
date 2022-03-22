@@ -78,10 +78,10 @@
         // برای آرایه ها، رشته ها و مجموعه ها طراحی شده است
 
         var numbers = [
-            [zero,one,two,three,four],
-            [five,six,seven,eight,nine],
-            [ten,twenty,thirty,forty,fifty],
-            [sixty,seventy,eighty,ninety]
+            [zero, one, two, three, four],
+            [five, six, seven, eight, nine],
+            [ten, twenty, thirty, forty, fifty],
+            [sixty, seventy, eighty, ninety]
         ];
         // for (const array of numbers) {
         //     for (const num of array) {
@@ -89,12 +89,15 @@
         //     }
         // }
 
+
         // for in
         // بین خصوصیت های یک شئ می چرخد
 
-        // for (const key in phones) {
-        //         console.log('my',key,'phone: ' , phones[key]);
-        // }
+        for (const key in phones)
+            // console.table(key, 'phones:', phones[key])
+            for (const phone of phones[key])
+                console.log('my phone: ', phone)
+
 
         // for (const key in languages) {
         //     var keyString = String(languages[key]);
