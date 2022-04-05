@@ -2,9 +2,7 @@
 
 @font-face {
     font-family: "Vazir";
-    src: url("fonts/Vazir.eot");
-    src: url("fonts/Vazir.woff2") format("woff2"),
-        url("fonts/Vazir.woff") format("woff"),
+    src: url("fonts/Vazir.woff") format("woff"),
         url("fonts/Vazir.ttf") format("truetype");
 }
 
@@ -62,7 +60,7 @@ body {
     display: grid;
     justify-content: space-between;
     grid-template: "hamburger logo""search search""list list"/ 1fr 1fr;
-    background: #005169 url('../img/(40).jpg') center;
+    background: #005169 url('../image/41.jpg') center;
     background-blend-mode: hard-light;
     background-size: cover;
 }
@@ -198,7 +196,8 @@ h2.title-content {
     font-size: 2rem;
 }
 
-h3.title-content, .service-title {
+h3.title-content,
+.service-title {
     margin: 20px auto;
     color: #00b1e7;
     font-size: 1.5rem;
@@ -278,7 +277,7 @@ textarea {
     grid-template: "icons""copyright";
     padding: 1rem 2rem;
     color: #fff;
-    background: #005169 url('../img/(43).jpg') bottom;
+    background: #005169 url('../image/42.jpg') bottom;
     background-blend-mode: hard-light;
     background-size: cover;
 }

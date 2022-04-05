@@ -5,7 +5,8 @@ body {
     background: url(Wallpaper.jpg);
     background-size: 100%;
 }
-.circle{
+
+.circle {
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
@@ -20,9 +21,11 @@ body {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }

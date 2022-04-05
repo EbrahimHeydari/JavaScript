@@ -10,15 +10,15 @@
 
 <body>
     <div class="container">
-        <img src="img/cradle.png" class="cradle">
-        <img src="img/part.png" alt="part" class="part one">
-        <img src="img/part.png" alt="part" class="part two">
+        <img src="image/cradle.png" class="cradle">
+        <img src="image/part.png" alt="part" class="part one">
+        <img src="image/part.png" alt="part" class="part two">
     </div>
-<div class="box">
-            <button onclick="start(this)">
-                <img src="img/play.svg" class="click">
-            </button>
-        </div>
+    <div class="box">
+        <button onclick="start(this)">
+            <img src="image/play.svg" class="click">
+        </button>
+    </div>
 
     <script>
         var one = document.images[1];
@@ -29,11 +29,11 @@
             one.classList.toggle('first');
             two.classList.toggle('second');
 
-            if (click.getAttribute('src') == 'img/play.svg')
-                click.src = 'img/pause.svg';
+            if (click.getAttribute('src') == 'image/play.svg')
+                click.src = 'image/pause.svg';
             else
-                click.src = 'img/play.svg'
-            
+                click.src = 'image/play.svg'
+
         }
     </script>
 </body>

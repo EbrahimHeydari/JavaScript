@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Vazir', sans-serif;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fff;
+    text-transform: capitalize;
+}
+
+form {
+    background-color: #222;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.inbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inbox input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    border: 1px solid #343434;
+    border-radius: 5px;
+    color: #fefefe;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.inbox .button {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inbox .button:active {
+    color: #222;
+    background-color: #fefefe;
+}
+
+.inbox img {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 25px;
+    filter: invert(1);
+}
+
+button {
+    padding: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1rem;
+}
+
+button:hover {
+    color: #fff;
+    background: #000;
+}
+
+button:active {
+    transform: scale(0.9);
+}

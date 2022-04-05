@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="mouse.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Move Animation</title>
 </head>
+
 <body>
 
     <script>
-        document.onmousemove = function(){
+        document.onmousemove = function () {
             var elm = document.createElement("div");
             elm.style.top = event.clientY + "px";
             elm.style.left = event.clientX + "px";
             elm.style.background = randomColor();
-            elm.setAttribute("class","circle");
+            elm.setAttribute("class", "circle");
             document.body.appendChild(elm);
 
-            setTimeout(function(){document.body.removeChild(elm);},1000);
+            setTimeout(function () { document.body.removeChild(elm); }, 1000);
         }
 
-        function randomColor(){
+        function randomColor() {
             var s = "0123456789abcdef";
             var color = "#";
-            for(i=0;i<6;i++){
-                color+=s[Math.floor(Math.random()*s.length)];
+            for (i = 0; i < 6; i++) {
+                color += s[Math.floor(Math.random() * s.length)];
             }
             return color;
         }
     </script>
 </body>
+
 </html>

@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hide Cursor</title>
 </head>
 <style>
   .box {
     cursor: none;
-    height: 90vh;
+    height: 97vh;
     min-width: 500px;
     background-color: bisque;
     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box:hover>.box__content {
+    visibility: hidden;
   }
 </style>
+
 <body>
-  <div class="box"></div>
+  <div class="box">
+    <h1 class="box__content">Bermuda Mouse</h1>
+  </div>
 </body>
+
 </html>

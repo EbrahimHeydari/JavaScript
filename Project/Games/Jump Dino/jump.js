@@ -16,7 +16,7 @@ var checkDeath = setInterval(() => {
   let score = Math.floor(counter / 100);
 
   if (blockLeft < 20 && blockLeft > -20 && characterTop >= 130) {
-    alert(`Game Over. Score: ${score}`); 
+    alert(`Game Over. Score: ${score}`);
     block.style.animation = 'none';
     counter = 0;
     block.style.animation = 'block 1s infinite linear'

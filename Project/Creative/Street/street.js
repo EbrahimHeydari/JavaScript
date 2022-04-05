@@ -1,6 +1,6 @@
 
 function run() {
-    document.getElementsByTagName('img')[0].setAttribute('src','img/(21).png')
+    document.getElementsByTagName('img')[0].setAttribute('src','image/run.png')
     var car = document.getElementsByTagName('div')[1];
     car.removeAttribute('class');
     car.setAttribute('id' , 'car')

@@ -20,11 +20,11 @@ body {
 }
 
 @keyframes floating {
-    
-    50%{
+
+    50% {
         transform: translateY(50px)
     }
-    
+
 }
 
 .face {

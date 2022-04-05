@@ -5,48 +5,48 @@ html {
 *,
 *::after,
 *::before {
-  margin         : 0;
-  padding        : 0;
-  border         : 0;
-  outline        : none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
   text-decoration: none;
-  font-size      : 100%;
-  overflow       : hidden;
-  box-sizing     : inherit;
+  font-size: 100%;
+  overflow: hidden;
+  box-sizing: inherit;
   font-family: 'Courier New', Courier, monospace;
 }
 
 body {
-  display        : flex;
-  flex-flow      : column;
-  align-items    : center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   justify-content: center;
-  min-height     : 100vh;
-  min-width      : 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .game {
-  width        : 500px;
-  height       : 200px;
-  border       : 1px solid #d4d4d4;
+  width: 500px;
+  height: 200px;
+  border: 1px solid #d4d4d4;
   border-radius: 5px;
 }
 
 .character {
-  width     : 20px;
-  height    : 50px;
+  width: 20px;
+  height: 50px;
   background: linear-gradient(orange, crimson);
-  position  : relative;
-  top       : 150px;
+  position: relative;
+  top: 150px;
 }
 
 .block {
-  width     : 20px;
-  height    : 20px;
-  top       : 130px;
-  left      : 150px;
-  position  : relative;
-  animation : block 1s infinite linear;
+  width: 20px;
+  height: 20px;
+  top: 130px;
+  left: 150px;
+  position: relative;
+  animation: block 1s infinite linear;
   background: linear-gradient(cyan, darkcyan);
 }
 

@@ -26,11 +26,12 @@ body {
   cursor: pointer;
 }
 
-@keyframes spin{
-  from{
+@keyframes spin {
+  from {
     transform: rotateY(0deg);
   }
-  to{
+
+  to {
     transform: rotateY(-360deg);
   }
 }
@@ -39,7 +40,7 @@ body {
   margin: 0px auto;
   height: 200px;
   width: 200px;
-  animation: spin 15s infinite linear ;
+  animation: spin 15s infinite linear;
   transform-style: preserve-3d;
 }
 
@@ -47,11 +48,12 @@ body {
 .shape:hover {
   animation-play-state: paused;
 }
+
 .plane {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
   font-size: 10em;
   color: white;

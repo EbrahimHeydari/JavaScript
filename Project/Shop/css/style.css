@@ -2,10 +2,8 @@
 
 @font-face {
     font-family: Vazir;
-    src: url("fonts/Vazir.eot");
-    src: url("fonts/Vazir.woff2") format("woff2"),
-        url("fonts/Vazir.woff") format("woff"),
-        url("fonts/Vazir.ttf") format("truetype");
+    src: url("font/Vazir.woff") format("woff"),
+        url("font/Vazir.ttf") format("truetype");
 }
 
 html {
@@ -177,15 +175,12 @@ input[type=image]:hover {
 
 .list-item a {
     padding: 5px 5px;
-    transition: 700ms;
-    border-radius: 2rem;
+    transition: 100ms;
 }
 
 .list-item a:hover,
 .list-item a:focus {
-    background-color: #fff;
-    color: #14655d;
-    border-radius: 2rem;
+    border-bottom: 1px solid currentColor;
 }
 
 #close {

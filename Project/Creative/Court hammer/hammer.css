@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   border: 0;
@@ -14,7 +16,7 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   background-color: #dbdbdb;
 }
 
@@ -24,7 +26,8 @@ body {
   margin-top: 250px;
 }
 
-.container .hammer, .container .platform {
+.container .hammer,
+.container .platform {
   width: 100%;
 }
 
