@@ -28,7 +28,7 @@ body {
     padding: 5px;
     height: 100vh;
     color: #fff;
-    background-color: #333;
+    background-color: #e6e6e6;
 }
 
 a {
@@ -52,7 +52,7 @@ button {
     color: #fff;
     border: 1px solid darkcyan;
     background-color: darkcyan;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: .2s;
     cursor: pointer;
 }
@@ -77,7 +77,8 @@ select {
     margin: 10px;
     width: 200px;
     height: 30px;
-    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 5px;
     border: 1px solid transparent;
     background: linear-gradient(-30deg, orange, yellow);
 }
