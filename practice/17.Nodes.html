@@ -70,51 +70,46 @@
 
 
     <script>
-        var main = document.querySelector('.container');
-        var box = document.getElementsByClassName('box');
+        var main = document.querySelector('.container')
+        var box = document.getElementsByClassName('box')
 
         function product() {
-            var div = document.createElement('div');
-            var p = document.createElement('p');
-            var text = document.createTextNode('HTML / CSS');
-            main.appendChild(div);
-            div.appendChild(p);
-            p.appendChild(text);
-            div.setAttribute('class', 'box');
+            var div = document.createElement('div')
+            var p = document.createElement('p')
+            var text = document.createTextNode('HTML / CSS')
+            main.appendChild(div)
+            div.appendChild(p)
+            p.appendChild(text)
+            div.setAttribute('class', 'box')
         }
 
         function drop() {
-            main.removeChild(box[0]);
+            main.removeChild(box[0])
         }
 
         function dropAll() {
             var i = 0;
             var s = box.length;
             for (; i < s; i++) {
-                main.removeChild(box[0]);
+                main.removeChild(box[0])
             }
         }
 
         function replace() {
-            var i = 0;
             var s = 1;
-            var circle = document.getElementsByClassName('circle');
-            for (; i < s; i++) {
-                if (box[i].getAttribute('class') === 'box circle') {
+            var circle = document.getElementsByClassName('circle')
+            for (i= 0; i < s; i++) {
+                if (box[i].getAttribute('class') === 'box circle')
                     s++
-                }
-                else {
-                    box[i].classList.toggle('circle');
-                }
+                else
+                    box[i].classList.toggle('circle')
             }
         }
         function replaceAll() {
-            var i = 0;
-            var s = box.length;
-            var circle = document.getElementsByClassName('circle');
-            for (; i < s; i++) {
-                box[i].classList.toggle('circle');
-            }
+            var s = box.length
+            var circle = document.getElementsByClassName('circle')
+            for (i = 0; i < s; i++)
+                box[i].classList.toggle('circle')
         }
 
 
