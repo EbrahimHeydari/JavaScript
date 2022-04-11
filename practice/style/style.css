@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Vazir";
-    src: url("font/Vazir.woff") format("woff"),
-        url("font/Vazir.ttf") format("truetype");
+    src: url("../font/Vazir.woff") format("woff"),
+        url("../font/Vazir.ttf") format("truetype");
 }
 
 html {
@@ -27,7 +27,6 @@ html {
 body {
     padding: 5px;
     height: 100vh;
-    color: #fff;
     background-color: #e6e6e6;
 }
 
