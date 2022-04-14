@@ -94,10 +94,6 @@ body {
 	transition: all .5s ease;
 }
 
-.nav-list li::before:hover {
-	width: 100%;
-}
-
 .nav-list li:hover::before {
 	width: 100%;
 }
