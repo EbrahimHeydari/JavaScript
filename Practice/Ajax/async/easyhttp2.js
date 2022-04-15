@@ -56,5 +56,4 @@ class easyHTTP {
                 .catch(err => reject(err));
         });
     }
-
 }
