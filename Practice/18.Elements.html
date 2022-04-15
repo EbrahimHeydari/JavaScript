@@ -10,7 +10,7 @@
 
 <body>
     <div class="video">
-        <video src="Movie/Clip/(1).mp4" controls></video>
+        <video src="../../../../F:/Movie/Clip/1.mp4" controls></video>
     </div>
     <div class="buttons">
         <button onclick="Go(-1)">Pervious</button>
@@ -28,13 +28,11 @@
 
         // رفتن به ویدئوی بعدی و قبلی
         function Go(value) {
-            if (index < 1) {
-                index = 7;
-            }
-            else if (index > 7) {
-                index = 1;
-            }
-            video.setAttribute('src', 'Movie/Clip/(' + index + ').mp4');
+            if (index < 1)
+                index = 7
+            else if (index > 7)
+                index = 1
+            video.setAttribute('src', `../../../../F:/Movie/Clip/${index}.mp4`);
             index += value;
         }
 
