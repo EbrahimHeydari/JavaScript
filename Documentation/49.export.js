@@ -1,5 +1,5 @@
 // export
-// برای تهیه کد به سایر ماژول‌ها استفاده می‌شود
+// برای فرستادن به سایر ماژول‌ها استفاده می‌شود
 
 function sum(x, y) {
     return x + y
@@ -9,4 +9,7 @@ function multi(a, b) {
     return a + b;
 }
 
-export{sum, multi};
+var hello = 'hello imported file';
+
+export default hello;
+export { sum, multi }

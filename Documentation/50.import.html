@@ -7,14 +7,20 @@
 </head>
 <body>
     
-    <script>
+    <script type="module">
         
         // import
         // برای خواندن کد صادر شده از ماژول دیگر استفاده می‌شود
+        // برای استفاده باید از خصوصیت type برابر با module استنفاده کرد
 
-        import{sum , multi} from './export';
-        console.log(sum(4,6));
-        console.log(multi(8,6));
+        import hello, {sum , multi} from './49.export.js';
+
+        console.log(hello)
+        console.log(sum(4,6))
+        console.log(multi(8,6))
+
+        // این قابلیت فقط درون پروتکل http(s) کار می کند 
+        // درون پروتکل فایل کار نمی کند
     </script>
 </body>
 </html>
