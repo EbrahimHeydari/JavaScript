@@ -6,8 +6,8 @@ class easyHTTP {
             fetch(url)
                 .then(res => res.json())
                 .then(data => resolve(data))
-                .catch(err => reject(err));
-        });
+                .catch(error => reject(error))
+        })
     }
 
     // Make an HTTP POST Request
@@ -22,8 +22,8 @@ class easyHTTP {
             })
                 .then(res => res.json())
                 .then(data => resolve(data))
-                .catch(err => reject(err));
-        });
+                .catch(error => reject(error))
+        })
     }
 
     // Make an HTTP PUT Request
@@ -38,8 +38,8 @@ class easyHTTP {
             })
                 .then(res => res.json())
                 .then(data => resolve(data))
-                .catch(err => reject(err));
-        });
+                .catch(error => reject(error))
+        })
     }
 
     // Make an HTTP DELETE Request
@@ -53,7 +53,7 @@ class easyHTTP {
             })
                 .then(res => res.json())
                 .then(() => resolve('Resource Deleted...'))
-                .catch(err => reject(err));
-        });
+                .catch(error => reject(error));
+        })
     }
 }

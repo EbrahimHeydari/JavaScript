@@ -1,9 +1,9 @@
 class easyHTTP {
     // Make an HTTP GET Request 
     async get(url) {
-        const response = await fetch(url);
-        const resData = await response.json();
-        return resData;
+        const response = await fetch(url)
+        const resData = await response.json()
+        return resData
     }
 
     // Make an HTTP POST Request
@@ -14,10 +14,10 @@ class easyHTTP {
                 'Content-type': 'application/json'
             },
             body: JSON.stringify(data)
-        });
+        })
 
-        const resData = await response.json();
-        return resData;
+        const resData = await response.json()
+        return resData
 
     }
 
@@ -29,10 +29,10 @@ class easyHTTP {
                 'Content-type': 'application/json'
             },
             body: JSON.stringify(data)
-        });
+        })
 
-        const resData = await response.json();
-        return resData;
+        const resData = await response.json()
+        return resData
     }
 
     // Make an HTTP DELETE Request
@@ -42,10 +42,10 @@ class easyHTTP {
             headers: {
                 'Content-type': 'application/json'
             }
-        });
+        })
 
         const resData = await 'Resource Deleted...';
-        return resData;
+        return resData
     }
 
 }

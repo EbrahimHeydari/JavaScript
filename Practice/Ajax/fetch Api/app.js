@@ -2,8 +2,8 @@ function getText() {
   fetch('text.txt')
     .then(res => res.text())
     .then(data => {
-      document.getElementById('output').innerHTML = data;
-      document.getElementById('output').dir = 'rtl';
+      document.getElementById('output').innerHTML = data
+      document.getElementById('output').dir = 'rtl'
     })
     .catch(error => console.log(error))
 }
@@ -14,10 +14,10 @@ function getJson() {
     .then(data => {
       let output = '';
       data.forEach(post => {
-        output += `<li>${post.title}</li> <p>${post.body}</p>`;
+        output += `<li>${post.title}</li> <p>${post.body}</p>`
       })
-      document.getElementById('output').innerHTML = output;
-      document.getElementById('output').dir = 'ltr';
+      document.getElementById('output').innerHTML = output
+      document.getElementById('output').dir = 'ltr'
     })
     .catch(error => console.log(error))
 }
@@ -36,6 +36,6 @@ function getExternal() {
     .catch(error => console.log(error))
 }
 
-document.getElementById('button1').addEventListener('click', getText);
-document.getElementById('button2').addEventListener('click', getJson);
-document.getElementById('button3').addEventListener('click', getExternal);
+document.getElementById('button1').addEventListener('click', getText)
+document.getElementById('button2').addEventListener('click', getJson)
+document.getElementById('button3').addEventListener('click', getExternal)
