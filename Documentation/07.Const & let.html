@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constants</title>
-    <script src="00.js"></script>
     <script>
 
         // ثابت ها
@@ -15,27 +14,25 @@
         // معمولا نام ثابت ها را طبق قرارداد با حروف بزرگ می نویسند
         /* اگر مطمئن هستید مقادیری در برنامه وجود دارد که هرگز در طول برنامه تغییر نمی کند، بهتر است که آن ها را به صورت ثابت تعریف کنید
         این کار هر چند کوچک کیفیت برنامه شما را بالا می برد */
-        // برای تعریف ثابت ها باید از کلمه ی کلیدی const استفاده کرد
 
-        const CONSTNAME = 'initial_value';      // keyword const
+        const CONSTNAME = 'initial_value'      // keyword const
 
         // نمی توان دوباره به یک ثابت که مقدار دهی شده ، مقدار داد 
-        // const CONSTNAME = 'change_value';    // Error
+        // const CONSTNAME = 'change_value'    // Error
 
 
-
-        // let (اجازه دادن)
+        // let
         // این کلمه کلیدی متغیر هایی را تعریف می کند که فقط درون یک بلاک کد قابل دسترسی باشند
-        for (let i = 1; i <= 10; i++) {
-            console.log(i);
-        }
-        console.log(i);         // Error: Uncaught ReferenceError: i is not defined
+        // for (let i = 1; i <= 10; i++) {
+        //     console.log(i)
+        // }
+        // console.log(i)         // Error: Uncaught ReferenceError: i is not defined
 
         // مثال دوم
-        for (let i = 0; i <= 50; i += 5) {
-            console.log('h' + i);
-        }
-        console.log(i);
+        // for (let i = 0; i <= 50; i += 5) {
+        //     console.log('h' + i);
+        // }
+        // console.log(i)
     </script>
 </head>
 

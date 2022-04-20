@@ -25,14 +25,14 @@
 
         (
             function () {
-                var name = 'Ali';               // local scope
-                family = 'Alavi';               // global scope
-                console.log(name, family);
+                var name = 'Ali'               // local scope
+                family = 'Alavi'               // global scope
+                console.log(name, family)
             }
         )
-            ();
+            ()
 
-        console.log(family);        // global scope
+        // console.log(family)        // global scope
 
 
 
@@ -41,18 +41,32 @@
         // متغیرهای سراسری با بسته شدن صفحه از بین می روند
         // تمام متغیرهای سراسری به شئ window تعلق دارند
         // بدون حساب و کتاب متغیر سراسری ایجاد نکنید. زیرا بر روی شئ window تاثیر بدی می گذارند
+        
+        var age = 24
+        var height = 190
+        
+        // function data() {
+        //     var name = 'Mohsen'
+        //     var family = 'Ahmadi'
+        //     console.log(name, family, age, height)
+        // }
+        // data()
+        // console.log(family)
 
-        var age = 24;
-        var height = 190;
+        
+        // let & const:
+        // از این دو متغییر برای تعیین متغیر های محای استفاده می شود
 
+        
         function data() {
-            var name = 'Mohsen';
-            var family = 'Ahmadi';
+            const age = 20
+            let height = 200
+            let name = 'Mohsen'
+            let family = 'Ahmadi'
             console.log(name, family, age, height)
         }
-        data();
-        console.log(family);
-
+        // data()
+        // console.log(family)
     </script>
 </body>
 

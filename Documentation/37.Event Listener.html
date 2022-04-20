@@ -23,45 +23,44 @@
 
         // روش اول
         
-        var btn = document.getElementById('btn');
-        btn.addEventListener('click' , one);
-        btn.addEventListener('click' , two);
+        var btn = document.getElementById('btn')
+        btn.addEventListener('click' , one)
+        btn.addEventListener('click' , two)
 
         function one() {
-            var demo = document.getElementById('demo');
-            var rand = Math.random() * 100;
-            demo.innerHTML = Math.ceil(rand);
+            var rand = Math.random() * 100
+            demo.innerHTML = Math.ceil(rand)
         }
 
         function two() {
-            var show  = document.getElementById('show');
-            var year  = date.getFullYear();
-            var month = date.getMonth();
-            var day   = date.getDay();
-            show.innerHTML = year + spc + month + spc + day;
+            var show  = document.getElementById('show')
+            var year  = date.getFullYear()
+            var month = date.getMonth()
+            var day   = date.getDay()
+            show.innerHTML = year + spc + month + spc + day
         }
 
 
         // روش دوم
 
         window.addEventListener('resize' , function() {
-            ShowWidth(window.innerWidth);
-            ShowHeight(window.innerHeight);
-        });
+            ShowWidth(window.innerWidth)
+            ShowHeight(window.innerHeight)
+        })
 
         function ShowWidth(width) {
-            document.getElementById('width').innerHTML = width + ' px';
+            document.getElementById('width').innerHTML = width + ' px'
         }
 
         function ShowHeight(height) {
-            document.getElementById('height').innerHTML = height + ' px';
+            document.getElementById('height').innerHTML = height + ' px'
         }
 
 
         // removeEventListener()
         // پردازش رویداد های بالا را حذف می کند
-        // btn.removeEventListener('click' ,one);
-        // btn.removeEventListener('click' ,two);
+        // btn.removeEventListener('click' ,one)
+        // btn.removeEventListener('click' ,two)
 
 
         // توزیع رویداد

@@ -16,61 +16,61 @@
         // زمانی که بخواهید از یک فیلد یا متد کلاس پدر در داخل کلاس سازنده کلاس فرزند استفاده کنید به کار می رود
         
         class phone {
-            calculator;
-            celender;
-            network;
-            memory;
-            photo;
-            video;
-            radio;
-            game;
-            call;
-            sms;
+            calculator
+            celender
+            network
+            memory
+            photo
+            video
+            radio
+            game
+            call
+            sms
 
             constructor(calculator, celender, network, memory, photo, video, radio, game, call, sms) {
-                this.calculator = calculator;
-                this.celender   = celender;
-                this.network    = network;
-                this.memory     = memory;
-                this.photo      = photo;
-                this.video      = video;
-                this.radio      = radio;
-                this.game       = game;
-                this.call       = call;
-                this.sms        = sms;
+                this.calculator = calculator
+                this.celender   = celender
+                this.network    = network
+                this.memory     = memory
+                this.photo      = photo
+                this.video      = video
+                this.radio      = radio
+                this.game       = game
+                this.call       = call
+                this.sms        = sms
             }
 
             ShowItem() {
-                console.log('calculator:' , this.calculator);
-                console.log('celender:'   , this.celender);
-                console.log('network:'    , this.network);
-                console.log('memory:'     , this.memory);
-                console.log('photo:'      , this.photo);
-                console.log('video:'      , this.video);
-                console.log('radio:'      , this.radio);
-                console.log('game:'       , this.game);
-                console.log('call:'       , this.call);
-                console.log('sms:'        , this.sms);
+                console.log('calculator:' , this.calculator)
+                console.log('celender:'   , this.celender)
+                console.log('network:'    , this.network)
+                console.log('memory:'     , this.memory)
+                console.log('photo:'      , this.photo)
+                console.log('video:'      , this.video)
+                console.log('radio:'      , this.radio)
+                console.log('game:'       , this.game)
+                console.log('call:'       , this.call)
+                console.log('sms:'        , this.sms)
             }
         }
 
         class nokia extends phone {
             constructor(a, b, c, d, e, f, g, h, i, j) {    // مجبوریم در اینجا پارامتری قرار دهیم
-                super(a, b, c, d, e, f, g, h, i, j);       // همچنین در اینجا
-                super.ShowItem();
+                super(a, b, c, d, e, f, g, h, i, j)       // همچنین در اینجا
+                super.ShowItem()
             }
         }
-        // let nokia_1 = new nokia(true, true, false, false, false, false, true, 'Sanke Game', true, true,);
-        // let nokia_2 = new nokia(true, false, false, true, false, false, true, 'Racing', true, true,);
+        // let nokia_1 = new nokia(true, true, false, false, false, false, true, 'Sanke Game', true, true,)
+        // let nokia_2 = new nokia(true, false, false, true, false, false, true, 'Racing', true, true,)
 
         class samsung extends phone {
             constructor(a, b, c, d, e, f, g, h, i, j) {     // مجبوریم در اینجا پارامتری قرار دهیم
-                super(a, b, c, d, e, f, g, h, i, j);        // همچنین در اینجا
-                super.ShowItem();
+                super(a, b, c, d, e, f, g, h, i, j)        // همچنین در اینجا
+                super.ShowItem()
             }
         }
-        // let j5 = new samsung(true, true, '3G', '32GB', '13MPX', '1440x960', true, 'Castle Crush', true, true);
-        // let j6 = new samsung(true, true, '4G', '8GB', '11MPX', '1280x720', true, 'Clash of Clans', true, true);
+        // let j5 = new samsung(true, true, '3G', '32GB', '13MPX', '1440x960', true, 'Castle Crush', true, true)
+        // let j6 = new samsung(true, true, '4G', '8GB', '11MPX', '1280x720', true, 'Clash of Clans', true, true)
     </script>
 </head>
 <body>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nodes</title>
+    <title>Edit Nodes</title>
 
     <style>
         body {
@@ -13,10 +13,20 @@
 
         button {
             cursor: pointer;
+            padding: 10px;
+            border-radius: 7px;
+            border: 1px solid currentColor;
+            background-color: #074d69;
+            color: #fff;
+            transition: .3s;
+        }
+
+        button:active {
+            transform: scale(.9);
         }
 
         .buttons {
-            padding-top: 20px;
+            margin: 20px 0;
         }
 
         .container {
@@ -58,8 +68,8 @@
 <body>
     <div class="buttons">
         <button onclick="product()">product</button>
-        <button onclick="drop()">Remove</button>
-        <button onclick="dropAll()">Remove All</button>
+        <button onclick="remove()">Remove</button>
+        <button onclick="removeAll()">Remove All</button>
         <button onclick="replace()">replace</button>
         <button onclick="replaceAll()">replace All</button>
     </div>
@@ -83,14 +93,13 @@
             div.setAttribute('class', 'box')
         }
 
-        function drop() {
+        function remove() {
             main.removeChild(box[0])
         }
 
-        function dropAll() {
-            var i = 0;
-            var s = box.length;
-            for (; i < s; i++) {
+        function removeAll() {
+            var s = box.length
+            for (i = 0; i < s; i++) {
                 main.removeChild(box[0])
             }
         }

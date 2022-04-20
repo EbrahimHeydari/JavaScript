@@ -7,8 +7,8 @@
     <title>loop</title>
     <script src="00.js"></script>
     <script>
-        // دستورات تکرار
-        // دستورات تکرار به شما کمک می کند که یک یا چند دستور را تا زمانی که یک شرط برقرار است، تکرار کنید
+        // حلقه ها
+        // حلقه ها به شما کمک می کند که یک یا چند دستور را تا زمانی که یک شرط برقرار است، تکرار کنید
 
 
         // while
@@ -16,7 +16,7 @@
         // اگر شمارنده یک بماند و آن را افزایش ندهیم و یا مقدار شرط هرگز غلط نشود، یک حلقه بی نهایت به وجود می آید
         // اگر می خواهید یک حلقه بی نهایت ایجاد کنید که هبچ گاه متوقف نشود، باید یک شرط ایجاد کنید که همواره درست باشد
         // while(five < 10) {
-        //     alert('welcome');
+        //     alert('welcome')
         //     ++five;
         // }
 
@@ -25,10 +25,10 @@
         // در این کد ابتدا کد اجرا می شود و سپس شرط مورد بررسی قرار می گیرد
         // در این حلقه شرط در آخر ساختار قرار دارد. یعنی کد های بدنه یک بار اجرا می شوند
         // do{
-        //     var get = prompt('Enter a Number geater than 10');
+        //     var get = prompt('Enter a Number geater than 10')
         // }
         // while(get <= 10){
-        //     get;
+        //     get
         // }
 
 
@@ -42,50 +42,50 @@
 
         // for (i=1; i<=6;i++) {
         // if(i%2 === 0){
-        //     continue;
+        //     continue
         // }
-        // document.write('<h'+i+'>'+'Heading '+i+'<h'+i+'>');
+        // document.write('<h'+i+'>'+'Heading '+i+'<h'+i+'>')
         // }
-        // console.log(copy);
+        // console.log(copy)
 
         // قسمت سوم این حلقه فورا اجرا نمی شود
 
         // nested loop
         // for (i=1;i <= 4; i++) {
         //     for(j=1; j <= 5; j++) {
-        //         console.log(' * ');
+        //         console.log(' * ')
         //     }
-        //     console.log('\n');
+        //     console.log('✔')
         // }
 
         // دستیابی به مقادیر آرایه
-        // var numbers = new Array(5);
-        // var total=0;
-        // var average;
-        // for(var i=0;i<numbers.length;i++){
-        //     numbers[i]=parseInt(prompt("Enter A Number:"));
-        //     console.log("Number"+i+":"+numbers[i]);
+        // var numbers = new Array(5)
+        // var total = 0
+        // var average
+        // for (var i = 0; i < numbers.length; i++) {
+        //     numbers[i] = parseInt(prompt("Enter A Number:"))
+        //     console.log(`Number ${i}: ${numbers[i]}`)
         // }
-        // for(var i=0;i<numbers.length;i++) {
-        //     total+=numbers[i];
+        // for (var i = 0; i < numbers.length; i++) {
+        //     total += numbers[i]
         // }
-        // console.log('Total: ' + total);
-        // average=total/numbers.length;
-        // console.log('average: ' , average);
+        // console.log('Total: ' + total)
+        // average = total / numbers.length
+        // console.log('average: ', average)
 
 
         // for of
         // برای آرایه ها، رشته ها و مجموعه ها طراحی شده است
 
-        var numbers = [
-            [zero, one, two, three, four],
-            [five, six, seven, eight, nine],
-            [ten, twenty, thirty, forty, fifty],
-            [sixty, seventy, eighty, ninety]
-        ];
+        // var numbers = [
+        //     [zero, one, two, three, four],
+        //     [five, six, seven, eight, nine],
+        //     [ten, twenty, thirty, forty, fifty],
+        //     [sixty, seventy, eighty, ninety]
+        // ]
         // for (const array of numbers) {
         //     for (const num of array) {
-        //         console.log('Number:',num);
+        //         console.log('Number:', num)
         //     }
         // }
 
@@ -93,10 +93,10 @@
         // for in
         // بین خصوصیت های یک شئ می چرخد
 
-        for (const key in phones)
-            // console.table(key, 'phones:', phones[key])
-            for (const phone of phones[key])
-                console.log('my phone: ', phone)
+        // for (var key in phones)
+        //     console.table(`${key} phones: ${phones[key]}`)
+        //     for (const phone of phones[key])
+        //         console.log('my phone:', phone)
 
 
         // for (const key in languages) {
