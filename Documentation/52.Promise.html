@@ -18,23 +18,25 @@
         // catch: اگر نتیجه غلط بود، اجرا می شود
 
         // resolve: زمانی اجرا می شود که کارمان تمام شده باشد و عملیات موفق باشد
-        new Promise(function (resolve, reject) {
-            console.log('Hi Promise');
+        new Promise((resolve, reject) => {
+            console.log('Hi Promise')
             setTimeout(() => {
-                console.log('Time out 2s');
-                resolve('ok');
-            }, 3000);
-        }).then(function(yes){console.log(yes)});
+                console.log('Time out 2s')
+                resolve('ok')
+            }, 3000)
+        })
+        .then(yes => console.log(yes))
         
 
         // reject: زمانی اجرا می شود که به مشکلی خورده باشیم
-        new Promise(function (resolve, reject) {
-            console.log('Hi Promise');
+        new Promise((resolve, reject) => {
+            console.log('Hi Promise')
             setTimeout(() => {
-                console.log('Time out 2s');
-                reject(new Error('NOT Recognized'));
-            }, 3000);
-        }).catch(function(no){console.log(no)});
+                console.log('Time out 2s')
+                reject(new Error('NOT Recognized'))
+            }, 3000)
+        })
+        .catch(no => console.log(no))
     </script>
 </body>
 

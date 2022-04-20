@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Elements</title>
+    <title>Edit Nodes</title>
     <script src="00.js"></script>
     <script>
 
@@ -41,53 +41,47 @@
         // childNodes[index]: دسترسی به عناصر فرزند
         // firstChild: دسترسی به اولین عنصر فرزند
         // lastChild: دسترسی به آخرین عنصر فرزند
-        // nextSibling: دسترسی به گره بعدی 
+        // nextSibling: دسترسی به گره بعدی
         // perviousSibling: دسترسی به گره قبلی
 
-        
-        </script>
 
-<script>
-    
-    // مثال
-    
-    var p = document.getElementsByTagName('p');
-    function launch() {
-        box = document.createElement('div');
-            box.setAttribute('class', 'box');
-            document.body.appendChild(box);
+        // مثال
+
+        var p = document.getElementsByTagName('p')
+        function launch() {
+            box = document.createElement('div')
+            box.setAttribute('class', 'box')
+            document.body.appendChild(box)
         }
 
         function Add() {
-            var txt = document.createElement('p');
-            txt.setAttribute('class', 'php');
-            box.appendChild(txt);
-            txt.innerHTML = languages.web[1];
+            var txt = document.createElement('p')
+            txt.setAttribute('class', 'php')
+            box.appendChild(txt)
+            txt.innerHTML = languages.web[1]
         }
+
         function Remove() {
-            box.removeChild(box.childNodes[0]);
+            box.removeChild(box.childNodes[0])
         }
+
         function RemoveAll() {
-            var i = 0;
-            var s = p.length;
-            for (; i < s; i++) {
-                box.removeChild(box.childNodes[0]);
+            for (i = 0; i < p.length; i++) {
+                box.removeChild(box.childNodes[0])
             }
         }
+
         function Replace(value) {
-            var i = 0;
-            var s = value;
-            for (; i < s; i++) {
-                var old_txt = box.childNodes[i];
-                var new_txt = document.createElement('p');
-                new_txt.setAttribute('class', 'js');
-                new_txt.innerHTML = languages.web[0];
-                if (p[i].getAttribute('class') === 'js') {
+            for (i = 0; i < value; i++) {
+                var old_txt = box.childNodes[i]
+                var new_txt = document.createElement('p')
+                new_txt.setAttribute('class', 'js')
+                new_txt.innerHTML = languages.web[0]
+
+                if (p[i].getAttribute('class') === 'js')
                     s++
-                }
-                else {
-                    box.replaceChild(new_txt, old_txt);
-                }
+                else
+                    box.replaceChild(new_txt, old_txt)
             }
         }
     </script>
@@ -98,7 +92,7 @@
             padding: 10px;
             margin: 5px;
             color: #fff;
-            border-radius: 10px;
+            border-radius: 20px;
         }
 
         .php {

@@ -5,48 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="00.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <button onclick="(setI)">Start</button>
+    <button onclick="clearInterval(setI)">Stop</button>
+    <p id="demo"></p>
 
-    <body>
-        <form action="#" onsubmit="setInterval(ShowValues , 500)">
-            <div>
-                <input type="text" id="put">
-            </div>
-            <div>
-                <button type="submit" id="send">submit</button>
-                <button type="reset">reset</button>
-            </div>
-        </form>
-
-        <script>
-
-            var float_1 = 5634.43;
-            var float_2 = 645.215;
-            var textInt = '7e6';
-
-
-            // var setI = setInterval(rand, 300);
-
-            // function rand() {
-            //     var rand = Math.random() * 100;
-            //     var ceil = Math.ceil(rand);
-            //     if (ceil % 5 === 0) {
-            //         console.log(ceil);
-            //     }
-            // }
-
-            function ShowValues() {
-                var put  = document.getElementById('put').value;
-                var rand = Math.random() * Number(put);
-                var round = Math.round(rand);
-                console.log(round);
-            }
-
-        </script>
-    </body>
+    <script>
+        function random() {
+            var random = Math.random() * 100
+            var round = Math.round(random)
+            document.getElementById('demo').innerHTML = `your number: ${round}`
+        }
+        const setI = setInterval(random, 1000)
+    </script>
+</body>
 
 </html>

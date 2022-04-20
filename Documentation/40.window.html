@@ -17,7 +17,7 @@
     <div>
         <button onclick="Close()">Close</button>
     </div>
-    <div style="margin-bottom: 100000px;">
+    <div style="margin-bottom: 100000px">
         <button onclick="reSize()">Resize</button>
     </div>
 
@@ -33,7 +33,7 @@
     // این شئ شامل اسکرول بار و نوار ابزار نمی شود
 
     // حتی خود سند html یا همان DOM جزوی از BOM محسوب می شود
-    window.document.getElementById('demo');
+    window.document.getElementById('demo')
 
 
     // خصوصیات
@@ -68,46 +68,46 @@
     // برداشتن تمرکز از روی عنصر
 
 
-    // window.moveTo(X (horizontal), Y (vertical));
+    // window.moveTo(X (horizontal), Y (vertical))
     // جابه جا کردن پنجره ی فعلی
 
 
-    // window.moveBy(X (horizontal), Y (vertical));
+    // window.moveBy(X (horizontal), Y (vertical))
     // جابه جایی پنجره ی جدید به مکانی از صفحه نمایش
     
 
-    // window.resizeTO(X (horizontal), Y (vertical));
+    // window.resizeTO(X (horizontal), Y (vertical))
     // تغییر اندازه ی پنجره ی فعلی
     
 
-    // window.resizeBy(X (horizontal), Y (vertical));
+    // window.resizeBy(X (horizontal), Y (vertical))
     // تغییر اندازه پنجره ی جدید
     
     
-    // window.scrollTo(X (horizontal), Y (vertical));
+    // window.scrollTo(X (horizontal), Y (vertical))
     // اسکرول کردن پنجره فعلی
     
 
-    // window.scrollBy(X (horizontal), Y (vertical));
+    // window.scrollBy(X (horizontal), Y (vertical))
     // اسکرول کردن پنجره جدید
 
 
 
     // مثال کاربردی
     function myWindow(x, y) {
-        newWin = window.open('13.Date().html' , '_blank' , 'width = 500px , height = 500px');
-        newWin.window.moveTo(x, y);
+        newWin = window.open('13.Date().html' , '_blank' , 'width = 500px , height = 500px')
+        newWin.window.moveTo(x, y)
     }
     function scrolling(value) {
-        window.scrollTo(0,value);
+        window.scrollTo(0,value)
     }
     function Close() {
-        newWin.close();
+        newWin.close()
     }
     function reSize() {
-        var Win = window.open('13.Date().html' , '_blank' , 'width = 500px , height = 800px');
-        Win.resizeTo(300 , 300);
-        Win.focus();
+        var Win = window.open('13.Date().html' , '_blank' , 'width = 500px , height = 800px')
+        Win.resizeTo(300 , 300)
+        Win.focus()
     }
 
     </script>

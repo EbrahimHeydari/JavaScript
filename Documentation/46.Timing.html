@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Timing</title>
 </head>
 <body>
-    <!-- <div>
-        <button onclick="myVar = setTimeout(myFunction,5000)">Try it !</button>
-        <button onclick="clearTimeout(myVar)">Stop</button>
-    </div> -->
-
     <div>
         <p id="demo"></p>
         <button onclick="Timer = setInterval(myTimer, 1000)">Resume</button>
@@ -51,18 +47,11 @@
 
 
         // مثال
-
-        // var myVar = setTimeout(myFunction , 5000);
-        // function myFunction() {
-        // alert('wellcome');
-        // }
-
-                
-        var Timer = setInterval(myTimer, 1000);
+        var Timer = setInterval(myTimer, 1000)
 
         function myTimer() {
-        var d = new Date();
-        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            var d = new Date()
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString()
         }
 
     </script>

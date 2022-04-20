@@ -2,6 +2,10 @@
   font-family: Vazir;
 }
 
+#output {
+  margin-top: 20px;
+}
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {

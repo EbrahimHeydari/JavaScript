@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Performance</title>
+    <script src="00.js"></script>
 </head>
+
 <body>
-    
+    <p id="demo"></p>
     <script>
-        
+
         // افزایش کارایی و سرعت در جاوااسکریپت
         // روش هایی وجود دارد که می توانید با انجام آن به برنامه خود سرعت دهید و از کند شدن آن جلوگیری کنید
 
@@ -16,7 +19,7 @@
         // هر دستوری که درون وجود دارد با اجرای حلقه یک بار اجرا می شود
         // بنابراین کد زیر به صورت بسیار بدی کد نویسی شده است
 
-        for(var i = 0; i < bros.length; i++) {
+        for (var i = 0; i < bros.length; i++) {
             // کدها
         }
         // کد بالا به شما خطایی نمی دهد و از لحاظ فنی صحیح است
@@ -24,9 +27,9 @@
         // ما نیازی نداریم هر بار متغیر خود را مقدار دهی کنیم و سرعت برنامه را کند کنیم
 
         // روش صحیح نوشتن این کد
-        var i;
-        var L = bros.length;
-        for(i = 0; i < L; i++){
+        var i
+        var L = bros.length
+        for (i = 0; i < L; i++) {
             // کدها
         }
 
@@ -34,8 +37,8 @@
         // کاهش دسترسی به DOM
         // در مقایسه با دستورات جاوااسکریپت، دسترسی به عناصر (DOM) بسیار کندتر است
         // اگر فکر می کنید نیاز خواهید داشت چندین بار به یک عنصر دسترسی داشته باشید، آنرا درون متغیر ذخیره کنید
-        var demo = document.getElementById('demo');
-        // demo.innerHTML = world;
+        var demo = document.getElementById('demo')
+        demo.innerHTML = world
 
 
         // بهینه سازی DOM
@@ -47,11 +50,11 @@
         // اگر قصد ذخیره کردن مقداری ندارید، بیهوده برای آن متغیر تعریف نکنید
         // برای استفاده ی یک باره متغیر تعریف نکنید
 
-        var fullName = 'Ali ' + 'Heidary';
-        demo.innerHTML = fullName;
+        var fullName = 'Ali ' + 'Heidary'
+        demo.innerHTML = fullName
 
         // اگر در برنامه خود قصد استفاده چند باره از متغیر بالا را ندارید، بهتر است کد بالا را به صورت زیر بنویسید
-        demo.innerHTML = 'Ali ' + 'Heidary';
+        demo.innerHTML = 'Ali ' + 'Heidary'
 
 
         // از with استفاده نکنید
@@ -59,4 +62,5 @@
         // استفاده از این کلمه کلیدی در حالت سخت گیرانه (strict mode) غیر مجاز است
     </script>
 </body>
+
 </html>

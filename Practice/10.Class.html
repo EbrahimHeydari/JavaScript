@@ -4,66 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="00.js"></script>
+    <!-- <script src="00.js"></script> -->
     <title>Class</title>
 </head>
 
 <body>
-    <form method="get" action="10.html">
-        <div>
-            <input type="text" id="name">
-        </div>
-        <div>
-            <input type="number" id="age" min="10" max="100">
-        </div>
-        <div>
-            <button id="send" onclick="Show()">Send</button>
-        </div>
-    </form>
     <p id="demo"></p>
 
-
     <script>
-        var demo = document.getElementById('demo');
+        var demo = document.getElementById('demo')
 
         function Person(name, age) {
-            this.name = name;
-            this.age = age;
+            this.name = name
+            this.age = age
             this.fullName = function () {
-                return this.name + ' ' + this.age;
+                return this.name + ' ' + this.age
             }
         }
-        // var person_1 = new Person('Ebrahim', 20);
-        // var person_2 = new Person('komail', 19);
-        // console.log(person_1.fullName());
-        // console.log(person_2.fullName());
+        var person_1 = new Person('Ebrahim', 20)
+        var person_2 = new Person('komail', 19)
+        // console.log(person_1.fullName())
+        // console.log(person_2.fullName())
         
         function person(name, age) {
-            this.name = name;
-            this.age  = age;
-        }
-
-        function Show() {
-            var name = document.getElementById('name').value;
-            var age  = document.getElementById('age').value;
-            var person_new = new person(name, age);
-            demo.innerHTML = person_new.name  + spc + person_new.age;
-            // console.log(person_new)
+            this.name = name
+            this.age  = age
         }
 
         var man = [
             new Person('ali', 70),
             new Person('reza', 32),
             new Person('mahdi', 12)
-        ];
-        var text = '';
+        ]
+        var text = ''
         for (x in man) {
-            text += man[x].fullName() + br;
+            p = document.createElement('p')
+            p.innerHTML = text = man[x].fullName()
+            demo.appendChild(p)
         }
-        // demo.innerHTML = text;
-
-
-    </script>
+        </script>
 </body>
 
 </html>

@@ -26,20 +26,20 @@
         // در واقع هنگامی که از دستورات دسترسی به عناصر HTML استفاده می کنیم، یک شئ از آن را به ما بر می گرداند
 
         // مثال
-        var collection = document.getElementsByTagName('p');
-        demo.innerHTML = 'collection length is: ' + collection.length;
-        var demo2 = document.getElementById('demo2');
-        demo2.innerHTML = 'second paragraph is: ' + collection[1].innerHTML;
+        var collection = document.getElementsByTagName('p')
+        demo.innerHTML = 'collection length is: ' + collection.length
+        var demo2 = document.getElementById('demo2')
+        demo2.innerHTML = 'second paragraph is: ' + collection[1].innerHTML
 
         // کاربرد length
-        var red = document.getElementById('red');
-        red.addEventListener('click' , redColor);
+        var red = document.getElementById('red')
+        red.addEventListener('click' , redColor)
 
         function redColor() {
-            var i;
-            plength = collection.length;
+            var i
+            plength = collection.length
             for(i = 0; i < plength; i++) {
-                collection[i].style.color = 'red';
+                collection[i].style.color = 'red'
             }
         }
        
@@ -54,10 +54,10 @@
         // querySelectorAll() و chlidNodes
 
         // مثال
-        var myChilds = document.body.childNodes;
-        demo.innerHTML = 'first paragraph is: ' + myChilds[1].innerHTML;
-        var myList = document.querySelectorAll('p');
-        demo2.innerHTML = 'second paragraph is: ' + myList[1].innerHTML;
+        var myChilds = document.body.childNodes
+        demo.innerHTML = 'first paragraph is: ' + myChilds[1].innerHTML
+        var myList = document.querySelectorAll('p')
+        demo2.innerHTML = 'second paragraph is: ' + myList[1].innerHTML
 
 
         

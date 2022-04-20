@@ -11,20 +11,16 @@
 
     <p id="demo"></p>
 
-    
-    <script src="00.js"></script>
     <script>
-        var one = document.getElementById('btn1');
-        var two = document.getElementById('btn2');
-        var demo = document.getElementById('demo');
-        
+        var one = document.getElementById('btn1')
+        var two = document.getElementById('btn2')        
         
         function showTime() {
-            var date = new Date();
-            var h = date.getHours();
-            var m = date.getMinutes();
-            var s = date.getSeconds();
-            demo.innerHTML = h + ':' + m + ':' + s ;
+            var date = new Date()
+            var h = date.getHours()
+            var m = date.getMinutes()
+            var s = date.getSeconds()
+            demo.innerHTML = h + ':' + m + ':' + s 
         }
     </script>
 </body>

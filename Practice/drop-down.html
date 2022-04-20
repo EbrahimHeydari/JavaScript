@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="00.js"></script>
     <title>drop-down list</title>
 </head>
@@ -67,16 +67,10 @@
     </div>
        
     <div>
-        <button onclick="show(); this.disabled = true" id="btn">Submit</button>
+        <button onclick="show();this.disabled = true" id="btn">Submit</button>
     </div>
 
-    <div id="values">
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <P></P>
-    </div>
+    <div id="values"></div>
 
     <script>
 
@@ -84,20 +78,20 @@
             VO  : ['V70', 'XC60', 'XC90'],
             VW  : ['Golf', 'Polo', 'Scirocco', 'Touareg'],
             BMW : ['M6', 'X5', 'Z3']
-        };
+        }
         
         function SetValue(group, item, data) {
-            var list     = document.getElementById(group);
-            var detail   = document.getElementById(item);
-            var selected = list.options[list.selectedIndex].value;
+            var list     = document.getElementById(group)
+            var detail   = document.getElementById(item)
+            var selected = list.options[list.selectedIndex].value
             while(detail.options.length) {
-                detail.remove(0);
+                detail.remove(0)
             }
-            var values = data[selected];
+            var values = data[selected]
             if(values) {
-                var i;
+                var i
                 for(i = 0; i < values.length; i++) {
-                    var value = new Option(values[i] , i);
+                    var value = new Option(values[i] , i)
                     detail.options.add(value)
                 }
             }
@@ -105,11 +99,12 @@
 
         // نوشتن فقط یک بار
         function show() {
-            var select  = document.getElementsByTagName('select');
-            var para    = document.getElementsByTagName('p');
-            var i;
+            var select  = document.getElementsByTagName('select')
+
             for(i = 1; i < select.length; i +=2) {
-                para[--i].innerHTML = select[i].options[select[i].selectedIndex].innerHTML;
+                var p = document.createElement('p')
+                p.innerHTML = select[i].options[select[i].selectedIndex].innerHTML
+                document.getElementById('values').appendChild(p)
             }
         }
         
