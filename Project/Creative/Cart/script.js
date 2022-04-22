@@ -160,6 +160,7 @@ class UI {
         let id = addAmount.dataset.id
         let tempItem = cart.find(item => item.id === id)
         ++tempItem.amount
+        tempItem.amount += 1
         Storage.saveCart(cart)
         this.setCartValues(cart)
         addAmount.nextElementSibling.innerText = tempItem.amount
