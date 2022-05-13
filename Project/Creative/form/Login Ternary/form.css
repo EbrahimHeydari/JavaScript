@@ -5,11 +5,11 @@ html {
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     outline: none;
     font-size: 100%;
+    box-sizing: inherit;
     font-family: Verdana, sans-serif;
 }
 
