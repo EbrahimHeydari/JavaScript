@@ -9,26 +9,25 @@
 </head>
 
 <body>
-
     <script>
-        document.onmousemove = function () {
-            var elm = document.createElement("div");
-            elm.style.top = event.clientY + "px";
-            elm.style.left = event.clientX + "px";
-            elm.style.background = randomColor();
-            elm.setAttribute("class", "circle");
-            document.body.appendChild(elm);
+        document.onmousemove = () => {
+            let elment = document.createElement('div')
+            elment.style.top = event.clientY + 'px'
+            elment.style.left = event.clientX + 'px'
+            elment.style.background = randomColor()
+            elment.setAttribute('class', 'circle')
+            document.body.appendChild(elment)
 
-            setTimeout(function () { document.body.removeChild(elm); }, 1000);
+            setTimeout(() => document.body.removeChild(elment), 1000)
         }
 
-        function randomColor() {
-            var s = "0123456789abcdef";
-            var color = "#";
-            for (i = 0; i < 6; i++) {
-                color += s[Math.floor(Math.random() * s.length)];
-            }
-            return color;
+        const randomColor = () => {
+            let hex = '0123456789abcdef'
+            let color = '#'
+            for (i = 0; i < 6; i++)
+                color += hex[Math.floor(Math.random() * hex.length)]
+
+            return color
         }
     </script>
 </body>

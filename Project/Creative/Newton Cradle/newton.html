@@ -21,16 +21,16 @@
     </div>
 
     <script>
-        var one = document.images[1];
-        var two = document.images[2];
-        var click = document.querySelector('.click');
+        var one = document.images[1]
+        var two = document.images[2]
+        var click = document.querySelector('.click')
 
         function start(button) {
-            one.classList.toggle('first');
-            two.classList.toggle('second');
+            one.classList.toggle('first')
+            two.classList.toggle('second')
 
             if (click.getAttribute('src') == 'image/play.svg')
-                click.src = 'image/pause.svg';
+                click.src = 'image/pause.svg'
             else
                 click.src = 'image/play.svg'
 

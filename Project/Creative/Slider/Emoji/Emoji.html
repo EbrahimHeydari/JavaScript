@@ -27,33 +27,33 @@
     </div>
 
     <script>
-        const slider = document.querySelector('input');
-        const tumb = document.querySelector('.tumb');
-        const bar = document.querySelector('.progress-bar');
-        const slideIcon = document.querySelector('.slide-icon');
+        const slider = document.querySelector('input')
+        const tumb = document.querySelector('.tumb')
+        const bar = document.querySelector('.progress-bar')
+        const slideIcon = document.querySelector('.slide-icon')
 
         slider.oninput = () => {
-            let value = slider.value;
-            tumb.style.left = value + '%';
-            bar.style.width = value + '%';
+            let value = slider.value
+            tumb.style.left = value + '%'
+            bar.style.width = value + '%'
             if (value < 20) {
-                slideIcon.style.marginTop = '0px';
-                document.body.style.background = 'linear-gradient(red , orange)';
+                slideIcon.style.marginTop = '0px'
+                document.body.style.background = 'linear-gradient(red , orange)'
             }
             if (value >= 20) {
-                slideIcon.style.marginTop = '-150px';
-                document.body.style.background = 'linear-gradient(#orange , #dc611e)';
+                slideIcon.style.marginTop = '-150px'
+                document.body.style.background = 'linear-gradient(#orange , #dc611e)'
             }
             if (value >= 40) {
-                slideIcon.style.marginTop = '-300px';
-                document.body.style.background = 'linear-gradient(#dc611e ,#fd8d58)';
+                slideIcon.style.marginTop = '-300px'
+                document.body.style.background = 'linear-gradient(#dc611e ,#fd8d58)'
             }
             if (value >= 60) {
-                slideIcon.style.marginTop = '-450px';
-                document.body.style.background = 'linear-gradient(#ffa500 , gold)';
+                slideIcon.style.marginTop = '-450px'
+                document.body.style.background = 'linear-gradient(#ffa500 , gold)'
             }
             if (value >= 80) {
-                slideIcon.style.marginTop = '-600px';
+                slideIcon.style.marginTop = '-600px'
             }
         }
     </script>

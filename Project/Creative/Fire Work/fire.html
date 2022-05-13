@@ -12,51 +12,45 @@
   <canvas></canvas>
 
   <script>
-    var time = 10;
-    var canvas = document.querySelector("canvas");
-    var dimension = canvas.getContext('2d');
+    let time = 10
+    let canvas = document.querySelector('canvas')
+    let dimension = canvas.getContext('2d')
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    dimension.fillStyle = 'hsla(0,0%,0%,1)';
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    dimension.fillStyle = 'hsla(0,0%,0%,1)'
 
-    window.addEventListener('resize', function () {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }, false);
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }, false)
 
-    function draw() {
+    const draw = () => {
+      dimension.globalCompositeOperation = 'source-over'
+      dimension.fillStyle = 'hsla(0,0%,0%,.1)'
+      dimension.fillRect(0, 0, canvas.width, canvas.height)
 
-      dimension.globalCompositeOperation = 'source-over';
-      dimension.fillStyle = 'hsla(0,0%,0%,.1)';
-      dimension.fillRect(0, 0, canvas.width, canvas.height);
-
-      var footer = Math.sin(time) * 3 * Math.PI;
-      var index, radial;
+      let footer = Math.sin(time) * 3 * Math.PI
+      let index, radial
 
       for (index = 0; index < 200; ++index) {
-
-        radial = 150 * Math.sin(index * footer);
-        dimension.globalCompositeOperation = '';
-        dimension.fillStyle = 'hsla(' + index + 15 + ',100%, 60%,1)';
-        dimension.beginPath();
+        radial = 150 * Math.sin(index * footer)
+        dimension.globalCompositeOperation = ''
+        dimension.fillStyle = 'hsla(' + index + 15 + ',100%, 60%,1)'
+        dimension.beginPath()
         dimension.arc(Math.sin(index) * radial + (canvas.width / 2),
           Math.cos(index) * radial + (canvas.height / 2),
-          1.5, 0, Math.PI * 3);
-        dimension.fill();
-
+          1.5, 0, Math.PI * 3)
+        dimension.fill()
       }
 
-      time += 0.000030;
-      return time %= 3 * Math.PI;
+      time += 0.000030
+      return time %= 3 * Math.PI
+    }
 
-    };
-
-    function run() {
-
-      window.requestAnimationFrame(run);
-      draw();
-
+    const run = () => {
+      window.requestAnimationFrame(run)
+      draw()
     }
 
     run()

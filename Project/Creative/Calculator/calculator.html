@@ -10,98 +10,78 @@
 </head>
 
 <body draggable="true">
-
   <form class="menu">
-
-    <p class="display">
-
+    <div class="display">
       <label class="Glass">E/O</label>
-      <input type="text" name="sum" id="sum" value="" class="txt1" onFocus="blur()">
-      <input type="text" name="asd" id="ads" value="" class="txt2" onFocus="blur()">
+      <input type="text" name="sum" id="sum" value="" class="txt1" onfocus="blur()">
+      <input type="text" name="asd" id="ads" value="" class="txt2" onfocus="blur()">
+    </div>
 
-    </p>
+    <div class="calc-row"><a href="#" id="a"></a></div>
 
-    <p class="calc-row">
-
-      <a href="#" id="a"></a>
-
-    </p>
-    <p class="menu-row">
-
-      <button type="button" class="btn-m btn-sm btn-red"
-        onClick="download('result.txt', 'text/plain')">Save</button>
+    <div class="menu-row">
+      <button type="button" class="btn-m btn-sm btn-red" onClick="download('result.txt', 'text/plain')">Save</button>
       <button type="button" class="btn-m btn-sm btn-red" onClick="caclulate('')">Clear</button>
-    </p>
+    </div>
 
-    <p class="menu-row">
-
-      <button type="button" class="btn-m" onClick="a('7')">7</button>
-      <button type="button" class="btn-m" onClick="a('8')">8</button>
-      <button type="button" class="btn-m" onClick="a('9')">9</button>
+    <div class="menu-row">
+      <button type="button" class="btn-m" onClick="add('7')">7</button>
+      <button type="button" class="btn-m" onClick="add('8')">8</button>
+      <button type="button" class="btn-m" onClick="add('9')">9</button>
       <button type="button" class="btn-m btn-red btn-big" onClick="add('*')">X</button>
+    </div>
 
-    </p>
-
-    <p class="menu-row">
-
+    <div class="menu-row">
       <button type="button" class="btn-m" onClick="add('4')">4</button>
       <button type="button" class="btn-m" onClick="add('5')">5</button>
       <button type="button" class="btn-m" onClick="add('6')">6</button>
       <button type="button" class="btn-m btn-red btn-big" onClick="add('-')">-</button>
+    </div>
 
-    </p>
-
-    <p class="menu-row">
-
+    <div class="menu-row">
       <button type="button" class="btn-m" onClick="add('1')">1</button>
       <button type="button" class="btn-m" onClick="add('2')">2</button>
       <button type="button" class="btn-m" onClick="add('3')">3</button>
       <button type="button" class="btn-m btn-red btn-big" onClick="add('+')">+</button>
+    </div>
 
-    </p>
-
-    <p class="menu-row">
-
+    <div class="menu-row">
       <button type="button" class="btn-m" onClick="add('0')">0</button>
       <button type="button" class="btn-m" onClick="add('.')">.</button>
       <button type="button" class="btn-m btn-yellow btn-big" onClick="evaluation()">=</button>
       <button type="button" class="btn-m btn-red btn-big" onClick="add('/')">÷</button>
-
-    </p>
-
+    </div>
   </form>
 
   <script>
-    function caclulate(v) {
-      document.getElementById('ads').value = v;
-      document.getElementById('sum').value = v;
+    const caclulate = number => {
+      document.getElementById('ads').value = number
+      document.getElementById('sum').value = number
     }
 
-    function add(v) {
-      document.getElementById('ads').value += v;
+    const add = number => document.getElementById('ads').value += number
+
+    const evaluation = () => {
+      caclulate(eval(document.getElementById('ads').value))
+      let result = document.getElementById('ads')
+      let even = document.getElementById('sum')
+
+      if (result.value % 2 == 0)
+        even.value = 'even'
+      else
+        even.value = 'odd'
     }
 
-    function evaluation() {
-      caclulate(eval(document.getElementById('ads').value));
-      var result = document.getElementById('ads');
-      var even = document.getElementById('sum');
-      if (result.value % 2 == 0) {
-        even.value = "even";
-      } else {
-        even.value = "odd";
-      }
-    }
+    const download = (name, type) => {
+      let result = document.getElementById('ads')
+      let text = 'result: '
+      let link = document.createElement('a')
 
-
-    function download(name, type) {
-      var result = document.getElementById('ads');
-      var text = "";
-      text += result.value;
-      var a = document.getElementById("a");
-      var file = new Blob([text], { type: type });
-      a.innerHTML = "Click For Save";
-      a.href = URL.createObjectURL(file);
-      a.download = name;
+      text += result.value
+      let file = new Blob([text], { type })
+      link.href = URL.createObjectURL(file)
+      link.download = name
+      link.click()
     }
 
   </script>
