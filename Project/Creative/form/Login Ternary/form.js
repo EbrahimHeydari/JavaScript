@@ -1,7 +1,7 @@
 let form = document.querySelector('.form')
 let button = document.getElementById('send')
 
-function resetClass(element, className) {
+const resetClass = (element, className) => {
     element.classList.remove(className)
 }
 
