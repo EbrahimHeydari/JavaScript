@@ -10,6 +10,7 @@
     box-sizing: inherit;
     outline: none;
     font-family: 'Vazir';
+    scroll-behavior: smooth;
 }
 
 a {
