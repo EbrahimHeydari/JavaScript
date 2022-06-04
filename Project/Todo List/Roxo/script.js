@@ -21,7 +21,7 @@ const createTask = taskValue => {
   li.className = 'collection-item'
   li.innerHTML = taskValue
 
-  li.innerHTML += `<a class='secondary-content' style="cursor:pointer">❌</a>`
+  li.innerHTML += `<a href='#' class='secondary-content'>❌</a>`
   taskList.appendChild(li)
 }
 
