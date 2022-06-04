@@ -8,6 +8,8 @@
 </head>
 
 <body>
+  <h1>Design Patterns</h1>
+
   <script>
     // الگوهای طراحی
     // راه‌حل‌هایی هستند برای مشکلاتی که در طراحی و توسعه نرم‌افزارها بوجود میاد
@@ -150,9 +152,86 @@
 
     // الگوهای طراحی رفتاری (Behavioral Design Patterns)
     // مجموعه‌ای از راهکارهای کدنویسی مربوط به تعامل و ارتباط اشیاء هستند
-    //  Strategy & Visitor & Command & Iterator
+    // Strategy & Visitor & Command & Iterator
 
     // مثال: فعلا موجود نیست
+
+
+
+
+
+    // Module Pattern
+    // به ما اجازه می دهد کدهای خودمان را به قسمت های کوچک تر تقسیم کنیم
+
+    // نوع اول (STANDARD MODULE PATTERN)
+    // در این الگو توابع و متغیر های خصوصی را در قسمت اول قرار می دهیم
+    // سپس در قسمت دوم (return) توابع و متغیر های عمومی را قرار می دهیم
+
+    // ساختار
+    // (function () {
+    //   // Declare private vars and functions
+
+    //   return {
+    //     // Declare public var and functions
+    //   }
+    // })()
+
+
+    // مثال: STANDARD MODULE PATTERN
+
+    const UICtrl = (() => {
+      let text = 'Hello World'
+
+      const changeText = () => {
+        const element = document.querySelector('h1')
+        element.innerHTML = text
+      }
+
+      return {
+        callChangeText: () => {
+          changeText()
+          console.log(text)
+        }
+      }
+    })()
+
+    // UICtrl.callChangeText()
+
+
+    // نوع دوم (Revealing Module Pattern)
+    /* تنها تفاوت آن با الگوی نوع اول این است که در شیء برگردانده شده به جای تعریف یک تابع جدید
+    باید توابع خصوصی خودمان را به آن شیء برگردانده شده متصل کنیم */
+
+    // مثال: REVEALING MODULE PATTERN
+    const ItemCtrl = (() => {
+      let data = []
+
+      const add = item => {
+        data.push(item)
+        console.log('Item Added....')
+      }
+
+      const get = id => {
+        return data.find(item => {
+          return item.id === id
+        })
+      }
+
+      return {
+        add,
+        get
+      }
+    })()
+
+    ItemCtrl.add({ id: 1, name: 'John' })
+    ItemCtrl.add({ id: 2, name: 'Mark' })
+    console.log(ItemCtrl.get(1))
+    console.log(ItemCtrl.get(2))
+
+    /* به دلیل راحت تر بودن کار با الگوی دوم، اکثر توسعه دهندگان استفاده از آن را ترجیح می دهند
+    اما الگوی استاندارد روش اول به شما اجازه می دهد علاوه بر دسترسی به تابع کار های دیگری نیز انجام دهید
+    مثلا ما یک دستور console.log را نیز به آن اضافه کرده بودیم که در تابع اصلی وجود نداشت 
+    بنابراین در نهایت استفاده از هر کدام آن ها به نیاز شما بستگی دارد  */
   </script>
 </body>
 
