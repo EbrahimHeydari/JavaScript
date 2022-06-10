@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closure</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+
+  <script>
+    // Closure
+    // زمانی است که یک تابع به متغیر های خارج از محدوده خود دسترسی پیدا می کند و آن را به یاد می آورد
+    // حتی اگر تابع در یک دامنه متفاوت اجرا شود
+    // آبجکت ها closure نمی‌شوند و فانکشن ها می شوند
+
+    function getAdder(x) {
+      return function sum(number) {
+        return x * number
+      }
+    }
+
+    const sum = getAdder(5)
+    document.getElementById('demo').innerHTML = sum(7)
+  </script>
+</body>
+
+</html>
