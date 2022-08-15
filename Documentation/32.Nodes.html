@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Nodes</title>
+  <script src="00.js"></script>
+  <script>
+
+    // ویرایش گره ها
+
+    // createElement()
+    // ایجاد گره جدید
+
+    // createTextNode()
+    // ایجاد متن درون گره
+
+    // appendChild()
+    // افزودن گره جدید به درون گره دیگر
+
+    // replaceChild()
+    // جابه جایی گره ها
+    // آرگومان اول: گره جدید
+    // آرگومان دوم: گره ای که باید حذف شود
+
+    // removeChild()
+    // حذف گره ها
+    // آرگومان اول: گره جدید
+    // آرگومان دوم: گره ای که باید حذف شود
+
+    // insertBefore(before, after)
+    // جابه جایی گره ها
+    // آرگومان اول را قبل از آرگومان دوم قرار می دهد
+
+
+    // دستورات پیمایش بین گره ها
+
+    // nodeValue: دسترسی به محتوای گره
+    // parentNode: دسترسی به والد گره
+    // childNodes[index]: دسترسی به عناصر فرزند
+    // firstChild: دسترسی به اولین عنصر فرزند
+    // lastChild: دسترسی به آخرین عنصر فرزند
+    // nextSibling: دسترسی به گره بعدی
+    // perviousSibling: دسترسی به گره قبلی
+
+
+    // مثال
+
+    var p = document.getElementsByTagName('p')
+    function launch() {
+      box = document.createElement('div')
+      box.setAttribute('class', 'box')
+      document.body.appendChild(box)
+    }
+
+    function Add() {
+      var txt = document.createElement('p')
+      txt.setAttribute('class', 'php')
+      box.appendChild(txt)
+      txt.innerHTML = languages.web[1]
+    }
+
+    function Remove() {
+      box.removeChild(box.childNodes[0])
+    }
+
+    function RemoveAll() {
+      for (i = 0; i < p.length; i++) {
+        box.removeChild(box.childNodes[0])
+      }
+    }
+
+    function Replace(value) {
+      for (i = 0; i < value; i++) {
+        var old_txt = box.childNodes[i]
+        var new_txt = document.createElement('p')
+        new_txt.setAttribute('class', 'js')
+        new_txt.innerHTML = languages.web[0]
+
+        if (p[i].getAttribute('class') === 'js')
+          s++
+        else
+          box.replaceChild(new_txt, old_txt)
+      }
+    }
+  </script>
+  <style>
+    .js,
+    .php {
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+      color: #fff;
+      border-radius: 20px;
+    }
+
+    .php {
+      background-color: darkcyan;
+    }
+
+    .js {
+      background-color: darkorange;
+
+    }
+  </style>
+</head>
+
+<body onload="launch()">
+  <h1>Edit Elements</h1>
+  <div class="buttons">
+    <button onclick="Add()">Add</button>
+    <button onclick="Remove()">Delete</button>
+    <button onclick="RemoveAll()">Delete All</button>
+    <button onclick="Replace(1)">Replace</button>
+    <button onclick="Replace(p.length)">ReplaceAll</button>
+  </div>
+</body>
+
+</html>

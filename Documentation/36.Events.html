@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body>
+  <p>please check the console</p>
+  <p>mouse events:</p>
+  <div>
+    <button onclick="console.log('clicked')">Click</button>
+  </div>
+  <div>
+    <button ondblclick="console.log('double clicked')">Double Click</button>
+  </div>
+  <div>
+    <button onmousedown="console.log('mouse down')">Mouse down</button>
+  </div>
+  <div>
+    <button onmousemove="console.log('Mouse move')">Mouse move</button>
+  </div>
+  <div>
+    <button onmouseover="console.log('Mouse over')">Mouse over</button>
+  </div>
+  <div>
+    <button onmouseup="console.log('Mouse up')">Mouse up</button>
+  </div>
+  <div>
+    <button onmousewheel="console.log('mouse wheel')">mouse wheel</button>
+  </div>
+
+  <p>keyboard events:</p>
+  <div>
+    <input type="text" placeholder="keypress" onkeypress="console.log('keypress')" />
+  </div>
+  <div>
+    <input type="text" placeholder="keydown" onkeydown="console.log('keydown')" />
+  </div>
+  <div>
+    <input type="text" placeholder="keyup" onkeyup="console.log('keyup')" />
+  </div>
+
+  <p>paste events:</p>
+  <div>
+    <input type="text" value="cut" oncut="console.log('cut');alert('please dont cut')" />
+  </div>
+  <div>
+    <input type="text" value="copy" oncopy="console.log('copy');alert('please dont copy')" />
+  </div>
+  <div>
+    <input type="text" placeholder="paste" onpaste="console.log('paste');alert('please dont paste')" />
+  </div>
+
+  <p>form events:</p>
+  <form action="events.html" onreset="console.log('reset')" onsubmit="console.log('submited')"
+    onchange="console.log('changed')">
+    <div class="input-box">
+      <input type="text" placeholder="Username" autofocus>
+    </div>
+    <div class="input-box">
+      <input type="password" placeholder="Password" onfocus="console.log('focus')">
+    </div>
+    <div class="input-box">
+      <input type="tel" placeholder="Phone Number" onblur="console.log('Blur')">
+    </div>
+    <div class="input-box">
+      <input type="text" placeholder="Home Address">
+    </div>
+    <div class="input-box">
+      <button type="submit">Login</button>
+      <button type="reset">reset</button>
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form Validation</title>
+</head>
+
+<body>
+  <input type="number" id="put" min="1350" max="1400" placeholder="سال تولد" required>
+  <button onclick="myFunction()">OK</button>
+  <p id="demo"></p>
+  <script>
+
+    // اعتبارسنجی در فرم ها
+
+    // متدها
+
+    // checkValidity()
+    // از این متد برای نمایش خطا استفاده می شود
+    // خروجی مقدار بولی است
+
+    function myFunction() {
+      var input = document.getElementById('put')
+      if (input.checkValidity()) {
+        document.getElementById('demo').innerHTML = input.rangeOverflow
+      }
+    }
+
+    // setCustomValidity()
+    // پیغام اعتبار سنجی یک ورودی را تعیین می کند
+
+
+    // خصوصیات
+
+    // خواص DOM
+    // validity: مقدار بولی بر می گرداند که با معتبر بودن یک عنصر ورودی ارتباط دارد
+    // validitionMessage: پیغامی را هنگام نامعتبر بودن داده نمایش می دهد
+    // WillValidate: معتبر بودن یا نبودن عنصر ورودی را مشخص می کند
+
+
+    // خواص Validity
+    // customError: اگر پیغام معتبر بودن تنظیم شده باشد به true تنظیم می شود
+    // patternMismatch: اگر الگوی خصوصیت با مقدار ورودی مطابقت نداشته باشد به true تنظیم می شود
+    // rangeOverflow: اگر مقدار ورودی بیشتر از مقدار max باشد true را برمی گرداند
+    // rangeUnderflow: اگر مقدار ورودی از min کمتر باشد true را برمی گرداند
+    // stepMismatch: اگر مقدار ورودی در مورد ویژگی step نامعتبر باشد به true تبدیل می شود
+    // tooLong: اگر مقدار ورودی در مورد یک ویژگی maxlength نامعتبر باشد به true تنظیم می شود
+    // typeMismatch: اگر مقدار یک ورودی در مورد یک ویژگی نامعتبر باشد به true تنظیم می شود
+    // valueMissing: اگر فیلد ضروری مقدار نداشته باشد به true تنظیم می شود
+    // valid: اگر مقدار یک ورودی معتبر باشد به true تنظیم می شود
+
+  </script>
+</body>
+
+</html>

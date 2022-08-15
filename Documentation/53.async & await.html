@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>async & await</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <script>
+    // async
+    // یک تابع را به صورت ناهمزمان اجرا می کند
+
+    // await
+    // دستوری که باید به صورت ناهمزمان اجرا شود را مشخص می کند
+
+    // Call Stack Function
+    const testCallStack = tests => {
+      tests.forEach(test => {
+        console.log(test.green)
+      })
+    }
+
+    const myTest = ['Ebrahim', "Ali"]
+    // testCallStack(myTest)
+
+
+    // Async Function
+    console.log('I cant wait') // first
+
+    // Callback Queue
+    setTimeout(() => {
+      console.log('Two Second') // third
+    }, 2000)
+
+    setTimeout(() => {
+      console.log('Zero Second') // fourth
+    }, 0)
+
+    console.log("im done") // second
+
+    // an example
+    async function changeHTML() {
+      let promise = new Promise((resolve, reject) => {
+        resolve("All OK.")
+      })
+      document.querySelector("#demo").innerHTML = await promise
+    }
+    changeHTML()
+  </script>
+</body>
+
+</html>

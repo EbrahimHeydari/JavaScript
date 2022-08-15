@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>try & catch & finally</title>
+  <script src="00.js"></script>
+  <script>
+          
+    // مدیریت خطاها و استثنا یابی
+    // بهترین برنامه نویسان در هنگام برنامه نویسی با خطا مواجه می شوند
+    // استثنا ها توسط برنامه به وجود می آیند و لازم است که شما آنها را اداره کنید
+    // مثلا در دنیای کامپیوتر یک عدد صحیح هرگز نمی تواند بر صفر تقسیم شود
+
+
+    // استثنا های اداره نشده
+    // استثنا هایی هستند که به درستی توسط برنامه اداره نشده اند و باعث می شوند که برنامه به پایان برسد
+        /* وقتی یک برنامه در زمان اجرا با یک استثنا مواجه می شود و آن را اداره نمی کند،
+        به صورت بالقوه باعث نابودی جریان و اجرای برنامه شما می شود */
+
+
+    // try & catch
+    // می توان خطاها را با استفاده از این دو دستور اداره کرد
+
+    // try: کدی که احتمال بروز خطا می دهد را در اینجا بنویسید
+    // catch: اگر خطا وجود داشت، این بخش اجرا می شود
+
+    // try {
+    //     number
+    // }
+    // catch {
+    //     throw('this word is not defined')
+    // }
+
+
+    // use class (err)
+    // try {
+    //     number
+    // }
+    // catch(err) {
+    //     throw(err.name)        // ReferenceError
+    //     throw(err.message)     // number is not defined
+    // }
+
+
+    // use class (err) & instanceof
+    // err : این کلاس برای به دام انداختن همه ی استثنا های که به وسیله برنامه به وجود می آید به کار می رود
+    // throw: امکان ایجاد خطای دلخواه را فراهم می کند
+
+
+    // finally
+    // اگر بخواهیم کدهایی بنویسیم که در هر صورت اجرا شوند از این دستور استفاده می کنیم
+    // کد هایی را که فکر می کنید حیاتی هستند را درون این دستور قرار دهید
+
+    // try {
+    //     number
+    // }
+    // catch(err) {
+    //     console.log(err.name)            // ReferenceError
+    //     console.log(err.message)         // number is not defined
+    // }
+    // finally {
+    //     console.log('finally blocked was reached')
+    // }
+
+
+    // ساخت سریع خطا
+        
+    // var error = new Error(well)
+    // console.log(error)
+        
+    // console.error(well)
+
+    // throw(well)
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

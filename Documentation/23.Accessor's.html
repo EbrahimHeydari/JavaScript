@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessor's</title>
+  <script src="00.js"></script>
+  <script>
+
+    // خصوصیت
+    // مقادیری هستند که به یک شئ داده شده اند
+    // یک شئ مجموعه ای از خصوصیات مرتب نشده است
+
+
+    // روش های دسترسی به خصوصیات
+    // روش اول
+    // console.log(me.age)
+
+    // روش دوم
+    // console.log(me['age'])
+
+    // روش سوم
+    var x = 'age'
+    // console.log(me[x])
+
+
+    // Accessor's
+    // استانداردی برای دسترسی به متغیر هایی با سطح دسترسی خصوصی در داخل یک کلاس است
+
+    // هر خصوصیت دارای دو بخش می باشد
+    // set block: برای مقدار دهی به متغیرهای خصوصی به کار می رود
+    // get block: برای استخراج مقدار متغیرهای خصوصی به کار می رود 
+    // با استفاده از این روش، کدنویسی انعطاف پذیر تر می شود
+    // مخصوصا اگر بخواهید یک اعتبارسنجی برای اختصاص مقدار به متغیر یا استخراج مقدار از آن ایجاد کنید
+
+    class person_2 {
+      #name
+      #age
+      #height
+      #gender
+
+      get name() {
+        return this.#name
+      }
+      set name(value) {
+        this.#name = value
+      }
+
+      get age() {
+        return this.#age
+      }
+      set age(value) {
+        this.#age = value
+      }
+
+      get height() {
+        return this.#height
+      }
+      set height(value) {
+        this.#height = value
+      }
+
+      get gender() {
+        return this.#gender
+      }
+      set gender(value) {
+        this.#gender = value
+      }
+
+      constructor(name, age, height, gender) {
+        this.#name = name
+        this.#age = age
+        this.#height = height
+        this.#gender = gender
+      }
+
+      show() {
+        console.log('name:', this.name)
+        console.log('age:', this.age)
+        console.log('height:', this.height, 'CM')
+        console.log('gender:', this.gender)
+      }
+    }
+    let man_2 = new person_2('reza', 35, 185, 'male')
+    // man_2.show()
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event & Event Handler</title>
+</head>
+<body>
+
+  <div>
+    <button id="btn1">mouse wheel</button>
+    <button id="btn2">over</button>
+    <button id="btn3">out</button>
+    <button id="btn4">down</button>
+    <button id="btn5">Up</button>
+    <button id="btn6">click</button>
+    <button id="btn7">double click</button>
+    <button id="btn8">blur</button>
+    <button id="btn9">focus</button>
+  </div>
+
+  <script>
+    document.getElementById('btn1').addEventListener('mousewheel', function () {
+      console.log('Event:', 1)
+    })
+
+
+    document.getElementById('btn2').addEventListener('mouseover', function () {
+      console.log('Event:', 2)
+    })
+
+
+    document.getElementById('btn3').addEventListener('mouseout', function () {
+      console.log('Event:', 3)
+    })
+
+
+    document.getElementById('btn4').addEventListener('mousedown', function () {
+      console.log('Event:', 4)
+    })
+
+
+    document.getElementById('btn5').addEventListener('mouseup', function () {
+      console.log('Event:', 5)
+    })
+
+
+    document.getElementById('btn6').addEventListener('click', function () {
+      console.log('Event:', 6)
+    })
+
+
+    document.getElementById('btn7').addEventListener('dblclick', function () {
+      console.log('Event:', 7)
+    })
+
+
+    document.getElementById('btn8').addEventListener('blur', function () {
+      console.log('Event:', 8)
+    })
+
+
+    document.getElementById('btn9').addEventListener('focus', function () {
+      console.log('Event:', 9)
+    })
+
+
+  </script>
+</body>
+</html>

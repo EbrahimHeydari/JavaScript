@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+
+<body>
+  <script>
+    // Promise
+    // برای مدیریت عملیات های نامتقارن استفاده می شود
+
+    // then: اگر نتیجه درست بود، اجرا می شود
+    // catch: اگر نتیجه غلط بود، اجرا می شود
+
+    // resolve: زمانی اجرا می شود که کارمان تمام شده باشد و عملیات موفق باشد
+    new Promise((resolve, reject) => {
+      console.log('Hi Promise')
+      setTimeout(() => {
+        console.log('Time out 3s')
+        resolve('ok')
+      }, 3000)
+    })
+      .then(yes => console.log(yes))
+
+
+    // reject: زمانی اجرا می شود که به مشکلی خورده باشیم
+    new Promise((resolve, reject) => {
+      console.log('Hi Promise')
+      setTimeout(() => {
+        console.log('Time out 3s')
+        reject(new Error('NOT Recognized'))
+      }, 3000)
+    })
+      .catch(no => console.log(no))
+  </script>
+</body>
+
+</html>

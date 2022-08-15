@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("font/Vazir.woff") format("woff"),
+    url("font/Vazir.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: none;
+  font-family: 'Vazir';
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #06374e;
+}
+
+body {
+  background: #dffeff;
+  text-align: center;
+}
+
+div {
+  margin-top: 1rem;
+}
+
+input {
+  padding: 5px;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  outline: none;
+  color: #fff;
+  border: 1px solid currentColor;
+  background-color: darkcyan;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+button:focus,
+button:hover {
+  background-color: #fff;
+  color: darkcyan;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+img {
+  border-radius: 5px;
+}
+
+button,
+.icon {
+  cursor: pointer;
+}

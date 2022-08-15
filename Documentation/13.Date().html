@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Object</title>
+  <script src="00.js"></script>
+  <script>
+    // Date(year, month, day, hours, minutes, seconds, miliseconds)
+    // یک شئ از پیش تعریف شده در جاوااسکریپت است که برای نمایش زمان و تاریخ به کار می رود
+
+
+    // تنظیم تاریخ مشخص
+    var past = new Date(2018, 7, 12, 10, 15, 30,)
+
+
+    // می توان این شئ را در قالب یک متغیر تعریف کرد
+    var date = new Date()      // نمایش تاریخ و زمان به صورت پیش فرض
+
+
+    // تبدیل تاریخ به رشته
+    // console.log(date.toString())
+
+
+    // انواع قالب بندی های تاریخ
+
+    // ISO
+    // سال به صورت چهاررقمی، ماه به صورت دو رقمی و روز به صورت دو رقمی است
+    // جاوااسکریپت این فرمت را ترجیح میدهد
+    // (YYYY/MM/DD)
+
+    // short
+    // این نوع قالب بندی بر عکس قالب بالا است
+    // (DD/MM/YYYY)
+
+    // long
+    // این نوع قالب بندی به صورت زیر است
+    // (MMM/DD/YYYY)
+
+
+
+    // متدهای دریافت تاریخ
+
+    // getFullYear()
+    //نمایش سال فعلی به صورت چهار رقمی
+    // console.log(date.getFullYear())
+
+
+    // getMonth()
+    // نمایش ماه فعلی به صورت عددی بین 0 تا 11
+    // console.log(date.getMonth())
+
+
+    // getDate()
+    // نمایش روز فعلی به صورت ماهانه بین 0 تا 31
+    // console.log(date.getDate())
+
+
+    // getDay()
+    // نمایش روز فعلی به صورت هفتگی بین 0 تا 6
+
+
+    // getHours()
+    // نمایش ساعت فعلی از 0 تا 23
+    // console.log(date.getHours())
+
+
+    // getMinutes()
+    // نمایش دقیقه فعلی از 0 تا 59
+    // console.log(date.getMinutes())
+
+
+    // getSeconds()
+    // نمایش ثانیه فعلی از 0 تا 59
+    // console.log(date.getSeconds())
+
+
+    // getMiliseconds()
+    // نمایش میلی ثانیه فعلی از 0 تا 999
+    // console.log(date.getMilliseconds())
+
+
+    // getTime()
+    // نمایش تعداد ثانیه های سپری شده از اول ژانویه 1970
+    // console.log(date.getTime())
+
+
+
+    // متدهای (UTC) معادل متدهای بالا
+    // console.log(date.getUTCFullYear)
+    // console.log(date.getUTCMonth)
+    // console.log(date.getUTCDate)
+    // console.log(date.getUTCDay)
+    // console.log(date.getUTCHours)
+    // console.log(date.getUTCMinutes)
+    // console.log(date.getUTCSeconds)
+    // console.log(date.getUTCMilliseconds)
+
+
+
+    // متدهای تعیین تاریخ
+    // خروجی این متدها ثانیه های گذشته از اول ژانویه 1970 است
+
+    // setFullYear()
+    // تعیین سال به صورت چهار رقمی
+    // console.log(date.setFullYear(2021))
+
+
+    // setMonth()
+    // تعیین ماه به صورت دو رقمی
+    // console.log(date.setMonth(06))
+
+
+    // setDate()
+    // تعیین روز به صورت دو رقمی
+    // console.log(date.setDate(14))
+
+
+    // setHours()
+    // تعیین ساعت از 0 تا 23
+    // console.log(date.setHours(16))
+
+
+    // setMinutes()
+    // تعیین دقیقه از 0 تا 59
+    // console.log(date.setMinutes(05))
+
+
+    // setSeconds()
+    // تعیین ثانیه از 0 تا 59
+    // console.log(date.setSeconds(45))
+
+
+    // setTime()
+    // تعیین تعداد ثانیه های سپری شده از اول ژانویه 1970
+    // console.log(date.setTime(1623670883931))
+
+
+
+    // ساخت ساعت زنده
+    // روش اول
+    function startTime() {
+      var today = new Date()
+      var h = today.getHours()
+      var m = today.getMinutes()
+      var s = today.getSeconds()
+
+      m = checkTime(m)
+      s = checkTime(s)
+      document.getElementById('time1').innerHTML = `${h}:${m}:${s}`
+      t = setTimeout('startTime()', 1000)     // تازه سازی هر یک ثانیه
+    }
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i
+      }
+      return i
+    }
+
+    // setInterval(startTime, 1000)
+
+    // روش دوم
+    function Timer() {
+      let date = new Date().toLocaleTimeString()
+      document.getElementById('time2').innerHTML = date
+    }
+    // setInterval(Timer, 1000)
+  </script>
+</head>
+
+<body>
+  <h1 id="time1"></h1>
+  <h1 id="time2"></h1>
+</body>
+
+</html>

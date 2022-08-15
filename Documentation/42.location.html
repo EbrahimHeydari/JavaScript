@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>location Object</title>
+</head>
+<body>
+  <button onclick="location.reload()">Reload</button>
+  <button onclick="location.replace('https://www.google.com')">Google</button>
+  <button onclick="location.assign('https://www.css-tricks.ir')">CSS Tricks</button>
+  <button onclick="location.href = 'https://www.toplearn.com'">toplearn</button>
+  <button onclick="ShowLocation()">Show location</button>
+
+  <script>
+    // window.location
+    // می تواند آدرس اینترنتی فعلی را بگیرد و همچنین کاربر را به صفحه ی دیگری منتقل کند
+
+
+    // خصوصیات
+
+    // location.href
+    // آدرس اینترنتی صفحه ی فعلی را برمی گرداند
+    // console.log(location.href)
+
+
+    // location.hostname
+    // نام دامنه ی هاست شما را برمی گرداند
+    // console.log(location.hostname)
+
+
+    // location.pathname
+    // آدرس و نام فعلی فایل صفحه ی فعلی را به صورت نسبی نمایش می دهد
+    // console.log(location.pathname)
+
+
+    // location.port
+    // تعداد پورت های میزبان را نمایش می دهد
+    // console.log(location.port)
+
+
+    // location.protocol
+    // پروتکل فعلی صفحه را نمایش می دهد
+    // console.log(location.protocol)
+
+
+    // reload()
+    // صفحه را دوباره بارگذاری می کند
+
+
+    // replace()
+    // آدرس صفحه را جایگزین می کند
+
+
+    // assign()
+    // می تواند یک سند جدید را در صفحه شما باز کند
+
+
+    function ShowLocation() {
+      var locstr = location.toString()
+      console.log(locstr)
+    }
+
+    console.log(location.pathname)
+    console.log(location.hostname)
+    console.log(location.protocol)
+    console.log(location.port)
+  </script>
+</body>
+</html>

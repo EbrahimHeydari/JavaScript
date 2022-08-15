@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables Scope</title>
+</head>
+
+<body>
+
+  <script>
+    // سطح دسترسی متغیرها
+    // در جاوااسکریپت دو نوع سطح دسترسی وجود دارد
+
+    // Local Scope
+    // متغیر هایی که در درون توابع تعریف شوند و فقط درون توابع کاربرد دارند
+    // می توان دو متغیر محلی با نام یکسان در دو متد متفاوت تعریف کرد
+    // متغیرهای محلی زمانی ایجاد می شوند که تابع آنها فراخوانی شود
+    // متغیرهای محلی بعد از اتمام تابع از بین می روند
+    // پارامترها و آرگومان های توابع نیز متغیر محلی محسوب می شوند
+
+    /* اگر در ایجاد متغیر محلی درون تابع از کلمه کلیدی var استفاده نکنید
+    مرورگر آنرا به عنوان متغیر سراسری در نظر می گیرد */
+
+    (
+      function () {
+        var name = 'Ali'               // local scope
+        family = 'Alavi'               // global scope
+        console.log(name, family)
+      }
+    )
+      ()
+
+    // console.log(family)        // global scope
+
+
+
+    // Global Scope:
+    // متغیر هایی که در خارج از توابع تعریف شوند و فقط خارج از توابع کاربرد دارند
+    // متغیرهای سراسری با بسته شدن صفحه از بین می روند
+    // تمام متغیرهای سراسری به شئ window تعلق دارند
+    // بدون حساب و کتاب متغیر سراسری ایجاد نکنید. زیرا بر روی شئ window تاثیر بدی می گذارند
+
+    var age = 24
+    var height = 190
+
+    // function data() {
+    //     var name = 'Mohsen'
+    //     var family = 'Ahmadi'
+    //     console.log(name, family, age, height)
+    // }
+    // data()
+    // console.log(family)
+
+
+    // let & const:
+    // از این دو متغییر برای تعیین متغیر های محای استفاده می شود
+
+
+    function data() {
+      const age = 20
+      let height = 200
+      let name = 'Mohsen'
+      let family = 'Ahmadi'
+      console.log(name, family, age, height)
+    }
+        // data()
+        // console.log(family)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Override</title>
+  <script>
+
+    // بازنویسی
+    /* اگر متد کلاس والد، دارای کد های زیادی در بدنه خود باشد و شما بخواهید کد دیگری به آن اضافه کنید 
+    استفاده از این روش کد نویسی را بهینه تر و ساده تر می کند */
+    class parent_1 {
+      Message() {
+        console.log('parent class message')
+      }
+    }
+    let person_1 = new parent_1()
+
+    class child_1 extends parent_1 {
+      Show() {
+        super.Message()
+        console.log('method was overrided!')
+      }
+    }
+    let boy_1 = new child_1()
+
+  </script>
+</head>
+
+<body>
+  <button onclick="boy_1.Show()">boy</button>
+  <button onclick="person_1.Message()">person</button>
+</body>
+
+</html>

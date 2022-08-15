@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strict mode</title>
+  <script>
+    // حالت سختگیرانه
+    // حالتی که در آن کدها را با شرایط سخت تری اجرا می شوند
+    // استفاده از این حالت باعث می شود تا کد های ایمن تر، مرتب تر و استاندارد تری بنویسید
+    // برای اعلام این حالت باید دستور زیر را استفاده کنید
+
+    "use strict"         // تمام حروف باید کوچک باشد
+
+    // اگر این دستور را در ابتدای سند بنویسید برای تمام سند اعمال می شود
+    // اگر درون یک تابع نوشته شود، فقط برای همان تابع اعمال می شود
+
+
+    // اعمال غیر مجاز در این حالت
+
+    // استفاده از متغیرها بدون اعلام کردن
+    // var human
+    // human = 'yousef heidary'
+
+
+    // استفاده از اشیاء بدون اعلام کردن
+    // var person
+    // person = {name: 'ebrahim', family: 'heidary', age: 19}
+
+
+    // حذف متغیرها و اشیاء و توابع
+    // delete human
+    // delete person
+    // delete function show(x, y) {}
+
+
+    // دوگانه سازی نام پارامترها
+    // function message(x, x) {}
+
+
+    // تغییر خصوصیات read-only
+    // read-only: مقادیر یا خصوصیاتی هستند که تنها قابل خواندن هستند و اگر سعی کنید آنها را تغییر دهید با خطا مواجه می شوید
+    // با استفاده از دستور writable: false می توانید خصوصیات و مقادیر را read-only کنید
+    // var obj = {}
+    // Object.defineProperty(obj , 'x' , {value: 0, writable: false})
+    // obj.x = 3.14
+
+
+    // تغییر خصوصیات get-only
+    // get-only: خصوصیاتی هستند که فقط قابلیت دریافت (get) را دارند و نمی توان آنها را (set) کرد
+    // var obje = {get x() {return 0 }}
+    // obje.x = 3.14
+
+
+    // استفاده از کلمات کلیدی و رزرو شده برای نام متغیرها
+    // var eval = 3.14
+    // var arguments = 1024
+
+
+    // استفاده از دستور with
+    // with(Math) {x = abs(-10)}
+
+
+    // استفاده از تابع eval() در شرایط خاص
+    // اگر بخواهیم با تابع eval() متغیری بسازیم که در scope یکسان با خود eval() صدا زده است، به خطا می خوریم
+    // eval("var x = 5")
+    // alert(x)
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

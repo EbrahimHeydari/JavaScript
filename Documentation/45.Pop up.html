@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="00.js"></script>
+  <title>Dialog Box</title>
+  <script>
+    // کادر های وروردی
+
+    // alert()
+    // برای نمایش پیغام به کار می رود
+    alert(well)
+        
+    // confirm()
+    // پیغامی نمایش می دهد که می توانید قبول یا رد کنید
+        
+    var confirm = window.confirm('شما گواهینامه دارید؟')
+    if(!confirm) {
+      document.write('لطفا برای گرفتن گواهینامه اقدام کنید' + br)
+    }
+
+    // prompt()
+    // ایجاد کادر ورود اطلاعات 
+
+    // آرگومان اول عنوان کادر
+    // آرگومان دوم مقدار پیشفرض کادر
+
+    var name = prompt('نام خود را به فارسی وارد کنید')
+    document.write('سلام ' + name)
+        
+
+    // کاراکترهای کنترلی
+    // این کارکتر ها مخصوص کادر های ورودی هستند
+        
+    // alert('Ebrahim \r return')
+    // alert('Ebrahim \t new tab')
+    // alert('Ebrahim \n new line')
+    // alert('\u26BD \u26BD \u26BD \u26BD \u26BD ')o
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

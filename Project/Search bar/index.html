@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Auto Complete Search bar</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="search-input">
+      <a href="" target="_blank" hidden></a>
+      <input type="text" placeholder="Type to search..">
+      <div class="autocom-box">
+
+      </div>
+      <div class="icon"><i class="fas fa-search"></i></div>
+    </div>
+  </div>
+
+  <script src="script.js" type="module"></script>
+  <script>
+    const searchWrapper = document.querySelector('.search-input')
+    const inputBox = searchWrapper.querySelector('input')
+    const suggBox = searchWrapper.querySelector('.autocom-box')
+    const icon = searchWrapper.querySelector('.icon')
+    let linkTag = searchWrapper.querySelector('a')
+    let webLink
+    const select = element => {
+      let selectData = element.textContent
+      inputBox.value = selectData
+      icon.onclick = () => {
+        webLink = `https://www.google.com/search?q=${selectData}`
+        linkTag.setAttribute("href", webLink)
+        linkTag.click()
+      }
+      searchWrapper.classList.remove("active")
+    }
+  </script>
+
+</body>
+
+</html>

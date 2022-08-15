@@ -1,0 +1,95 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: cursive;
+  background: repeating-linear-gradient(-45deg, #075722, #017e2b, #1ab64e, #15d6dd, #008b8b, #234a6b);
+  min-height: 100vh;
+  background-size: 100%;
+}
+
+.error {
+  max-width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 17%;
+  right: 17%;
+  bottom: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.content h1 {
+  font-size: 18vw;
+  line-height: 1em;
+}
+
+.content h1::after {
+  position: absolute;
+  content: attr(data-text);
+  left: 0;
+  right: 0;
+  background: repeating-linear-gradient(-45deg, #234a6b, #008b8b, #15d6dd, #1ab64e, #017e2b, #075722);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s infinite;
+}
+
+@keyframes animate {
+  50% {
+    background-position: 100%;
+  }
+}
+
+.content h4 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #000;
+  max-width: 600px;
+  font-size: 2rem;
+}
+
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+}
+
+.btns a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 1rem;
+  border: 2px solid #008b8b;
+  color: #008b8b;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 2em;
+  transition: .2s ease-in-out;
+}
+
+.btns a:hover {
+  color: #fff;
+  background-color: #008b8b;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Types</title>
+  <script src="00.js"></script>
+  <script>
+    // انواع داده ها در جاوااسکریپت
+    // undefined: تعریف می شود ولی مقدار دهی نمی شود
+    // null: هیچ مقداری ندارد
+    // boolean: شامل مقداری شرطی است    // true | false
+    // number: اعداد صحیح و اعشاری
+    // string: توالی و ترکیبی از کاراکترها
+    // object: مجموعه ای از آیتم ها که به صورت کلید و مقدار تعریف می شود
+    // array: مجموعه ای از داده های همنوع و غیر همنوع
+
+
+    // دسته بندی های مختلف داده ها
+
+    // refrence-type (array & object)
+    // داده های این دسته اگر از روی مقدارشان متغییر تعریف شود، به مقدار آن متغیر متصل می شوند
+    // یعنی اگر مقدار متغیر اولیه را تغییر بدیم متغیر دوم هم تغییر می کند
+    // فرقی نمی کند کدام متغیر را تغییر دهیم. هر دو به هم متصل هستند
+
+    var langs = languages
+    console.log('languages: ', languages)
+
+    const reference = () => {
+      langs.web = ['html', 'css', 'js']
+      console.log('langs: ', langs)
+      console.log('languages: ', languages)
+    }
+
+
+    // primitive-type (undefined & null & boolean & number & string)
+    // داده های این دسته اگر از روی مقدارشان متغیر تعریف شود، مقدار شان کپی می شود
+    // یعنی اگر مقدار متغیر اولیه را تغییر بدیم متغیر دوم تغییری نمی کند و روی مقدار هم تاثیری ندارند
+
+    var old = age
+    console.log('age: ', age)
+
+    const primitive = () => {
+      old = 20
+      console.log('old:', old)
+      console.log('age:', age)
+    }
+
+
+    // تست نوع متغیر
+    // typeof()
+    // نوع متغیر را نمایش می دهد
+
+    // console.log(`eh: ${eh} Type: ${typeof eh} `)
+    // console.log(`date: ${date} Type: ${typeof date}`)
+    // console.log(`friends: ${friends} Type: ${typeof friends}`)
+    // console.log(`yes: ${yes} Type: ${typeof yes}`)
+    // console.log(`none: ${none} Type: ${typeof none}`)
+    // console.log(`PI: ${PI} Type: ${typeof PI}`)
+    // console.log(`zero: ${zero} Type: ${typeof zero}`)
+
+
+    // تغییر نوع متغیر
+    // Boolean(): تبدیل به مقادیر شرطی
+    // console.log('to Boolean: ')
+    // console.log(`eh is: ${Boolean(eh)} Type: ${typeof Boolean(eh)}`)
+    // console.log(`date is: ${Boolean(date)} Type: ${typeof Boolean(date)}`)
+    // console.log(`friends is: ${Boolean(friends)} Type: ${typeof Boolean(friends)}`)
+    // console.log(`yes is: ${Boolean(yes)} Type: ${typeof Boolean(yes)}`)
+    // console.log(`none is: ${Boolean(none)} Type: ${typeof Boolean(none)}`)
+    // console.log(`PI is: ${Boolean(PI)} Type: ${typeof Boolean(PI)}`)
+    // console.log(`zero is: ${Boolean(zero)} Type: ${typeof Boolean(zero)}`)
+
+    // Number(): تبدیل به مقادیر عددی
+    // console.log('to Number: ')
+    // console.log(`eh is: ${Number(eh)} Type: ${typeof Boolean(eh)}`)
+    // console.log(`date is: ${Number(date)} Type: ${typeof Boolean(date)}`)
+    // console.log(`friends is: ${Number(friends)} Type: ${typeof Boolean(friends)}`)
+    // console.log(`yes is: ${Number(yes)} Type: ${typeof Boolean(yes)}`)
+    // console.log(`none is: ${Number(none)} Type: ${typeof Boolean(none)}`)
+
+    // toString(): تبدیل به مقادیر رشته ای
+    // console.log('to toString: ')
+    // console.log(`date is: ${date.toDateString()} Type: ${typeof Boolean(date)}`)
+    // console.log(`friends is: ${friends.toString()} Type: ${typeof Boolean(friends)}`)
+    // console.log(`yes is: ${yes.toString()} Type: ${typeof Boolean(yes)}`)
+    // console.log(`PI is: ${PI.toString()} Type: ${typeof Boolean(PI)}`)
+    // console.log(`zero is: ${zero.toString()} Type: ${typeof Boolean(zero)}`)
+
+    // parseInt(): تبدیل به اعداد صحیح
+    // parsefloat(): تبدیل به اعداد اعشاری
+    // console.log(`313 person is: ${parseInt("313 person")} Type: ${typeof parseInt("313 person")}`)
+    // console.log(`3.21.90 is: ${parseInt("3.21.90")} Type: ${typeof parseInt("3.21.90")}`)
+    // console.log(`3.21.90 is: ${parseFloat("3.21.90")} Type: ${typeof parseFloat("3.21.90")}`)
+
+    // جاوااسکریپت در صورت نیاز، داده ها را به صورت خودکار تبدیل می کند
+  </script>
+</head>
+
+<body>
+  <button onclick=reference()>Change Reference</button>
+  <button onclick=primitive()>Change Primitive</button>
+</body>
+
+</html>

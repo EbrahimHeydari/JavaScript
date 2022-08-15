@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encapsulation</title>
+  <script>
+    // کپسوله سازی
+    /* فرآیندی است که طی آن اطلاعات حساس یک موضوع از دید کاربر مخفی می شود و
+    فقط اطلاعاتی که لازم باشد، برای او نشان داده می شود */
+    class test {
+      five = 5
+      Add(number) {
+        this.five += number
+        return this.five
+      }
+    }
+    var Test = new test()
+    Test.five = 50
+    console.log('result:', Test.Add(100))
+
+    // لازم نیست که کاربر به تمام فیلد ها دسترسی داشته باشد
+    // اینکه فیلد ها را طوری تنظیم کنیم که در خارج از کلاس قابل دسترسی باشند، بسیار خطرناک است
+    // چون ممکن است کاربر رفتار و نتیجه یک متد را تغییر دهد
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

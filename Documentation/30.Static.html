@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Members</title>
+  <script>
+
+    // اعضای ایستا
+    // عضو داده ای یا خاصیتی که در همه ی شئ های کلاس قابل دسترسی است
+    // برای این کار از کلمه ی کلیدی static استفاده می کنیم
+    // با این کار فیلد و خاصیت مورد نظر در همه ی نمونه های کلاس تقسیم می شود
+    // وقتی یک متد یا خاصیت به صورت ایستا تعریف شود، می توانید آنها را بدون ساختن نمونه از شئ فراخوانی کنید
+    // برای استفاده ابتدا نام کلاس، سپس (.) , و در آخر نام عضو استاتیک را می نویسیم
+
+    class sample {
+      static message() {
+        console.log('Static Method')
+      }
+    }
+    sample.message()
+  </script>
+</head>
+<body>
+
+</body>
+</html>

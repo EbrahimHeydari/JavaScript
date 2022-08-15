@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Emoji Slider</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="section">
+      <div class="emojis">
+        <li class="slide-icon"><img src="image/1.png" alt="face"></li>
+        <li><img src="image/2.png" alt="face"></li>
+        <li><img src="image/3.png" alt="face"></li>
+        <li><img src="image/4.png" alt="face"></li>
+        <li><img src="image/5.png" alt="face"></li>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="tumb"><span></span></div>
+      <div class="progress-bar"></div>
+      <input type="range" min="0" max="100" value="0">
+    </div>
+  </div>
+
+  <script>
+    const slider = document.querySelector('input')
+    const tumb = document.querySelector('.tumb')
+    const bar = document.querySelector('.progress-bar')
+    const slideIcon = document.querySelector('.slide-icon')
+
+    slider.oninput = () => {
+      let value = slider.value
+      tumb.style.left = value + '%'
+      bar.style.width = value + '%'
+      if (value < 20) {
+        slideIcon.style.marginTop = '0px'
+        document.body.style.background = 'linear-gradient(red , orange)'
+      }
+      if (value >= 20) {
+        slideIcon.style.marginTop = '-150px'
+        document.body.style.background = 'linear-gradient(#orange , #dc611e)'
+      }
+      if (value >= 40) {
+        slideIcon.style.marginTop = '-300px'
+        document.body.style.background = 'linear-gradient(#dc611e ,#fd8d58)'
+      }
+      if (value >= 60) {
+        slideIcon.style.marginTop = '-450px'
+        document.body.style.background = 'linear-gradient(#ffa500 , gold)'
+      }
+      if (value >= 80) {
+        slideIcon.style.marginTop = '-600px'
+      }
+    }
+  </script>
+</body>
+
+</html>

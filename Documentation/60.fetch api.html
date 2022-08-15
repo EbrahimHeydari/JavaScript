@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch api</title>
+</head>
+
+<body>
+
+  <button onclick="getData('data.json')">Get data</button>
+
+  <div>
+    <p id="name"></p>
+    <p id="family"></p>
+    <p id="age"></p>
+  </div>
+
+  <script>
+    // fetch api
+    // روشی جدید برای کار با درخواست های http است
+    // برای این کار از سه تابع زیر استفاده می شود
+
+
+    // fetch(url,)
+    // از این تابع برای گرفتن اطلاعات استفاده میشه
+    // این تابع اطلاعات را به صورت یک promise بر می گرداند
+    // پارامتر اول آدرس فایل است
+
+
+
+    // then(response)
+    // برای مدیریت پاسخ  دریافتی از این تابع استفاده میشه
+    // تابعی را به صورت پارامتر دریافت می کند و روی پاسخ دریافتی، عملیاتی را انجام می دهد
+    // محدودیتی در تعداد استفاده ندارد ولی هرچه کمتر، بهتر
+
+
+
+    // catch(error)
+    // برای مدیریت خطا های احتمالی هنگام کار با درخواست ها استفاده می شود
+    // تابعی را به صورت پارامتر دریافت می کند و مدیریت خطا را انجام می دهد
+
+    function getData(url) {
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          console.log((data))
+          document.getElementById('name').innerHTML = data.person.name
+          document.getElementById('family').innerHTML = data.person.family
+          document.getElementById('age').innerHTML = data.person.age
+        })
+        .catch(error => {
+          document.getElementById('demo').innerHTML = error
+        })
+    }
+
+  </script>
+</body>
+
+</html>

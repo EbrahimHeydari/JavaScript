@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope variables</title>
+</head>
+<body>
+  <script>
+    // "use strict"
+
+    // Block Scope
+    (function foo() {
+      for (let i = 0; i < 3; i++) {
+        console.log(i)
+      }
+      console.log(i * 3)
+    })
+    // ()
+
+    function hello() {
+      var A = 'Scope 1'
+      console.log(C)       // undefined
+
+      function world() {
+        var B = "Scope 2"
+
+        function boom() {
+          var C = "Scope 3"
+          return ` I've access to ${A}, ${B} , ${C}`
+        }
+
+        return boom
+      }
+
+      return world
+    }
+
+    // var sayHello = hello()()()
+    // console.log(sayHello)
+
+
+    // Explicit Blobk
+    // {
+    //   let b = 4
+    //   console.log(b)
+    // }
+    // console.log(b)
+
+    function process() {
+      let b = 4
+
+      {
+        let someData = 5
+        b = 5
+      }
+
+      return function foo() {
+        console.log(b)
+        b = 6
+        console.log(b)
+        console.log(someData)
+      }
+    }
+
+    // process()()
+
+
+    // look-up
+    say(3)
+
+    function say(b) {
+      c = b
+      console.log(c)
+    }
+  </script>
+</body>
+</html>

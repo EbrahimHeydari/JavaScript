@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Collection</title>
+</head>
+<body>
+  <p>Hello World</p>
+  <p>Hello Ebrahim</p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+
+  <button id="red">Change Color</button>
+
+  <script src="00.js"></script>
+  <script>
+    // HTMLCollection
+    // یک لیست آرایه مانند از تمام عناصر HTML است
+    // در واقع هنگامی که از دستورات دسترسی به عناصر HTML استفاده می کنیم، یک شئ از آن را به ما بر می گرداند
+
+    // مثال
+    var collection = document.getElementsByTagName('p')
+    demo.innerHTML = 'collection length is: ' + collection.length
+    var demo2 = document.getElementById('demo2')
+    demo2.innerHTML = 'second paragraph is: ' + collection[1].innerHTML
+
+    // کاربرد length
+    var red = document.getElementById('red')
+    red.addEventListener('click', redColor)
+
+    function redColor() {
+      var i
+      plength = collection.length
+      for (i = 0; i < plength; i++) {
+        collection[i].style.color = 'red'
+      }
+    }
+
+    // HTML Collection در حقیقت یک شئ است نه آرایه
+    // پس شما نمی توانید از توابع مربوط به آرایه ها بر روی آن استفاده کنید
+
+
+    // NodeList
+    // این شئ لیست از گره ها است که از یک سند گرفته شده است
+    // این شئ تقریبا مشابه HTMLCollection است
+    // تمام مرورگرها برای خصوصیات زیر یک NodeList برمی گردانند
+    // querySelectorAll() و chlidNodes
+
+    // مثال
+    var myChilds = document.body.childNodes
+    demo.innerHTML = 'first paragraph is: ' + myChilds[1].innerHTML
+    var myList = document.querySelectorAll('p')
+    demo2.innerHTML = 'second paragraph is: ' + myList[1].innerHTML
+
+
+    // NodeList VS HTMLCollection
+    // NodeList: تنها از طریق شماره ایندکس قابل دسترسی است
+    // HTMLCollection: از طریق نام، شناسه و شماره ایندکس قابل دسترسی است
+  </script>
+</body>
+</html>

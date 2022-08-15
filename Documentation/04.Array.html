@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+  <script>
+    // آرایه ها
+    // مجموعه ای از داده های همنوع و غیر همنوع
+
+    // روش های تعریف
+
+    // روش اول
+    var numbers = [2, 4, 8, 32,]
+
+
+    // روش دوم
+    var colors = new Array("red", "black", "white", "green", "brown")
+    var names = new Array('mohammad', 'hasan', 'mahdi')
+
+
+    // روش سوم
+    var cars = []
+    cars[0] = 'benz'
+    cars[1] = 'volvo'
+    cars[2] = 'toyota'
+    cars[9] = 'nisan'
+
+
+
+    // ویژگی ها و متدها
+
+    // delete
+    // مقدار متغیر را در آرایه حذف می کند و اندیس آن را باقی می گذارد
+    // delete cars[0]
+    // console.log(cars)
+
+
+    // isArray(object)
+    // بررسی می کند که یک شئ یک آرایه است یا نه
+    // خروجی این متد اعضای آرایه است
+    // console.log(Array.isArray(colors))
+
+
+    // includes(value , start)
+    // بررسی می کند که آیا آرایه شامل یک مقدار خاص هست یا نه
+    // آرگومان اول مقداری که می خواهیم توی آرایه جستجو کنیم است
+    // آرگومان دوم مبدا جستجو است 
+    // به حروف کوچک و بزرگ حساس است
+    // خروجی مقدار بولی است
+    // console.log(colors.includes('white', 0))
+    // console.log(colors.includes('white', 1))
+
+
+    // length
+    // به دست آوردن تعداد مقادیر آرایه
+    // console.log(cars.length)
+
+
+    // toString()
+    // آرایه را موقتا به رشته تبدیل می کند
+    // console.log(colors.toString())
+    // console.log(colors)
+
+
+    // join()
+    // آرایه را با جداکننده مخصوص موقتا تبدیل به رشته می کند
+    // console.log(colors.join(' ❤ '))
+    // console.log(colors)
+
+
+    // concat()
+    // افزودن مقادیر جدید به آرایه
+    // حتی می تواند دو آرایه را ادغام کند
+    // var cars = cars.concat('praid', 'neisaan')
+    // console.log(cars)
+
+
+    // slice(start , end)
+    // تعیین نمایش مقادیر خاصی از آرایه
+    // آرگومان اول مقدار مبداء
+    // آرگومان دوم مقدار مقصد
+    var slice1 = cars.slice(1)
+    var slice2 = cars.slice(1, 3)
+    // console.log(slice1)
+    // console.log(slice2)
+
+
+    // push()
+    // افزودن مقادیر جدید به انتهای آرایه
+    names.push('Ebrahim', 'Hmaid', 'reza')
+    // console.log(names)
+
+
+    // pop()
+    // حذف مقادیر از انتهای آرایه
+    names.pop()
+    names.pop()
+    // console.log(names)
+
+
+    // unshift()
+    // افزودن مقادیر جدید به ابتدای آرایه
+    names.unshift('sadra')
+    names.unshift('amir')
+    // console.log(names)
+
+
+    // shift()
+    // حذف مقادیر از ابتدای آرایه
+    names.shift()
+    names.shift()
+    // console.log(names)
+
+
+    // sort()
+    // مرتب کردن آرایه ها
+    var Nsort = colors.sort()
+    // console.log(Nsort)
+
+
+    // reverse()
+    // معکوس کردن ترتیب آرایه ها
+    var Nrevs = colors.reverse()
+    // console.log(Nrevs)
+
+
+    // splice()
+    // برای درج و حذف مقادیر آرایه به کار می رود
+    // آرگومان اول موقعیت مقدار اضافه شده
+    // آرگومان دوم تعداد مقادیری که باید حذف شود
+    // آرگومان های بعدی مقادیری که باید افزوده شود را بنویسید
+
+    numbers.splice(4, 0, 64, 128, 256, 512, 1024)
+    // console.log(numbers)
+
+    var Isort = numbers.sort()
+    // console.log(Isort.toString())
+
+
+
+    // متدهای تکرار آرایه
+
+    // forEach()
+    // یک تابع را روی هر یک از عناصر آرایه فراخوانی می کند
+    var numbers = [1, 2, 4, 8, 32, 64]
+    function reference(value) {
+      console.log(value)
+    }
+    // numbers.forEach(reference)
+
+
+    // map()
+    // با انجام یک تابع در هر عنصر آرایه یک آرایه جدید ایجاد می کند
+    // این متد آرایه اصلی را تغییر نمی دهد
+    function myMap(value) {
+      console.log(value ** 2)
+    }
+    // numbers.map(myMap)
+
+
+    // filter()
+    // یک آرایه جدید با عناصر آرایه ایجاد می کند که تست می شود
+    function myFilter(value) {
+      if (value > 15)
+        console.log(value)
+    }
+    // numbers.filter(myFilter)
+
+
+    // reduce()
+    // یک تابع در هر عنصر آرایه برای تولید یک مقدار (کاهش آن) را اجرا می کند
+    // می تواند یک مقدار خاص را به عنوان آرگومان دوم بپذیرد
+    // به ترتیب از چپ به راست کار می کند
+    // این متد آرایه اصلی را تغییر نمی دهد
+    function myReduce(total, value) {
+      console.log(total - value)
+    }
+    // numbers.reduce(myReduce)
+    // numbers.reduce(myReduce , 10)
+
+
+    // every()
+    // بررسی می کند که آیا تمام مقادیر آرایه یک تست را تحویل می دهند
+    function myEvery(value) {
+      if (value > 1)
+        console.log(value)
+    }
+    // numbers.every(myEvery)
+
+
+    // some()
+    // بررسی می کند که آیا برخی مقادیر یک تست را تحویل می دهند
+    function mySome(value) {
+      if (value < 1000)
+        console.log(value)
+    }
+    // numbers.some(myEvery)
+
+
+    // indexOf()
+    // یک آرایه را برای یک مقدار عنصر جستجو کرده و موقعیت آن را باز می گرداند
+    // اگر پیدا نشود 1- را بر می گرداند
+    // console.log(numbers.indexOf(32))             // 6
+    // console.log(numbers.indexOf(5120))           // 6
+
+
+    // lastIndexOf()
+    // مانند متد بالا است با این تفاوت که از انتها شروع می کند
+    // console.log(numbers.lastIndexOf(32))       // 1
+
+
+    // find()
+    // مقدار عنصر اول که یک تست را می گذراند، بر می گرداند
+    function myFind(value) {
+      if (value < 150)
+        console.log(value)
+    }
+    // numbers.find(myFind)
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

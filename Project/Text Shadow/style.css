@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+  font-size: 2em;
+  background: gold;
+  font-family: cursive;
+}
+
+#td {
+  text-shadow: 0 1px 1px #bbb,
+    0 2px 0 #999, 0 3px 0 #888,
+    0 4px 0 #777, 0 5px 0 #666,
+    0 6px 0 #555, 0 7px 0 #444,
+    0 8px 0 #333, 0 9px 7px #302314;
+  color: #ccc;
+}
+
+#ts {
+  text-shadow: 0 1px 1px #bbb,
+    0 2px 0 #999, 0 3px 0 #888,
+    0 4px 0 #777, 0 5px 0 #666,
+    0 6px 0 #555, 0 7px 0 #444,
+    0 8px 0 #333, 0 9px 7px #302314;
+}
+
+#tf {
+  text-shadow: 0 1px 1px #ddd,
+    0 2px 0 #c5bba4,
+    0 3px 0 #c5bba5,
+    0 4px 0 #b7ae98,
+    0 5px 0 #a39a87,
+    0 6px 0 #8b8472,
+    0 7px 0 #726c5c,
+    0 8px 0 #5b5547,
+    0 9px 7px #474136;
+}
+
+#tb {
+  color: #ddd;
+  text-shadow: 0px -1px 1px #000;
+}

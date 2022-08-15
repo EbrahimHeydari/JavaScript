@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbdbdb;
+}
+
+.container {
+  max-width: 300px;
+  position: relative;
+  margin-top: 250px;
+}
+
+.container .hammer,
+.container .platform {
+  width: 100%;
+}
+
+.container .hammer {
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  transform: translatex(150px);
+  animation: knock 1.1s infinite ease-in-out;
+}
+
+@keyframes knock {
+  50% {
+    transform: rotate(-45deg);
+  }
+}

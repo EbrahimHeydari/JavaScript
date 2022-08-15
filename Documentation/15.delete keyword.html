@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>delete keyword</title>
+  <script>
+    // delete
+    // برای حذف خصوصیات اشیاء و مقادیر آرایه به کار می رود
+    // این دستور خصوصیت را به همراه مقدار آن حذف می کند
+    // همچنین می توان توابع را هم با این دستور حذف کرد
+    // نباید از این کلید واژه روی خصوصیات پیش فرضی استفاده کنید که خود جاوااسکریپت آنها را تعریف کرده است
+
+    var person = {
+      name: 'ali',
+      family: 'akbari',
+      age: 19
+    }
+    delete person.age
+    console.log(person.age)
+
+
+    var bros = ['Mohammad', 'Ali', 'Small']
+    delete bros[2]
+    console.log(bros)
+
+
+    delete function show() {
+      alert('wellcome')
+    }
+    show()
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

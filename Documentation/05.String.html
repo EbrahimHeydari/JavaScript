@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+</body>
+
+<script>
+  // رشته
+  // توالی و ترکیبی از کاراکترها
+
+  var string = new String('Ebrahim Heidary')
+  var string = string + ' From mashhad city'
+  var fruits = 'banana,apple,orange'
+  var space = '       Ebrahim Heidary         '
+  var intString = 50
+  var me = `Ebrahim
+              Heidary`
+  var force = '50'
+  var demo = document.getElementById('demo')
+
+  // ویژگی ها و متدها
+
+  // length
+  // نمایش تعداد کاراکترها
+  // console.log(`me: ${me} length: ${me.length}`)
+
+
+  // trim()
+  // فضاهای خالی را از دو طرف رشته پاک می کند
+  // این متد کاری به فضای خالی بین رشته ها ندارد
+  // console.log(space)
+  // alert(space)
+
+  var trim = space.trim()
+  // console.log(trim)
+  // demo.innerHTML = trim
+  // alert(trim)
+
+
+
+  // split
+  // رشته را به آرایه تبدیل می کند
+  // آرگومان دریافتی نوع جدا کننده است
+  color = 'red|black|white|green|brown'
+  split = color.split('|')
+  // console.log(split)
+  // console.log(split[2])
+
+
+  // charAt()
+  // جایگاه عددی کاراکتر را در رشته نمایش می دهد
+  // console.log(string.charAt(0))
+
+
+  // charCodeAt()
+  // جایگاه عددی کاراکتر را به صورت کد کاراکتری در رشته نمایش می دهد
+  // console.log(string.charCodeAt(0))
+
+
+  // match()
+  // جستجوی یک عبارت درون رشته
+  // عبارت جستجو شده را به صورت خروجی برمی گرداند
+  // اگر عبارت درون رشته وجود نداشت (null) را بر می گرداند
+  // این متد به بزرگی و کوچکی حروف حساس است
+  // console.log(string.match('heidary'))                     // null
+  // console.log(string.match('Heidary'))                     // Heidary
+
+
+  // indexOf()
+  // موقعیت عددی کاراکتری خاص از ابتدا
+  // آرگومان دوم برای تعیین مکان شروع جستجو است
+  // console.log(string.indexOf('he'))
+  // console.log(string.indexOf('O'))
+  // console.log(string.indexOf('r'))
+  // console.log(string.indexOf('ry' , 5))
+
+
+  // includes()
+  // بررسی می کند که آیا رشته شامل مقدار مورد نظر است یا نه
+  // خروجی مقدار بولی است
+  // console.log(me.includes('rahim'))
+  // console.log(string.includes('rahim'))
+
+
+  // startsWith()
+  // بررسی می کند که رشته با مقدار مورد نظر شروع می شود یا نه
+  // خروجی مقدار بولی است
+  // console.log(me.startsWith('Ebrahim'))
+  // console.log(fruits.startsWith('apple'))
+
+
+  // repeat()
+  // رشته را به مقدار مورد نظر تکرار می کند
+  // خروجی به صورت رشته است
+  // console.log(me.repeat(10))
+  // console.log(`*`.repeat(2) , string , `*`.repeat(5))
+
+
+  // lastIndexOf()
+  // موقعیت عددی کاراکتری خاص از انتها
+  // آرگومان دوم برای تعیین مکان شروع جستجو است
+  // console.log(string.indexOf('he'))
+  // console.log(string.indexOf('O'))
+  // console.log(string.indexOf('r'))
+  // console.log(string.indexOf('ry' , 5))
+
+
+  // localeCompare()
+  // رشته ها را با یکدیگر مقایسه می کند
+  // اگر بزرگتر باشد 1 را بر می گرداند
+  // اگر برابر باشد 0 را بر می گرداند
+  // اگر کوچکتر باشد 1- را بر می گرداند
+  // console.log(string.localeCompare('Ali'))
+  // console.log(string.localeCompare('Ebrahim Heidary From mashhad city'))
+  // console.log(string.localeCompare('Mahdi'))
+
+
+  // search()
+  // درون رشته جستجو می کند
+  // اگر پیدا شود موقعیت عددی آن را بر می گرداند
+  // اگر پیدا نشود 1- را برمی گرداند
+  // console.log(string.search('مشهد'))
+
+
+  // replace()
+  // رشته ها با یکدیگر جایگزین می کند
+  // demo.innerHTML = (string.replace('mashhad' , 'Tehran'))
+
+
+  // slice()
+  // رشته ای را از رشته دیگر موقتا حذف می کند
+  // آرگومان اول محل شروع
+  // آرگومان دوم محل پایان
+  // آگر آرگومان دوم نوشته نشود پایان، طول رشته در نظر گرفته می شود
+  // console.log(string.slice(15))
+  // console.log(string.slice(8 , 28))
+  // console.log(string.slice(10))
+  // console.log(string.slice(8 , 13))
+
+
+  // substr()
+  // رشته ای را از رشته دیگر موقتا حذف می کند
+  // آرگومان اول محل شروع
+  // آرگومان دوم محل پایان
+  // آگر آرگومان دوم نوشته نشود پایان، طول رشته در نظر گرفته می شود
+  // این متد  اعداد منفی را نمی پذیرد
+  // console.log(string.substr(20))
+  // console.log(string.substr(8 , 20))
+  // console.log(string.substr(20 , 8))
+
+
+  // toLowerCase()
+  // رشته را با حروف کوچک نمایش می دهد
+  // demo.innerHTML = (string.toLowerCase())
+
+
+  // toUpperCase()
+  // رشته را با حروف بزرگ نمایش می دهد
+  // demo.innerHTML = (string.toUpperCase())
+
+
+  // eval(string)
+  // متن درون رشته را تبدیل به کد می کند
+  // eval('demo.innerHTML = intString')                 // 50
+
+
+  // big()
+  // اندازه متن رشته را بزرگ می کند
+  // demo.innerHTML = string.big()
+
+
+  // small()
+  // اندازه متن رشته را کوچک می کند
+  // demo.innerHTML = string.small()
+
+
+  // bold()
+  // رشته را ضخیم می کند
+  // demo.innerHTML = string.bold()
+
+
+  // fontcolor()
+  // رنگ متن را تعیین می کند
+  // demo.innerHTML = string.fontcolor('darkcyan')
+
+
+  // link()
+  // متن را تبدیل به لینک می کند
+  // demo.innerHTML = string.link('https://www.w3schools.com')
+
+
+  // ترکیب رشته ها و اعداد با استفاده از عملگر (+)
+  // console.log(intString)
+  // console.log('intString: ' + intString)
+
+
+  // تبدیل اعداد رشته ای به اعداد حسابی
+  // console.table(force)         // String
+  // console.table(+force)        // Number
+</script>
+
+</html>

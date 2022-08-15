@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops</title>
+  <script src="00.js"></script>
+  <script>
+    // حلقه ها
+    // حلقه ها به شما کمک می کند که یک یا چند دستور را تا زمانی که یک شرط برقرار است، تکرار کنید
+
+
+    // while
+    // ابتدا یک شرط را مورد بررسی قرار می دهد و تا زمانی که شرط برقرار باشد، کد های درون بلوک اجرا می شود
+    // اگر شمارنده یک بماند و آن را افزایش ندهیم و یا مقدار شرط هرگز غلط نشود، یک حلقه بی نهایت به وجود می آید
+    // اگر می خواهید یک حلقه بی نهایت ایجاد کنید که هبچ گاه متوقف نشود، باید یک شرط ایجاد کنید که همواره درست باشد
+    // while(five < 10) {
+    //     alert('welcome')
+    //     ++five;
+    // }
+
+
+    // do while
+    // در این کد ابتدا کد اجرا می شود و سپس شرط مورد بررسی قرار می گیرد
+    // در این حلقه شرط در آخر ساختار قرار دارد. یعنی کد های بدنه یک بار اجرا می شوند
+    // do{
+    //     var get = prompt('Enter a Number geater than 10')
+    // }
+    // while(get <= 10){
+    //     get
+    // }
+
+
+    // for
+    // این حلقه شبیه به while است و فقط دارای چند خصوصیت اضافی است
+
+    // اجزاء تشکیل دهنده
+    // مقدار دهی اولیه
+    // شرط
+    // عملگر
+
+    // for (i=1; i<=6;i++) {
+    // if(i%2 === 0){
+    //     continue
+    // }
+    // document.write('<h'+i+'>'+'Heading '+i+'<h'+i+'>')
+    // }
+    // console.log(copy)
+
+    // قسمت سوم این حلقه فورا اجرا نمی شود
+
+    // nested loop
+    // for (i=1;i <= 4; i++) {
+    //     for(j=1; j <= 5; j++) {
+    //         console.log(' * ')
+    //     }
+    //     console.log('✔')
+    // }
+
+    // دستیابی به مقادیر آرایه
+    // var numbers = new Array(5)
+    // var total = 0
+    // var average
+    // for (var i = 0; i < numbers.length; i++) {
+    //     numbers[i] = parseInt(prompt("Enter A Number:"))
+    //     console.log(`Number ${i}: ${numbers[i]}`)
+    // }
+    // for (var i = 0; i < numbers.length; i++) {
+    //     total += numbers[i]
+    // }
+    // console.log('Total: ' + total)
+    // average = total / numbers.length
+    // console.log('average: ', average)
+
+
+    // for of
+    // برای آرایه ها، رشته ها و مجموعه ها طراحی شده است
+
+    // var numbers = [
+    //     [zero, one, two, three, four],
+    //     [five, six, seven, eight, nine],
+    //     [ten, twenty, thirty, forty, fifty],
+    //     [sixty, seventy, eighty, ninety]
+    // ]
+    // for (const array of numbers) {
+    //     for (const num of array) {
+    //         console.log('Number:', num)
+    //     }
+    // }
+
+
+    // for in
+    // بین خصوصیت های یک شئ می چرخد
+
+    // for (var key in phones)
+    //     console.table(`${key} phones: ${phones[key]}`)
+    //     for (const phone of phones[key])
+    //         console.log('my phone:', phone)
+
+
+    // for (const key in languages) {
+    //     var keyString = String(languages[key]);
+    //     console.log(key, 'languages: ', keyString);
+    // }
+
+    // خارج شدن از حلقه
+    // break: حلقه را کاملا متوقف می کند
+    // continue: بخشی از حلقه را رد و مرحله بعد را اجرا می کند
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

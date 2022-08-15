@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>location</title>
+</head>
+<body>
+  <button onclick="location.reload()">Refresh</button>
+  <button onclick="location.assign('https://www.google.com')">Google</button>
+  <button onclick="location.replace('https://www.youtube.com')">YouTube</button>
+  <button onclick="location.href = 'https://www.linkedin.com'">Linkedin</button>
+
+  <div>
+    <p id="demo"></p>
+  </div>
+
+  <script>
+    console.log(location.pathname)
+    console.log(location.protocol)
+  </script>
+</body>
+</html>

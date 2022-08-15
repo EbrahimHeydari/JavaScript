@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="00.js"></script>
+  <title>drop-down list</title>
+</head>
+<body>
+  <div>
+    <select id="car" onchange="SetValue('car' , 'carmodel' , carsAndModels)">
+      <option value="">Your Car:</option>
+      <option value="VO">Volvo</option>
+      <option value="VW">Volkswagen</option>
+      <option value="BMW">BMW</option>
+    </select>
+
+    <select id="carmodel"></select>
+  </div>
+
+  <div>
+    <select id="company" onchange="SetValue('company', 'phone', phones)">
+      <option value="">نوع تلفن</option>
+      <option value="Samsung">سامسونگ</option>
+      <option value="Houawi">هوآوی</option>
+      <option value="Xiaomi">شیائومی</option>
+      <option value="Nokia">نوکیا</option>
+    </select>
+
+    <select id="phone"></select>
+  </div>
+
+  <div>
+    <select id="Envir" onchange="SetValue('Envir' , 'lang' , languages)">
+      <option value="">محیط برنامه نویسی</option>
+      <option value="web">web</option>
+      <option value="game">game</option>
+      <option value="data">data</option>
+      <option value="desktop">desktop</option>
+      <option value="mobile">mobile</option>
+    </select>
+
+    <select id="lang"></select>
+  </div>
+
+  <div>
+    <select id="reshte" onchange="SetValue('reshte' , 'shakhe' , reshteha)">
+      <option value="">رشته مورد نظر</option>
+      <option value="nazari">نظری</option>
+      <option value="karodanesh">کارودانش</option>
+      <option value="fannie">فنی و حرفه ای</option>
+    </select>
+
+    <select id="shakhe"></select>
+  </div>
+
+  <div>
+    <select id="level" onchange="SetValue('level', 'payeh' , levels)">
+      <option value="">پایه تحصیلی</option>
+      <option value="dabestan">دبستان</option>
+      <option value="first">متوسطه اول</option>
+      <option value="second">متوسطه دوم</option>
+    </select>
+
+    <select id="payeh"></select>
+  </div>
+
+  <div>
+    <button onclick="show();this.disabled = true" id="btn">Submit</button>
+  </div>
+
+  <div id="values"></div>
+
+  <script>
+
+    var carsAndModels = {
+      VO: ['V70', 'XC60', 'XC90'],
+      VW: ['Golf', 'Polo', 'Scirocco', 'Touareg'],
+      BMW: ['M6', 'X5', 'Z3']
+    }
+
+    function SetValue(group, item, data) {
+      var list = document.getElementById(group)
+      var detail = document.getElementById(item)
+      var selected = list.options[list.selectedIndex].value
+      while (detail.options.length) {
+        detail.remove(0)
+      }
+      var values = data[selected]
+      if (values) {
+        var i
+        for (i = 0; i < values.length; i++) {
+          var value = new Option(values[i], i)
+          detail.options.add(value)
+        }
+      }
+    }
+
+    // نوشتن فقط یک بار
+    function show() {
+      var select = document.getElementsByTagName('select')
+
+      for (i = 1; i < select.length; i += 2) {
+        var p = document.createElement('p')
+        p.innerHTML = select[i].options[select[i].selectedIndex].innerHTML
+        document.getElementById('values').appendChild(p)
+      }
+    }
+
+  </script>
+</body>
+</html>

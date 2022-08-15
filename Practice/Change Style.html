@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change the style</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="00.js"></script>
+  <script>
+    function ChangeColor(name, value) {
+      var id = document.getElementById(name)
+      id.style.color = value
+    }
+
+    function ChangeFont(font) {
+      var text = document.getElementById('demo')
+      text.style.fontFamily = font
+    }
+
+    function ChangeText() {
+      var content = document.getElementById('text').value
+      document.getElementById('demo').innerHTML = content
+    }
+
+    function ChangeSize(size) {
+      var text = document.getElementById('demo')
+      text.style.fontSize = size + 'px'
+    }
+
+  </script>
+</head>
+<body" id="body">
+  <div>
+    <p id="demo">Hello World</p>
+  </div>
+  <div>
+    <input type="text" id="text" placeholder="please enter value">
+    <button type="submit" id="btn" onclick="ChangeText()">Change Text</button>
+  </div>
+  <div>
+    <button onclick="ChangeColor('body','#ff7f50')">Change color</button>
+    <button onclick="ChangeColor('body','#000')">Reset color</button>
+    <button onclick="ChangeFont('Mj_Faraz')">Change Font (fa)</button>
+    <button onclick="ChangeFont('cursive')">Change Font (en)</button>
+    <button onclick="ChangeFont('Vazir , Tahoma')">Reset Font</button>
+  </div>
+  <div>
+    <input type="number" placeholder="Size The Text" onblur="ChangeSize(this.value)">
+  </div>
+  <div>
+    <button onclick="ChangeSize('40')">xx-large</button>
+    <button onclick="ChangeSize('28')">x-large</button>
+    <button onclick="ChangeSize('20')">large</button>
+    <button onclick="ChangeSize('16')">medium</button>
+    <button onclick="ChangeSize('12')">Small</button>
+    <button onclick="ChangeSize('8')">x-Small</button>
+  </div>
+  </body>
+
+</html>

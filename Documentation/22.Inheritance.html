@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inheritance</title>
+  <script src="00.js"></script>
+  <script>
+
+    // inheritance
+    class parent_1 {
+      #field = 'this is private field'
+      massage() {
+        console.log('this is public message!')
+      }
+    }
+    class child_1 extends parent_1 {
+
+    }
+    let boy_1 = new child_1()
+    // boy_1.massage()
+    // boy_1.#field      // Error: Private field '#field' must be declared in an enclosing class
+
+
+
+    // super() &  super keyword
+    class parent_2 {
+      constructor() {
+        console.log('parent_2 class message')
+      }
+      Show() {
+        console.log(world)
+      }
+    }
+    class child_2 extends parent_2 {
+      constructor() {
+        super()            // method
+        super.Show()       // keyword
+      }
+    }
+    let boy_2 = new child_2()
+
+
+
+    // instanceof
+    // چک می کند که آیا یک متغیر، نمونه ای از شی است یا خیر
+
+    if (boy_1 instanceof child_1) {
+      console.log(ok, 'boy_1')
+    }
+
+    if (boy_2 instanceof parent_2) {
+      console.log(ok, 'boy_2')
+    }
+
+  </script>
+</head>
+
+<body></body>
+
+</html>

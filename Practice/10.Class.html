@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="00.js"></script> -->
+  <title>Class</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+
+  <script>
+    var demo = document.getElementById('demo')
+
+    function Person(name, age) {
+      this.name = name
+      this.age = age
+      this.fullName = function () {
+        return this.name + ' ' + this.age
+      }
+    }
+    var person_1 = new Person('Ebrahim', 20)
+    var person_2 = new Person('komail', 19)
+    // console.log(person_1.fullName())
+    // console.log(person_2.fullName())
+
+    function person(name, age) {
+      this.name = name
+      this.age = age
+    }
+
+    var man = [
+      new Person('ali', 70),
+      new Person('reza', 32),
+      new Person('mahdi', 12)
+    ]
+    var text = ''
+    for (x in man) {
+      p = document.createElement('p')
+      p.innerHTML = text = man[x].fullName()
+      demo.appendChild(p)
+    }
+  </script>
+</body>
+
+</html>

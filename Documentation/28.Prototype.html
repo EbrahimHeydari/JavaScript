@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype</title>
+  <script>
+
+    // نمونه اولیه
+    // هر متدی که تعریف می کنیم، ویژگی هایی را از نمونه اولیه به ارث می برند
+    /* این ویژگی ها شامل متدها و خصوصیات مفیدی هستند که ما فکر می کنیم توی متغیرمان وجود دارند،
+    اما از یک والد به ارث برده می شوند */
+
+    /* به هیچ عنوان به نمونه های اولیه پیش فرض جاوااسکریپت و اشیاء استاندارد آن دست نزنید که تمام برنامه به هم خواهید ریخت */
+
+    var person = {
+      name: 'karl'
+    }
+    // console.log(person.toString())         // [object object]
+
+
+    // Object.create()
+    // شی را با نمونه اولیه دلخواه ایجاد می کند
+    // آرگومان این تابع، نمونه ی اولیه ی مد نظر است 
+    var parent = {
+      name: 'Lukas'
+    }
+    var child = Object.create(parent)
+    // console.log(child.name)            // Lukas
+
+
+
+    // hasOwnProperty()
+    // مشخص می کند که یک خصوصیت متعلق به یک شئ است یا نه
+    // console.log(child.hasOwnProperty('name'))      // false
+    // console.log(parent.hasOwnProperty('name'))     // true
+
+
+
+    // برای دسترسی به جزئیات نمونه اولیه دو روش وجود دارد
+
+    // console.log(Object.getPrototypeOf(child))
+
+    // or
+
+    // console.log(parent.__proto__)
+
+
+    // وقتی یک عضو را از یک شئ فرا می خوانیم ، جاوااسکریپت به دنبال آن عضو در همان شئ می گردد
+    // اگر نتوانست آن را پیدا کند درون نمونه اولیه آن را می گردد و اگر باز هم نتوانست پیدا کند، درون نمونه اولیه والد آن می گردد
+    // این زنجیره ی نمونه اولیه ادامه می یابد تا اینکه هیچ نمونه اولیه ای وجود نداشته باشد
+    // زنجیره ی نمونه ی اولیه جایی متوقف می شود که مقدار آن تهی (null) باشد
+
+
+
+    // طول زنجیره برای متغیرها
+
+    // طول زنجیره برای اشیاء 1 است
+    // console.log(person.__proto__)                      // object
+    // console.log(person.__proto__.__proto__)            // null
+
+    // طول زنجیره برای آرایه ها 2 است
+    // console.log(bros.__proto__)                        // array
+    // console.log(bros.__proto__.__proto__)              // object
+    // console.log(bros.__proto__.__proto__.__proto__)    // null
+
+    // طول زنجیره برای رشته ها 2 است
+    // console.log(eh.__proto__)                          // string
+    // console.log(eh.__proto__.__proto__)                // object
+    // console.log(eh.__proto__.__proto__.__proto__)      // null
+
+    // طول زنجیره برای اعداد 2 است
+    // console.log(army.__proto__)                        // number
+    // console.log(army.__proto__.__proto__)              // object
+    // console.log(army.__proto__.__proto__.__proto__)    // null
+
+
+
+    // prototype in forEach
+    function A() {
+
+    }
+    A.prototype.display = function () {
+      return 'A is invoked'
+    }
+
+    function B() {
+
+    }
+    B.prototype = Object.create(A.prototype)
+
+    var a = [new A(), new B()]
+
+    // a.forEach(
+    //     function (msg) {
+    //         console.log(msg.display())
+    //     }
+    // )
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

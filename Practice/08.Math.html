@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="00.js"></script>
+  <title>Math</title>
+</head>
+
+<body>
+  <input type="number">
+  <p id="demo"></p>
+  <button>Click me</button>
+
+  <script>
+    let number = document.querySelector('input')
+    let demo = document.querySelector('#demo')
+
+    document.querySelector('button').addEventListener('click', function () {
+      (number.value < 0) ? demo.innerHTML = number.value * -1 : demo.innerHTML = number.value
+    })
+
+    // document.querySelector('button').addEventListener('click', function () {
+    //     demo.innerHTML = Math.abs(number.value)
+    // })
+  </script>
+</body>
+
+</html>

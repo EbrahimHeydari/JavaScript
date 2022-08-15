@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Edit Elements</title>
+</head>
+
+<body>
+  <!-- Open in file explorer -->
+  <div class="video">
+    <video src="F:/Movie/Clip/1.mp4" controls></video>
+  </div>
+  <div class="buttons">
+    <button onclick="Go(-1)">Pervious</button>
+    <button onclick="Play()" id="play">Play</button>
+    <button onclick="Go(1)">Next</button>
+  </div>
+
+  <script>
+    var video = document.querySelector('video')
+    var playButton = document.getElementById('play')
+    var index = 1
+
+    playButton.addEventListener('dblclick', Pause)
+
+
+    // رفتن به ویدئوی بعدی و قبلی
+    function Go(value) {
+      if (index < 1)
+        index = 7
+      else if (index > 7)
+        index = 1
+      video.setAttribute('src', `F:/Movie/Clip/${index}.mp4`)
+      index += value
+    }
+
+    function Play() {
+      video.play()
+      if (video.played) {
+        playButton.innerHTML = 'Pause'
+      }
+    }
+
+    function Pause() {
+      video.pause()
+      if (video.paused) {
+        playButton.innerHTML = 'Play'
+      }
+    }
+  </script>
+</body>
+
+</html>

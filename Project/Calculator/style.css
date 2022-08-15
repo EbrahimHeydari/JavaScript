@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  font-size: 100%;
+  font: inherit;
+}
+
+body {
+  color: #404040;
+  background: #d8e5e5;
+  font: 12px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+}
+
+input,
+button {
+  box-sizing: border-box;
+}
+
+a {
+  color: #ffe600;
+}
+
+.menu {
+  width: 177px;
+  padding: 15px;
+  margin: 50px auto;
+  border-radius: 4px;
+  background: #3d4543;
+  border: 1px solid #222222;
+  background-image: linear-gradient(to bottom, #3d4543, #2f2a2f);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  padding: 3px;
+  margin: 0 0 20px;
+  background: #222;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.Glass {
+  float: left;
+  font-size: 18px;
+  margin-top: 5px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.txt1 {
+  width: 80%;
+  float: right;
+  height: 35px;
+  color: #444;
+  display: block;
+  padding: 0 8px;
+  text-align: right;
+  border-radius: 2px;
+  background: #bccd95;
+  border: 1px solid #222222;
+  background-clip: padding-box;
+  font: 26px/35px 'Ubuntu Mono', monospace;
+  background-image: linear-gradient(to bottom, #bccd95, #e0f5b1);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12);
+
+}
+
+.txt2 {
+  width: 100%;
+  height: 35px;
+  color: #444;
+  padding: 0 8px;
+  display: block;
+  text-align: right;
+  border-radius: 2px;
+  background: #bccd95;
+  border: 1px solid #222222;
+  background-clip: padding-box;
+  font: 26px/35px 'Ubuntu Mono', monospace;
+  background-image: linear-gradient(to bottom, #bccd95, #e0f5b1);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.menu-row {
+  zoom: 1;
+  margin-top: 7px;
+}
+
+.menu-row:before,
+.menu-row:after {
+  content: '';
+  display: table;
+}
+
+.menu-row:after {
+  clear: both;
+}
+
+.btn-m {
+  padding: 0;
+  float: left;
+  width: 39px;
+  color: white;
+  cursor: pointer;
+  margin: 0 0 0 7px;
+  text-align: center;
+  border-radius: 3px;
+  background: #313131;
+  font: 14px/23px 'Ubuntu Mono', monospace;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  background-clip: padding-box !important;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(to bottom, #313131, #1c1c1c);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 1px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: 0.3s;
+}
+
+.btn-m:first-child {
+  margin-left: 0;
+}
+
+.btn-m:active {
+  transform: scale(0.95);
+  background: #282828;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6),
+    0 1px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.btn-sm {
+  font-size: 11px;
+}
+
+.btn-red {
+  background-image: linear-gradient(to bottom, #ff7286, #ff4561);
+}
+
+.btn-red:active {
+  background: #ff3352;
+}
+
+.btn-yellow {
+  background-image: linear-gradient(to bottom, #ffb935, #ffa70c);
+}
+
+.btn-yellow:active {
+  background: #ffa200;
+}
+
+.btn-big {
+  font-size: 16px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change the Elements</title>
+  <script src="00.js"></script>
+</head>
+
+<body onload="ShowPath()">
+  <!-- Open in file explorer -->
+  <div class="image">
+    <img src="F:/Picture/Car/1.jpg" width="450" height="300" alt="image">
+  </div>
+
+  <div class="source">
+    <button id="next" onclick="Go(1)">Next</button>
+    <button id="previous" onclick="Go(-1)">Previous</button>
+  </div>
+  <div>
+    <input type="number" id="goto" placeholder="Between 1 & 690" required>
+    <button onclick="GoTo()">Go</button>
+  </div>
+
+  <div class="Buttons">
+    <button onclick="DoubleSize()">DoubleSize size</button>
+    <button onclick="Resize()">reset size</button>
+    <button onclick="Remove()">Delete</button>
+  </div>
+
+  <div class="dir">
+    <p id="demo"></p>
+  </div>
+  <script>
+    // دسترسی به صفات عناصر
+
+    // getAttribute()
+    //  نام خصوصیت عنصر را بر می گرداند
+    var b = document.body
+    // console.log(b.getAttribute('id'))
+
+
+    // setAttribute()
+    //  برای عنصر خصوصیتی جدید تعریف می کند
+    // b.setAttribute('class', 'body') 
+
+
+    // removeAttribute()
+    //  خصوصیت مورد نظر را حذف می کند
+    // b.removeAttribute('id')
+
+
+    // remove(index)
+    // گره مورد نظر را حذف می کند
+
+
+
+    var index = 1
+    var img = document.querySelector('img')
+    var goto = document.getElementById('goto')
+    var event = addEventListener('click', ShowPath)
+
+    goto.event
+    document.getElementById('next').event
+    document.getElementById('previous').event
+
+    // عکس بعدی و عکس قبلی
+    function Go(value) {
+      if (index < 1) {
+        index = 365
+      }
+      if (index > 365) {
+        index = 1
+      }
+      img.setAttribute('src', 'F:/Picture/Car/' + index + '.jpg')
+      index += value
+    }
+
+    // رفتن به عکس مورد نظر از طریق شماره عکس
+    function GoTo() {
+      index = Number(goto.value)
+      img.setAttribute('src', 'F:/Picture/Car/' + index + '.jpg')
+      if (index > 365) {
+        alert('This Number Not Valid!')
+        throw 'This Number Not Valid!'
+      }
+    }
+
+    function ShowPath() {
+      demo.innerHTML = img.getAttribute('src').substr(15)
+    }
+
+    function Remove() {
+      img.remove(0)
+    }
+
+    function DoubleSize() {
+      img.width = '900'
+      img.height = '600'
+    }
+
+    function Resize() {
+      img.width = '450'
+      img.height = '300'
+    }
+  </script>
+</body>
+
+</html>

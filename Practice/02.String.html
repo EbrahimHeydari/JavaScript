@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String</title>
+  <script src="00.js"></script>
+</head>
+
+<body>
+  <p id="demo"></p>
+
+  <script>
+    var demo = document.getElementById('demo')
+    var text_1 = '       welcome to my page\ im Ebrahim heidary from mashhad city   '
+    var text_2 = '             سلام  به همه خوش آمدید       '
+    var text_3 = 'hadi'
+    var text_4 = '313'
+    var names = 'ali|mahdi|reza|hossein|kazem|bagher|hassan|sadegh|sajjad'
+    var cars = 'pykan*samand*nisan*pride*xintaia*mazda'
+    var split = names.split('|')
+    var split_2 = cars.split('*')
+    var join = split.join(' ☺ ')
+    var cyan = names.fontcolor('rgb(98,89,89)')
+    var palce = names.replace('kazem', 'javad')
+    var ball = ['\u26BD', '\u26BD', '\u26BD', '\u26BD ']
+    var bjoin = ball.join(' \u26BD ')
+    var hID = `${text_3}
+        and reza & ali 
+        or ahmad or mohammad
+        ${text_4}`;
+
+    // demo.innerHTML = bjoin.repeat(100)
+    // demo.innerHTML = hID
+  </script>
+</body>
+
+</html>

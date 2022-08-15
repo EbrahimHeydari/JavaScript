@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Animation</title>
+  <style>
+    #container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background-color: darkcyan;
+      border-radius: 10px;
+    }
+
+    #animate {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: #54be16;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="animate"></div>
+  </div>
+  <button onclick="myMove(0, 350, 1)">Move</button>
+  <button onclick="myMove(350, 0, -1)">Return</button>
+
+  <script>
+    // انیمیشن ها در مدل شئ گرای سند
+
+    // setInterval(function, miliseconds)
+    // یک تابع را هر چند ملی ثانیه به طور بینهایت تکرار می کند
+    // آرگومان اول نام تابع است
+    // آرگومان دوم زمان بر حسب میلی ثانیه است
+
+
+
+    // clearInterval(setInterval())
+    // تابع بالا را متوقف می کند
+    // پارامتر دریافتی، تابع بالاست که می توان آن را درون یک متغیر تعریف کرد
+
+
+
+    // مثال کامل
+    var element = document.getElementById('animate')
+
+    // function myMove() {
+    //     var position = 0
+    //     var id = setInterval(frame , 5)
+
+    //     function frame() {
+    //         if (position === 350) {
+    //             clearInterval(id)
+    //         }
+    //         else {
+    //             position++
+    //             element.style.top = position + 'px'
+    //             element.style.left = position + 'px'
+    //         }
+    //     }
+    // }
+
+    // function myReturn() {
+    //     var position = 350
+    //     var id = setInterval(frame , 5)
+
+    //     function frame() {
+    //         if (position === 0) {
+    //             clearInterval(id)
+    //         }
+    //         else {
+    //             position--
+    //             element.style.top = position + 'px'
+    //             element.style.left = position + 'px'
+    //         }
+    //     }
+    // }
+
+    // خلاصه شده مثال
+    function myMove(position, value, crease) {
+      var id = setInterval(frame, 5)
+
+      function frame() {
+        if (position === value) {
+          clearInterval(id)
+        }
+        else {
+          position += crease
+          element.style.top = position + 'px'
+          element.style.left = position + 'px'
+        }
+      }
+    }
+  </script>
+</body>
+</html>

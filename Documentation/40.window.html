@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>window Object</title>
+  <script src="00.js"></script>
+</head>
+
+<body>
+  <div>
+    <img src="icon/down.png" class="icon" alt="down" />
+  </div>
+  <div>
+    <button onclick="myWindow(300, 100)">show time in new window</button>
+  </div>
+  <div>
+    <button onclick="Close()">Close</button>
+  </div>
+  <div style="margin-bottom: 100000px">
+    <button onclick="reSize()">Resize</button>
+  </div>
+
+  <div>
+    <img src="icon/up.png" class="icon" alt="up" />
+  </div>
+  <script>
+
+    // window
+    // این شئ مهم ترین و ریشه ای ترین قسمت در BOM است
+    // تمام اشیاء، توابع و متغیرهای سراسری به صورت خودکار عضوی از این شئ خواهند شد
+    // متغیرهای سراسری، خصوصیات و توابع سراسری، متدهای این شئ محسوب می شوند
+    // این شئ شامل اسکرول بار و نوار ابزار نمی شود
+
+    // حتی خود سند html یا همان DOM جزوی از BOM محسوب می شود
+    window.document.getElementById('demo')
+
+
+    // خصوصیات
+
+    // window.innerHeight
+    // ارتفاع داخلی پنجره را به پیکسل می گیرد
+
+    // window.innerWidth
+    // عرض داخلی پنجره را به پیکسل می گیرد
+
+
+
+    // متدها
+
+    // window.open()
+    // باز کردن پنجره ی جدید
+
+
+    // window.close()
+    // بستن پنجره ی فعلی 
+
+
+    // window.focus()
+    // تمرکز بر روی عنصر
+
+
+    // opener()
+    // ایجاد محتوا درون پنجره جدید
+
+
+    // blur()
+    // برداشتن تمرکز از روی عنصر
+
+
+    // window.moveTo(X (horizontal), Y (vertical))
+    // جابه جا کردن پنجره ی فعلی
+
+
+    // window.moveBy(X (horizontal), Y (vertical))
+    // جابه جایی پنجره ی جدید به مکانی از صفحه نمایش
+
+
+    // window.resizeTO(X (horizontal), Y (vertical))
+    // تغییر اندازه ی پنجره ی فعلی
+
+
+    // window.resizeBy(X (horizontal), Y (vertical))
+    // تغییر اندازه پنجره ی جدید
+
+
+    // window.scrollTo(X (horizontal), Y (vertical))
+    // اسکرول کردن پنجره فعلی
+
+
+    // window.scrollBy(X (horizontal), Y (vertical))
+    // اسکرول کردن پنجره جدید
+
+
+
+    // مثال کاربردی
+    const myWindow = (x, y) => {
+      newWin = window.open('13.Date().html', '_blank', 'width = 500px , height = 500px')
+      newWin.window.moveTo(x, y)
+    }
+
+    const scrolling = value => window.scrollTo(0, value)
+    const Close = () => newWin.close()
+
+    const reSize = () => {
+      var Win = window.open('13.Date().html', '_blank', 'width = 500px , height = 800px')
+      Win.resizeTo(300, 300)
+      Win.focus()
+    }
+
+    const icons = document.querySelectorAll('.icon')
+
+    icons[0].onclick = () => scrolling(900000)
+    icons[1].onclick = () => scrolling(-900000)
+  </script>
+</body>
+
+</html>

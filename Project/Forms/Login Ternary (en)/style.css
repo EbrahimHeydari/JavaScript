@@ -1,0 +1,136 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: 100%;
+  box-sizing: inherit;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background-color: #101010;
+}
+
+.box {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  position: relative;
+  width: 300px;
+  padding: 10px;
+}
+
+.form-header {
+  height: 30px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form-header>div {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form.signup .form-header div.show-signup {
+  color: darkcyan;
+}
+
+.form.signin .form-header div.show-signin {
+  color: darkcyan;
+}
+
+.form.reset .form-header div.show-reset {
+  color: darkcyan;
+}
+
+.form .arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 45px;
+  transition: 0.5 ease-in-out;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ddd;
+}
+
+.form.signup .arrow {
+  left: calc(100% / 6);
+}
+
+.form.signin .arrow {
+  left: calc(100% / 2);
+}
+
+.form.reset .arrow {
+  left: calc(100% / 1.3);
+}
+
+.form-elements {
+  margin-top: 15px;
+}
+
+.form-element {
+  opacity: 1;
+  height: 50px;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+}
+
+.form-element input {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  margin: 5px auto;
+  box-sizing: inherit;
+  border-radius: 10px;
+}
+
+.form-element button {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: darkcyan;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.form-element button:hover,
+button:focus {
+  background-color: #101010;
+  border: 1px solid darkcyan;
+  color: darkcyan;
+}
+
+.form-element button:active {
+  transform: scale(.9);
+}
+
+.form.signin .form-elements>div:nth-child(3) {
+  opacity: 0;
+  height: 0;
+}
+
+.form.reset .form-elements>div:nth-child(2),
+.form.reset .form-elements>div:nth-child(3) {
+  opacity: 0;
+  height: 0;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Pattern</title>
+</head>
+
+<body>
+  <h1>Design Patterns</h1>
+
+  <script>
+    // الگوهای طراحی
+    // راه‌حل‌هایی هستند برای مشکلاتی که در طراحی و توسعه نرم‌افزارها بوجود میاد
+    // اینکه بدونیم کجا و چطوری از الگوهای طراحی استفاده کنیم خیلی مهمه
+
+
+    // مزایا
+    // افزایش مقیاس پذیری (scalability)
+    // افزایش انعطاف پذیری (flexibility)
+    // افزایش سرعت توسعه نرم افزار
+    // کاهش و مدیریت بهتر خطاها
+    // افزایش خوانایی کد (readability)
+
+
+    // دسته ها
+
+    // الگوهای طراحی سازنده (Creational Design Patterns)
+    // برای حل مشکلات مربوط به ایجاد اشیاء به ما کمک میکنن
+    // Singleton & Factory method & Builder & Null Object
+
+    // مثال: Null Object
+
+    class User {
+      constructor(id, name, role) {
+        this.id = id
+        this.name = name
+        this.role = role
+      }
+
+      hasAccess() {
+        return this.role === 'ADMIN'
+      }
+    }
+
+    const users = [
+      new User(1, 'Bob', 'ADMIN'),
+      new User(2, 'John', 'GUEST')
+    ]
+
+    // بدون الگو
+    // function getUser(id) {
+    //   return users.find(user => user.id === id)
+    // }
+
+    // function printUser(id) {
+    //   const user = getUser(id)
+    //   let name = 'Guest'
+
+    //   if (user != null && user.name != null) name = user.name
+    //   console.log(`hello ${name}`)
+
+    //   if (user != null && user.hasAccess != null && user.hasAccess())
+    //     console.log('you have access')
+    //   else
+    //     console.log('access denied')
+    // }
+
+    // printUser(1)
+    // printUser(2)
+
+    // با الگو
+    class NullUser {
+      constructor() {
+        this.id = -1
+        this.name = 'Guest'
+        this.role = 'GUEST'
+      }
+    }
+
+    function getUser(id) {
+      return users.find(user => user.id === id) || new NullUser()
+    }
+
+    function printUser(id) {
+      const user = getUser(id)
+
+      console.log(`hello ${user.name}`)
+      user.hasAccess()
+        ? console.log('you have access')
+        : console.log('access denied')
+    }
+
+    // printUser(1)
+    // printUser(2)
+
+
+
+
+
+    // الگوهای طراحی ساختاری (Structural Design Patterns) 
+    // برای حل مشکلات توسعه پذیری ساختار نرم افزارها و برای مدیریت بهتر ارتباط بین کلاس‌ها و اشیاء با همدیگه استفاده می‌شن
+    // Adapter & Decorator & Composite & Facade
+
+    // مثال: Builder Pattern
+
+    // class User {
+    //   constructor(name, age, phone, email) {
+    //     this.age = age
+    //     this.name = name
+    //     this.phone = phone
+    //     this.email = email
+    //   }
+    // }
+
+    // class userBuilder {
+    //   constructor(name) {
+    //     this.user = new User(name)
+    //   }
+
+    //   setAge(age) {
+    //     this.user.age = age
+    //     return this
+    //   }
+
+    //   setPhone(phone) {
+    //     this.user.phone = phone
+    //     return this
+    //   }
+
+    //   setEmail(email) {
+    //     this.user.email = email
+    //     return this
+    //   }
+
+    //   build() {
+    //     return this.user
+    //   }
+    // }
+
+    // let user_1 = new userBuilder('sajjad').setEmail('akbt35@gmail.com').build()
+
+    // let user_2 = new userBuilder('ali').setAge(24).build()
+
+    // console.log(user_1)
+    // console.log(user_2)
+
+
+
+
+
+    // الگوهای طراحی رفتاری (Behavioral Design Patterns)
+    // مجموعه‌ای از راهکارهای کدنویسی مربوط به تعامل و ارتباط اشیاء هستند
+    // Strategy & Visitor & Command & Iterator
+
+    // مثال: فعلا موجود نیست
+
+
+
+
+
+    // Module Pattern
+    // به ما اجازه می دهد کدهای خودمان را به قسمت های کوچک تر تقسیم کنیم
+
+    // نوع اول (STANDARD MODULE PATTERN)
+    // در این الگو توابع و متغیر های خصوصی را در قسمت اول قرار می دهیم
+    // سپس در قسمت دوم (return) توابع و متغیر های عمومی را قرار می دهیم
+
+    // ساختار
+    // (function () {
+    //   // Declare private vars and functions
+
+    //   return {
+    //     // Declare public var and functions
+    //   }
+    // })()
+
+
+    // مثال: STANDARD MODULE PATTERN
+
+    const UICtrl = (() => {
+      let text = 'Hello World'
+
+      const changeText = () => {
+        const element = document.querySelector('h1')
+        element.innerHTML = text
+      }
+
+      return {
+        callChangeText: () => {
+          changeText()
+          console.log(text)
+        }
+      }
+    })()
+
+    // UICtrl.callChangeText()
+
+
+    // نوع دوم (Revealing Module Pattern)
+    /* تنها تفاوت آن با الگوی نوع اول این است که در شیء برگردانده شده به جای تعریف یک تابع جدید
+    باید توابع خصوصی خودمان را به آن شیء برگردانده شده متصل کنیم */
+
+    // مثال: REVEALING MODULE PATTERN
+    const ItemCtrl = (() => {
+      let data = []
+
+      const add = item => {
+        data.push(item)
+        console.log('Item Added....')
+      }
+
+      const get = id => {
+        return data.find(item => {
+          return item.id === id
+        })
+      }
+
+      return {
+        add,
+        get
+      }
+    })()
+
+    ItemCtrl.add({ id: 1, name: 'John' })
+    ItemCtrl.add({ id: 2, name: 'Mark' })
+    console.log(ItemCtrl.get(1))
+    console.log(ItemCtrl.get(2))
+
+    /* به دلیل راحت تر بودن کار با الگوی دوم، اکثر توسعه دهندگان استفاده از آن را ترجیح می دهند
+    اما الگوی استاندارد روش اول به شما اجازه می دهد علاوه بر دسترسی به تابع کار های دیگری نیز انجام دهید
+    مثلا ما یک دستور console.log را نیز به آن اضافه کرده بودیم که در تابع اصلی وجود نداشت 
+    بنابراین در نهایت استفاده از هر کدام آن ها به نیاز شما بستگی دارد  */
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Move Animation</title>
+</head>
+
+<body>
+  <script>
+    document.onmousemove = () => {
+      let elment = document.createElement('div')
+      elment.style.top = event.clientY + 'px'
+      elment.style.left = event.clientX + 'px'
+      elment.style.background = randomColor()
+      elment.setAttribute('class', 'circle')
+      document.body.appendChild(elment)
+
+      setTimeout(() => document.body.removeChild(elment), 1000)
+    }
+
+    const randomColor = () => {
+      let hex = '0123456789abcdef'
+      let color = '#'
+      for (i = 0; i < 6; i++)
+        color += hex[Math.floor(Math.random() * hex.length)]
+
+      return color
+    }
+  </script>
+</body>
+
+</html>

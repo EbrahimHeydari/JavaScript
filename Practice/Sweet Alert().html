@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Sweet Alert Library</title>
+  <style>
+    input:not(input[type="checkbox"]) {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="text" placeholder="Your text" value="Simple Text" />
+  <input type="text" id="title" placeholder="Your title" value="Title" />
+
+  <select id="icon">
+    <option value="success">Success</option>
+    <option value="warning">Warning</option>
+    <option value="error">Error</option>
+    <option value="info">Info</option>
+  </select>
+
+  <div>
+    <p>Button type:</p>
+    <label for="cancel">Cancel</label>
+    <input type="checkbox" id="cancel" checked />
+    <label for="confirm">Confirm</label>
+    <input type="checkbox" id="confirm" checked />
+  </div>
+
+  <div>
+    <p>Close Mode:</p>
+    <label for="esc">Close on Esc</label>
+    <input type="checkbox" id="esc" checked />
+    <label for="outside">Close on click Outside</label>
+    <input type="checkbox" id="outside" checked />
+  </div>
+
+  <div class="">
+    <label for="danger">Danger Mode</label>
+    <input type="checkbox" id="danger" />
+    <input type="number" id="timer" value="3000" placeholder="show time" />
+  </div>
+
+  <button onclick="testAlert()">Confirm</button>
+
+
+
+  <script>
+    const testAlert = () => {
+      let text = document.getElementById('text').value
+      let title = document.getElementById('title').value
+      let icon = document.getElementById('icon').value
+      let cancel = document.getElementById('cancel').checked
+      let confirm = document.getElementById('confirm').checked
+      let closeOnEsc = document.getElementById('esc').checked
+      let closeOnClickOutside = document.getElementById('outside').checked
+      let dangerMode = document.getElementById('danger').checked
+      let timer = document.getElementById('timer').value
+
+
+      swal({
+        text,
+        title,
+        icon,
+        content: {
+          element: 'input',
+          attributes: {
+            placeholder: 'Your Password',
+            type: 'password'
+          }
+        },
+        buttons: {
+          cancel,
+          confirm
+        },
+        closeOnEsc,
+        closeOnClickOutside,
+        dangerMode,
+        timer
+      })
+    }
+
+  </script>
+</body>
+
+</html>

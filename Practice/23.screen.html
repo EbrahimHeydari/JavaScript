@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen</title>
+</head>
+<body dir="rtl">
+  <p id="1"></p>
+  <p id="2"></p>
+  <p id="3"></p>
+  <p id="4"></p>
+  <p id="5"></p>
+  <p id="6"></p>
+
+  <script>
+
+    document.getElementById('1').innerHTML = 'ارتفاع کل: ' + screen.height
+    document.getElementById('2').innerHTML = 'عرض کل: ' + screen.width
+    document.getElementById('3').innerHTML = 'ارتفاع موجود: ' + screen.availHeight
+    document.getElementById('4').innerHTML = 'عرض موجود: ' + screen.availWidth
+    document.getElementById('5').innerHTML = 'عمق رنگ: ' + screen.colorDepth
+    document.getElementById('6').innerHTML = 'عمق پیکسل: ' + screen.pixelDepth
+
+
+    console.log(screen.availHeight)
+    console.log(screen.availWidth)
+    console.log(screen.height)
+    console.log(screen.width)
+    console.log(screen.colorDepth)
+    console.log(screen.pixelDepth)
+  </script>
+</body>
+</html>

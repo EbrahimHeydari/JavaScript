@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instanceof</title>
+  <script>
+    // عملگر instanceof
+    // این عملگر به شما اجازه می دهد که تست کنید که یک شئ از نوع خاص است یا نه
+    // این عملگر به دو عملوند نیاز دارد و یک مقدار بولی را بر می گرداند
+
+    class Animal_1 { }
+
+    var animal = new Animal_1()
+
+    if (animal instanceof Animal_1) {
+      console.log('animal is a Animal')
+    }
+
+
+    // همچنین می تواند تست کند که آیا یک شی خاص در سلسله مراتب وراثت یک نوع خاص است
+
+    class Animal_2 { }
+
+    class dog extends Animal_2 { }
+
+    var dog_1 = new dog()
+
+    if (dog_1 instanceof Animal_2) {
+      console.log('dog is a Animal')
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

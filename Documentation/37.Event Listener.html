@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>addEventListener()</title>
+  <script src="00.js"></script>
+    
+</head>
+<body>
+  <button id="btn">click</button>
+  <p id="demo">random number</p>
+  <p id="show">current date</p>
+  <p id="width">current width</p>
+  <p id="height">current height</p>
+  <script>
+    // addEventListener(event , function)
+    // تعریف یک یا چندین رویداد مختلف به عناصر سند
+    // با این متد می توانید بدون دخالت در عناصر html، یک رویداد به آنها اضافه کنید
+    // آرگومان اول نوع رویداد
+    // آرگومان دوم تابعی که باید فراخوانی شود
+    // آرگومان سوم یک مقدار بولی است که (Event bubbling) یا (Event Capturing) را مشخص می کند 
+
+    // روش اول
+
+    var btn = document.getElementById('btn')
+    btn.addEventListener('click' , one)
+    btn.addEventListener('click' , two)
+
+    function one() {
+      var rand = Math.random() * 100
+      demo.innerHTML = Math.ceil(rand)
+    }
+
+    function two() {
+      var show  = document.getElementById('show')
+      var year  = date.getFullYear()
+      var month = date.getMonth()
+      var day   = date.getDay()
+      show.innerHTML = year + spc + month + spc + day
+    }
+
+    // روش دوم
+    window.addEventListener('resize' , function() {
+      ShowWidth(window.innerWidth)
+      ShowHeight(window.innerHeight)
+    })
+
+    function ShowWidth(width) {
+      document.getElementById('width').innerHTML = width + ' px'
+    }
+
+    function ShowHeight(height) {
+        document.getElementById('height').innerHTML = height + ' px'
+    }
+
+    // removeEventListener()
+    // پردازش رویداد های بالا را حذف می کند
+    // btn.removeEventListener('click' ,one)
+    // btn.removeEventListener('click' ,two)
+    // توزیع رویداد
+    // این قسمت مربوط به آرگومان سوم است
+    // روشی برای تعریف ترتیب رویدادها در هنگام اجراست
+    // این روش زمانی کاربرد دارد که بخواهیم ترتیب رویداد های عنصر والد و فرزند را مشخص کنیم
+    // این روش دو حالت دارد
+  
+    // bubbling  (true): ابتدا رویداد داخلی ترین عنصر اجرا می شود
+    // capturing (false): ابتدا رویداد خارجی ترین عنصر انجام می شود
+
+  </script>
+</body>
+</html>

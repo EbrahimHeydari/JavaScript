@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set() & Map()</title>
+  <script src="00.js"></script>
+</head>
+
+<body>
+  <script>
+    // Set()
+    // نوعی شئ است که مجموعه ای از داده ها را در خود ذخیره می کند
+    // این شئ مقادیر تکراری را نمی پذیرد
+
+    let collect = new Set()
+    collect.add('Ebrahim')             // افزودن داده
+    collect.add(true)
+    collect.add(19)
+    collect.add('male')
+    collect.delete(true)               // حذف داده
+    collect.add(true)
+    // collect.clear()                    // پاک کردن تمام داده ها
+    // console.log(collect)
+    // console.log(collect.size)          // نمایش تعداد داده ها
+
+    var numbers = [7, 6, 3, 3, 7, 1, 8, 9, 0, , 1, 2, , 45, 7, 9, 34,]
+    let dontRepeat = new Set(numbers)
+    // console.log(dontRepeat)
+
+    // Map()
+    // این شئ مقادیر کلید و مقدار را در خود ذخیره می کند
+    let person = new Map()
+    person.set('name', eh)            // افزودن کلید و مقدار
+    person.set('marital', false)
+    // person.clear()                   // پاک کردن داده ها
+
+    // console.log(person)
+    // console.log(person.size)         // نمایش تعداد داده ها
+  </script>
+</body>
+
+</html>

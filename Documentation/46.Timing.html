@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Timing</title>
+</head>
+<body>
+  <div>
+    <p id="demo"></p>
+    <button onclick="Timer = setInterval(myTimer, 1000)">Resume</button>
+    <button onclick="clearInterval(Timer)">Stop Timer</button>
+  </div>
+
+  <script>
+
+    // رویدادهای زمان بندی
+    // شئ window به ما اجازه می دهد تا کدها را در بازه های متخلف زمانی اجرا کنیم
+
+    // متدها
+
+    // setTimeout(function , miliseconds)
+    // یک تابع را بعد از بازه زمانی مشخص شده تکرار می کند
+    // پارامتر اول تابعی باید اجرا شود
+    // پارامتر دوم بازه زمانی بر حسب میلی ثانیه
+
+
+
+    // clearTimeout(timeOutVariable)
+    // تابع بالا را متوقف می کند
+    // کافیست تابع بالا را درون یک متغیر بگذارید و آن متغیر را به این تابع بدهید
+
+
+
+    // setInterval(function, miliseconds)
+    // یک تابع را هر چند ملی ثانیه به طور بینهایت تکرار می کند
+    // آرگومان اول نام تابع است
+    // آرگومان دوم زمان بر حسب میلی ثانیه است
+
+
+
+    // clearInterval(setInterval(function, miliseconds)
+    // تابع بالا را متوقف می کند
+    // پارامتر دریافتی، تابع بالاست که می توان آن را درون یک متغیر تعریف کرد
+
+
+
+    // مثال
+    var Timer = setInterval(myTimer, 1000)
+
+    function myTimer() {
+      var d = new Date()
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString()
+    }
+
+  </script>
+</body>
+</html>

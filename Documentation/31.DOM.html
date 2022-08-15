@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Model</title>
+  <script>
+    // مدل شئ گرای سند
+    // با استفاده از DOM قادریم به تمام عناصر موجود در سند درسترسی داشته و آنها را ویرایش کنیم
+    // گره (Node): اجزای تشکیل دهنده مدل شی گرای سند
+    // document: گره اصلی که در راس این مدل وجود دارد
+
+
+    // انواع گره ها
+
+    // عنصر (element): شامل عناصر صفحه است که با تگ های پایانی و آغازین مشخص می شوند
+    // این نوع گره تنها نوعی است که می تواند شامل فرزندان از انواع دیگر باشد
+    // متن (text): شامل متن موجود در عناصر هستند
+    // خصوصیات (attr): شامل خصوصیات عناصر هستند
+    // توضیحات (comment): شامل توضیحات سند می شود
+
+
+    // ویژگی ها
+    // document.alinkColor = 'red'
+    // console.log(document.title)
+    // console.log(document.charset)                // deprecated
+    // console.log(document.childNodes)
+    // console.log(document.contentType)
+    // console.log(document.cookie)
+    // console.log(document.defaultView)
+    // console.log(document.designMode)
+    // console.log(document.dir = 'rtl')
+    // console.log(document.doctype)
+    // console.log(document.documentElement)
+    // console.log(document.body)
+    // console.log(document.head)
+    // console.log(document.documentURI)
+    // console.log(document.domain)
+    // console.log(document.embeds)
+    // console.log(document.firstElementChild)
+    // console.log(document.forms)
+    // console.log(document.images)
+    // console.log(document.implementation)
+    // console.log(document.lastModified)
+    // console.log(document.links)
+    // console.log(document.all)
+    // console.log(document.location)
+    // console.log(document.parentElement)
+    // console.log(document.plugins)
+    // console.log(document.readyState)
+    // console.log(document.referrer)
+    // console.log(document.scripts)
+    // console.log(document.styleSheets)
+    // console.log(document.title)
+    // console.log(document.URL)
+    // console.log(document.baseURI)
+
+
+    console.log(document.childNodes[1] === document.documentElement)
+    // console.log(document.documentElement.childNodes.length)
+    // console.log(document.documentElement.hasChildNodes)
+
+    // document.documentElement.remove()            // حذف تمام عناصر در صفحه
+
+
+
+    // متد ها
+
+    // دسترسی به گره های خاص
+
+    // دسترسی به همه ی عناصر
+    var all = document.getElementsByTagName('*')
+
+    // دسترسی به عناصر از نوع
+    var link = document.getElementsByTagName('a')
+
+    // دسترسی به عناصر با نام خاص
+    var btn = document.getElementsByName('send')
+
+    // دسترسی به عناصر با کلاس خاص
+    var h1 = document.getElementsByClassName('h')
+
+    // دسترسی به عناصر با شناسه خاص
+    var button = document.getElementById('btn')
+
+
+    // استایل دهی به سند
+
+    function changeStyle(value) {
+      var myStyle = document.body.style
+      myStyle.backgroundColor = value
+    }
+
+    // دستکاری عناصر 
+    // innerHTML: محتوای عنصر را تغییر می دهد
+
+
+    function changeText() {
+      var demo = document.getElementById('demo')
+      demo.innerHTML = document.getElementById('text').value
+    }
+
+    // انتخاب محتوا
+    // select(): محتوای درون عنصر را انتخاب می کند
+
+    function selectText() {
+      document.getElementById('text').select()
+    }
+
+    // دستکاری لیست های کشویی
+
+    // selectedIndex
+    // اندیس گزینه ی انتخاب شده را برمی گرداند
+
+
+    // add(option, index)
+    // برای افزودن به لیست های کشویی کاربرد دارد
+
+
+    // remove(index)
+    // حذف عنصری از لیست
+
+  </script>
+</head>
+
+<body>
+  <div>
+    <button onclick="changeStyle('#bd0b47')">red</button>
+    <button onclick="changeStyle('#4caf50')">green</button>
+    <button onclick="changeStyle('#00bcd4')">blue</button>
+  </div>
+  <input type="text" id="text" placeholder="Enter A Text">
+  <div>
+    <button id="btn">Hidden</button>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="selectText()">Select Text</button>
+    <p id="demo">Hello</p>
+  </div>
+  <script>
+    var button = document.getElementById('btn')
+
+    button.onclick = function () {
+      button.style.display = 'none'
+    }
+  </script>
+</body>
+
+</html>

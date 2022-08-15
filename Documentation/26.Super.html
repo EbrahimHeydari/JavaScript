@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>super() & super</title>
+  <script src="00.js"></script>
+  <script>
+    // super()
+    // سازنده کلاس پدر را فراخوانی کرده و از کدهای آن می توان استفاده کرد
+    // حتی اگر کلاس والد دارای سازنده ای نباشد، اگر یک کلاس از آن ارث بری کرد، از این متد استفاده کنید
+    // اگر این متد فراموش شود، با خطا مواجه می شوید
+
+
+    // super keyword
+    // زمانی که بخواهید از یک فیلد یا متد کلاس پدر در داخل کلاس سازنده کلاس فرزند استفاده کنید به کار می رود
+
+    class phone {
+      calculator
+      celender
+      network
+      memory
+      photo
+      video
+      radio
+      game
+      call
+      sms
+
+      constructor(calculator, celender, network, memory, photo, video, radio, game, call, sms) {
+        this.calculator = calculator
+        this.celender = celender
+        this.network = network
+        this.memory = memory
+        this.photo = photo
+        this.video = video
+        this.radio = radio
+        this.game = game
+        this.call = call
+        this.sms = sms
+      }
+
+      ShowItem() {
+        console.log('calculator:', this.calculator)
+        console.log('celender:', this.celender)
+        console.log('network:', this.network)
+        console.log('memory:', this.memory)
+        console.log('photo:', this.photo)
+        console.log('video:', this.video)
+        console.log('radio:', this.radio)
+        console.log('game:', this.game)
+        console.log('call:', this.call)
+        console.log('sms:', this.sms)
+      }
+    }
+
+    class nokia extends phone {
+      constructor(a, b, c, d, e, f, g, h, i, j) {    // مجبوریم در اینجا پارامتری قرار دهیم
+        super(a, b, c, d, e, f, g, h, i, j)       // همچنین در اینجا
+        super.ShowItem()
+      }
+    }
+    // let nokia_1 = new nokia(true, true, false, false, false, false, true, 'Sanke Game', true, true,)
+    // let nokia_2 = new nokia(true, false, false, true, false, false, true, 'Racing', true, true,)
+
+    class samsung extends phone {
+      constructor(a, b, c, d, e, f, g, h, i, j) {     // مجبوریم در اینجا پارامتری قرار دهیم
+        super(a, b, c, d, e, f, g, h, i, j)        // همچنین در اینجا
+        super.ShowItem()
+      }
+    }
+    // let j5 = new samsung(true, true, '3G', '32GB', '13MPX', '1440x960', true, 'Castle Crush', true, true)
+    // let j6 = new samsung(true, true, '4G', '8GB', '11MPX', '1280x720', true, 'Clash of Clans', true, true)
+  </script>
+</head>
+<body>
+
+</body>
+</html>

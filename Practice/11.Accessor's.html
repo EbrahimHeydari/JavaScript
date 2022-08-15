@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Accessors</title>
+  <script src="00.js"></script>
+</head>
+
+<body class="one-gradient">
+
+  <form method="get" onsubmit="Person_2.ShowValue(event)">
+    <div>
+      <input type="text" id="name">
+    </div>
+    <div>
+      <input type="number" id="age" min="10" max="120">
+    </div>
+    <div>
+      <input type="submit" value="Send">
+    </div>
+  </form>
+
+  <p id="title"></p>
+  <p id="demo"></p>
+
+  <script>
+    class car_1 {
+      #model
+      #color
+      #speed
+      #engine
+
+      set model(value) {
+        this.#model = value
+      }
+      get model() {
+        return this.#model
+      }
+
+      set color(value) {
+        this.#color = value
+      }
+      get color() {
+        return this.#color
+      }
+
+      set speed(value) {
+        this.#speed = value
+      }
+      get speed() {
+        return this.#speed
+      }
+
+      set engine(value) {
+        this.#engine = value
+      }
+      get engine() {
+        return this.#engine
+      }
+
+      constructor(model, color, speed, engine) {
+        this.#model = model
+        this.#color = color
+        this.#speed = speed
+        this.#engine = engine
+      }
+      Show() {
+        console.log('model:', this.model)
+        console.log('color:', this.color)
+        console.log('speed:', this.speed, 'KMH')
+        console.log('engine:', this.engine)
+      }
+    }
+    let benz = new car_1('turbo', 'DarkCyan', 380, 'V-8')
+    // benz.Show()
+
+    class person_1 {
+      #name
+      #age
+      #height
+      set name(value) {
+        this.#name = value
+      }
+      get name() {
+        return this.#name
+      }
+      set age(value) {
+        this.#age = value
+      }
+      get age() {
+        return this.#age
+      }
+      set height(value) {
+        this.$height = value
+      }
+      get height() {
+        return this.#height
+      }
+      constructor(name, age, height) {
+        this.#name = name
+        this.#age = age
+        this.#height = height
+      }
+      print() {
+        console.log('a student:')
+        console.log('name:', this.name)
+        console.log('age:', this.age)
+        console.log('height:', this.height)
+      }
+    }
+    let woman = new person_1('zahra', 20, 190, she)
+    // woman.print()
+
+    class person_2 {
+      #name
+      #age
+
+      set name(value) {
+        this.#name = value
+      }
+      get name() {
+        return this.#name
+      }
+      set age(value) {
+        this.#age = value
+      }
+      get age() {
+        return this.#age
+      }
+
+      constructor(name, age) {
+        this.#name = name
+        this.#age = age
+      }
+      ShowValue(event) {
+        var title = document.getElementById('title')
+        var demo = document.getElementById('demo')
+        var name = document.getElementById('name').value
+        var age = document.getElementById('age').value
+        event.preventDefault()
+
+        title.innerHTML = 'a Student'
+        demo.innerHTML = `name: ${name} Age: ${age}`
+      }
+    }
+    var Person_2 = new person_2(name, age)
+  </script>
+</body>
+
+</html>

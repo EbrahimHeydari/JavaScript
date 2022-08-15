@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  font-size: 100%;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(130deg, #14d314, #c92424, #222);
+  animation: opacity 2s ease;
+}
+
+.flag {
+  width: 80vh;
+  height: 60vh;
+  border-radius: 3%;
+  box-shadow: 0 0 5px 0px #3a3a3ae3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #131313 0% 35%, #d30404 35% 65%, #00af00 65% 100%);
+  animation: show 2s ease;
+  transition: 1s;
+}
+
+.flag img {
+  width: 20vh;
+}
+
+@media screen and (max-width: 320px) {
+  .flag {
+    width: 200px;
+    height: 150px;
+  }
+
+  .flag img {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .flag {
+    width: 300px;
+    height: 200px;
+  }
+
+  .flag img {
+    width: 60px;
+  }
+}
+
+@keyframes show {
+  0% {
+    filter: contrast(0%);
+  }
+
+  100% {
+    filter: contrast(100%);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    filter: opacity(0);
+  }
+
+  100% {
+    filter: opacity(100%);
+  }
+}

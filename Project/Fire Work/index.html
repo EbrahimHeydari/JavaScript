@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circular Firework</title>
+</head>
+
+<body>
+  <canvas></canvas>
+
+  <script>
+    let time = 10
+    let canvas = document.querySelector('canvas')
+    let dimension = canvas.getContext('2d')
+
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    dimension.fillStyle = 'hsla(0,0%,0%,1)'
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }, false)
+
+    const draw = () => {
+      dimension.globalCompositeOperation = 'source-over'
+      dimension.fillStyle = 'hsla(0,0%,0%,.1)'
+      dimension.fillRect(0, 0, canvas.width, canvas.height)
+
+      let footer = Math.sin(time) * 3 * Math.PI
+      let index, radial
+
+      for (index = 0; index < 200; ++index) {
+        radial = 150 * Math.sin(index * footer)
+        dimension.globalCompositeOperation = ''
+        dimension.fillStyle = 'hsla(' + index + 15 + ',100%, 60%,1)'
+        dimension.beginPath()
+        dimension.arc(Math.sin(index) * radial + (canvas.width / 2),
+          Math.cos(index) * radial + (canvas.height / 2),
+          1.5, 0, Math.PI * 3)
+        dimension.fill()
+      }
+
+      time += 0.000030
+      return time %= 3 * Math.PI
+    }
+
+    const run = () => {
+      window.requestAnimationFrame(run)
+      draw()
+    }
+
+    run()
+  </script>
+</body>
+
+<!-- Created by Muhammad Akmal Naim -->
+
+<!-- Edit from Zinc -->
+
+</html>

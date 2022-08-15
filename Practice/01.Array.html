@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+
+<body>
+  <div id="box"></div>
+
+  <script>
+    const box = document.getElementById('box')
+    var numbers = [2, 4, 8, 32]
+    var colors = new Array("red", "black", "white", "green", "brown")
+    colors[25] = 'blue'
+    var names = new Array('mohammad', 'hasan', 'mahdi', 'Ali', 'Reza', 'sadegh', 'Ahmad')
+    var fruits = 'banana,apple,orange,lemon,peach'
+    var fsplit = fruits.split(',')
+
+
+    var cars = []
+    cars[0] = 'benz'
+    cars[1] = 'volvo'
+    cars[2] = 'toyota'
+    cars[15] = 'pykan'
+
+    cars.splice(4, 10, 'xantia', 'mazda')
+
+
+    function MyMap(value) {
+      let p = document.createElement('p')
+      p.innerHTML = `Car: ${value}`
+      box.appendChild(p)
+    }
+    // cars.map(MyMap)
+
+    function myFilter(value) {
+      if (value.match('an')) {
+        let p = document.createElement('p')
+        p.innerHTML = `Filtered value: ${value}`
+        box.appendChild(p)
+      }
+    }
+    // cars.filter(myFilter)
+
+    cars.sort()
+    names.unshift('Ebrahim', 'hamid', 'mobina')
+    names.sort()
+
+    function show(value) {
+      let p = document.createElement('p')
+      p.innerHTML = `Name: ${value}`
+      box.appendChild(p)
+    }
+    // names.forEach(show)
+
+  </script>
+
+</body>
+
+</html>

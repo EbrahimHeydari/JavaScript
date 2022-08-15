@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    var eh = 'Ebrahim Heidary'
+    var me = 'Ebrahim'
+
+    // Arrow Function
+    const power = (first, second) => {
+      console.log(first ** second)
+    }
+    // power(3, 6)
+
+    const sqrt = (value) => console.log(Math.sqrt(value))
+    // sqrt(64)
+
+    const count = (value) => {
+      console.log(value.length)
+    }
+    // count(friends)
+
+    const add = (first, second) => {
+      console.log(first + second)
+    }
+    // add(876 ,24)
+
+    const remove = (array) => {
+      delete array[2]
+      console.log(array)
+    }
+    // remove(bros)
+
+
+
+    // Template Literal
+    // let version = 17.02
+    // const reactVersion = 'React.js V.' + version
+    // console.log(reactVersion)
+
+    const intString = (name, version) => {
+      const fullName = name + `${version}`
+      console.log(fullName)
+    }
+    // intString(`React.js V.`, 17.02), intString(`HTML`, 5), intString(`CSS`, 3)
+
+    var bros = []
+    const names = `${bros[0]} & ${eh} & Mahdi
+        Masoud & Hamid & Akbar
+        & Hadi & Reza & Sadegh
+        & ${bros[2]} & Komeil`
+    // console.log(names)
+
+
+    // Destructuring
+    // روشی برای استفاده ساده تر از مقادیر اشیاء است
+
+    // let person = {
+    //     name: 'eren',
+    //     family: 'yager',
+    //     height: 190,
+    //     male: true
+    // }
+
+    // let { name, family, height, male } = person
+    // console.log(name , family , height , male)
+
+    // name = 'Armin'
+    // console.log(name , family , height , male)
+
+    // name = 'zahra', family = 'Akbari', male = false
+    // console.log(name, family, height, male)
+
+
+
+    // Ternary Condition Operator
+    // console.log(unknown == 'undefined' ? true : false)
+    // console.log(five > 10 ? 'greater than 10' : 'lesser than 10')
+    // console.log(well.includes('Ebrahim') ? 'I`m' : 'unknown')
+    // console.log(typeof eh == 'string' ? 'Is String' : 'Not String')
+    // console.log(null === undefined ? true : false)
+
+
+    // map()
+    oneDigit = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const powMap = oneDigit.map((value, index, array) => {
+      return value ** 2
+    })
+    // console.log(powMap)
+
+
+    // filter()
+    const evenFilter = oneDigit.filter((value, index, array) => {
+      return value % 2 == 0
+    })
+    // console.log(evenFilter)
+
+    const oddFilter = oneDigit.filter((value, index, array) => {
+      return value % 2 == 1
+    })
+    // console.log(oddFilter)
+
+    const threeFilter = oneDigit.filter((value) => {
+      return value % 3 == 0
+    })
+    // console.log(threeFilter)
+
+
+    // reduce(callBackFunc, initialValue)
+    // یک تابع کاهش دهنده را به عنوان آرگومان اول روی تک تک اعضای یک آرایه اجرا می کند
+    // شما خودتان مسئول نوشتن این تابع می باشید
+    // به زبان ساده تر این تابع یک آرایه را به یک مقدار ساده تبدیل می کند
+    // آرگومان دوم یک مقدار اولیه است (اختیاری)
+    // تک تک مقادیر برگشتی به این مقدار اضافه می شود
+
+    const reduceInt = oneDigit.reduce((accomulutor, currentValue, currentIndex, array) => {
+      return accomulutor + currentValue
+    }, 0)
+    const avg = reduceInt / oneDigit.length
+    // console.log('array:', oneDigit)
+    // console.log('total values:', reduceInt)
+    // console.log('average:', avg)
+
+  </script>
+</body>
+
+</html>
