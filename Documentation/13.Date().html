@@ -139,34 +139,11 @@
 
 
     // ساخت ساعت زنده
-    // روش اول
-    function startTime() {
-      var today = new Date()
-      var h = today.getHours()
-      var m = today.getMinutes()
-      var s = today.getSeconds()
-
-      m = checkTime(m)
-      s = checkTime(s)
-      document.getElementById('time1').innerHTML = `${h}:${m}:${s}`
-      t = setTimeout('startTime()', 1000)     // تازه سازی هر یک ثانیه
-    }
-
-    function checkTime(i) {
-      if (i < 10) {
-        i = "0" + i
-      }
-      return i
-    }
-
-    // setInterval(startTime, 1000)
-
-    // روش دوم
     function Timer() {
-      let date = new Date().toLocaleTimeString()
+      let date = new Date().toLocaleTimeString('fa')
       document.getElementById('time2').innerHTML = date
     }
-    // setInterval(Timer, 1000)
+    setInterval(Timer, 1000)
   </script>
 </head>
 
