@@ -1,99 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Destructuring Assignment</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destructuring Assignment</title>
-</head>
+	<body>
+		<p id="demo"></p>
 
-<body>
-  <p id="demo"></p>
+		<script>
+			// تخریب
+			// یک روش ساده و سریع برای ایجاد متغیر از مقادیر داخل یک آرایه یا مشخصه های داخل یک آبجکت است
+			// مزیت این روش خوانایی و بهره وری کد نوشته شده است
 
-  <script>
-    // تخریب
-    // یک روش ساده و سریع برای ایجاد متغیر از مقادیر داخل یک آرایه یا مشخصه های داخل یک آبجکت است
-    // مزیت این روش خوانایی و بهره وری کد نوشته شده است
+			// استفاده درون اشیاء
+			// در این روش بدنبال نام مشخصه هستیم. پس این مشخصه ها رو در متغیرهایی با همین نام ذخیره می کنیم
 
-    // استفاده درون اشیاء
-    // در این روش بدنبال نام مشخصه هستیم. پس این مشخصه ها رو در متغیرهایی با همین نام ذخیره می کنیم
+			let person = {
+				name: 'Ebrahim',
+				lastName: 'heidary',
+				info: {
+					email: 'ebrahim76@gmail.com',
+				},
+			}
 
-    let person = {
-      name: 'Ebrahim',
-      lastName: 'heidary',
-      info: {
-        email: 'ebrahim76@gmail.com'
-      }
-    }
+			const {
+				name,
+				lastName: family,
+				info: { email },
+			} = person
+			// console.log(`my name: ${name} ${family}`)
+			// console.log(`my email: ${email}`)
 
-    const { name, lastName: family, info: { email } } = person
-    // console.log(`my name: ${name} ${family}`)
-    // console.log(`my email: ${email}`)
+			// تخریب آبجکت بعنوان پارامتر تابع
+			const hamidreza = {
+				name: 'Hamidreza',
+				age: 30,
+			}
 
+			const statement = ({ name, age }) => {
+				return `My name is ${name}. I am ${age} years old.`
+			}
+			document.getElementById('demo').innerHTML = statement(hamidreza)
 
-    // تخریب آبجکت بعنوان پارامتر تابع
-    const hamidreza = {
-      name: 'Hamidreza', age: 30
-    }
+			// استفاده درون آرایه ها
+			// آرایه ها به جای مشخصه، با اندیس به صورت ترتیبی ذخیره میشن. پس باید ترتیب رو رعایت کنیم
+			// از اونجایی که آرایه مشخصه نداره، هر اسمی می تونی برای متغیر ها استفاده کنی
+			// آیتم هایی که نیاز به خارج کردن نداریم رو می تونیم جای خالی بذاریم
 
-    const statement = ({ name, age }) => {
-      return `My name is ${name}. I am ${age} years old.`
-    }
-    document.getElementById('demo').innerHTML = statement(hamidreza)
+			const brands = ['McLaren', 'Renault', 'Ferrari', 'Honda', 'Saipa']
+			let [brand_1, , brand_2, , brand_3] = brands
+			// console.log(brand_1)                       // McLaren
+			// console.log(brand_2)                       // Ferrari
+			// console.log(brand_3)                       // Saipa
 
+			// جا به جایی مقدار متغیرها
+			[brand_1, brand_2, brand_3] = [brand_3, brand_1, brand_2]
+			// console.log(brand_1)                       // Saipa
+			// console.log(brand_2)                       // McLaren
+			// console.log(brand_3)                       // Ferrari
 
+			// ترکیبی از این دو روش بر روی آرایه ای از آبجکت ها
+			// یکی از رایج ترین انواع داده در جاوا اسکریپت آرایه ای از آبجکت هاست
 
+			const persons = [
+				{
+					firstName: 'John',
+					lastName: 'Smith',
+					phoneNumber: 123456789,
+					accounts: {
+						ing: 'NL69INGB0123456789',
+						rabobank: 'NL44RABO0123456789',
+						abnamro: 'NL02ABNA0123456789',
+					},
+				},
+				{
+					firstName: 'Josh',
+					lastName: 'Cruz',
+					phoneNumber: 987654321,
+					accounts: {
+						ing: 'NL71INGB0123456789',
+						snsbank: 'NL12SNSB0123456789',
+					},
+				},
+			]
 
+			const [
+				{
+					accounts: { ing: ingJohn },
+				},
+				{
+					accounts: { ing: ingJosh },
+				},
+			] = persons
 
-    // استفاده درون آرایه ها
-    // آرایه ها به جای مشخصه، با اندیس به صورت ترتیبی ذخیره میشن. پس باید ترتیب رو رعایت کنیم
-    // از اونجایی که آرایه مشخصه نداره، هر اسمی می تونی برای متغیر ها استفاده کنی
-    // آیتم هایی که نیاز به خارج کردن نداریم رو می تونیم جای خالی بذاریم
-
-    const brands = ['McLaren', 'Renault', 'Ferrari', 'Honda', 'Saipa']
-    let [brand_1, , brand_2, , brand_3] = brands;
-    // console.log(brand_1)                       // McLaren
-    // console.log(brand_2)                       // Ferrari
-    // console.log(brand_3)                       // Saipa
-
-    // جا به جایی مقدار متغیرها
-    [brand_1, brand_2, brand_3] = [brand_3, brand_1, brand_2]
-    // console.log(brand_1)                       // Saipa
-    // console.log(brand_2)                       // McLaren
-    // console.log(brand_3)                       // Ferrari
-
-
-
-
-
-    // ترکیبی از این دو روش بر روی آرایه ای از آبجکت ها
-    // یکی از رایج ترین انواع داده در جاوا اسکریپت آرایه ای از آبجکت هاست
-
-    const persons = [{
-      firstName: 'John',
-      lastName: 'Smith',
-      phoneNumber: 123456789,
-      accounts: {
-        ing: 'NL69INGB0123456789',
-        rabobank: 'NL44RABO0123456789',
-        abnamro: 'NL02ABNA0123456789'
-      }
-    },
-    {
-      firstName: 'Josh',
-      lastName: 'Cruz',
-      phoneNumber: 987654321,
-      accounts: {
-        ing: 'NL71INGB0123456789',
-        snsbank: 'NL12SNSB0123456789'
-      }
-    }]
-
-    const [{ accounts: { ing: ingJohn } }, { accounts: { ing: ingJosh } }] = persons
-
-    // console.log(`ingJohn: ${ingJohn}`)                        // NL69INGB0123456789
-    // console.log(`ingJosh: ${ingJosh}`)                        // NL71INGB0123456789
-  </script>
-</body>
-
+			// console.log(`ingJohn: ${ingJohn}`)                        // NL69INGB0123456789
+			// console.log(`ingJosh: ${ingJosh}`)                        // NL71INGB0123456789
+		</script>
+	</body>
 </html>

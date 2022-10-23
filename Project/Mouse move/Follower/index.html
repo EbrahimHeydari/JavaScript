@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Cursor Follower</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Cursor Follower On Mouse Move</h1>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+				laboriosam, architecto consequatur cumque quos ut natus, eligendi quasi
+				sunt ab sit inventore soluta corporis obcaecati omnis voluptas maxime,
+				recusandae sapiente.
+			</p>
+		</div>
+
+		<div class="cursor one"></div>
+		<div class="cursor two"></div>
+
+		<script>
+			let one = document.querySelector('.one')
+			let two = document.querySelector('.two')
+
+			document.addEventListener('mousemove', event => {
+				one.style.cssText =
+					two.style.cssText = `left: ${event.clientX}px; top: ${event.clientY}px;`
+			})
+
+			document.addEventListener('keydown', () => {
+				one.classList.toggle('active')
+				two.classList.toggle('active')
+			})
+		</script>
+	</body>
+</html>

@@ -21,19 +21,17 @@
 // }
 // export { sum, multi }
 
-
 // می توان اکسپورت های نام دار را هنگام اکسپورت تغییرنام داد
 
 function sum(x, y) {
-  return x + y
+	return x + y
 }
 
 function multiple(a, b) {
-  return a + b
+	return a + b
 }
 
 export { sum, multiple as multi }
-
 
 // حالت پیشفرض
 // فقط یکی از موجودیت ها را می توان به صورت پیشفرض اکسپورت کرد

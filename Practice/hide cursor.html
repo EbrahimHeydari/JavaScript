@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Hide Cursor</title>
+	</head>
+	<style>
+		.box {
+			cursor: none;
+			height: 97vh;
+			min-width: 500px;
+			background-color: bisque;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hide Cursor</title>
-</head>
-<style>
-  .box {
-    cursor: none;
-    height: 97vh;
-    min-width: 500px;
-    background-color: bisque;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+		.box:hover > .box__content {
+			visibility: hidden;
+		}
+	</style>
 
-  .box:hover>.box__content {
-    visibility: hidden;
-  }
-</style>
-
-<body>
-  <div class="box">
-    <h1 class="box__content">Bermuda Mouse</h1>
-  </div>
-</body>
-
+	<body>
+		<div class="box">
+			<h1 class="box__content">Bermuda Mouse</h1>
+		</div>
+	</body>
 </html>

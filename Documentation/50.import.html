@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>import</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>import</title>
-</head>
+	<body>
+		<!-- برای استفاده باید از خصوصیت type برابر با module در <script> استفاده کرد -->
+		<script type="module">
+			// import
+			// برای خواندن کد صادر شده از ماژول دیگر استفاده می‌شود
+			// هنگام ایمپورت کردن درون فایل های جاوااسکریپت نیاز به پسوند js نداریم
+			// اما درون فایل html باید پسوند را بگذاریم
+			// ترتیب در ایمپورت کردن اهمیتی ندارد
 
-<body>
-  <!-- برای استفاده باید از خصوصیت type برابر با module در <script> استفاده کرد -->
-  <script type="module">
+			// این قابلیت فقط درون پروتکل http(s) کار می کند
+			// درون پروتکل فایل کار نمی کند
 
-    // import
-    // برای خواندن کد صادر شده از ماژول دیگر استفاده می‌شود
-    // هنگام ایمپورت کردن درون فایل های جاوااسکریپت نیاز به پسوند js نداریم
-    // اما درون فایل html باید پسوند را بگذاریم
-    // ترتیب در ایمپورت کردن اهمیتی ندارد
+			// حالت نام دار
+			import { sum, multi } from './49.export.js'
 
-    // این قابلیت فقط درون پروتکل http(s) کار می کند 
-    // درون پروتکل فایل کار نمی کند
+			// حالت پیش فرض
+			import hello from './49.export.js'
 
+			console.log(hello)
+			console.log(sum(4, 6))
+			console.log(multi(8, 6))
 
-    // حالت نام دار
-    import { sum, multi } from './49.export.js';
+			// حالت کلی
+			// روشی برای ایمپورت کردن تمام موجودیت های اکسپورت شده است
+			// از * برای گرفتن تمام موجودیت های فایل استفاده می شود و بعد از آن نامی برای آن تعیین می شود
+			// در این روش تمام موجودیت های فایل درون یک شی قرار می گیرد و هر موجودیت به عنوان خصوصیتی از آن شی فراخوانی می شود
+			// این روش برای حالت پیشفرض کاربردی نیست
 
-    // حالت پیش فرض
-    import hello from './49.export.js';
-
-    console.log(hello)
-    console.log(sum(4, 6))
-    console.log(multi(8, 6))
-
-    // حالت کلی
-    // روشی برای ایمپورت کردن تمام موجودیت های اکسپورت شده است
-    // از * برای گرفتن تمام موجودیت های فایل استفاده می شود و بعد از آن نامی برای آن تعیین می شود 
-    // در این روش تمام موجودیت های فایل درون یک شی قرار می گیرد و هر موجودیت به عنوان خصوصیتی از آن شی فراخوانی می شود
-    // این روش برای حالت پیشفرض کاربردی نیست
-
-    import * as vars from './49.export.js';
-    console.log(vars.hello)                     // undefined
-    console.log(vars.sum(4, 6))
-    console.log(vars.multi(8, 6))
-  </script>
-</body>
-
+			import * as vars from './49.export.js'
+			console.log(vars.hello) // undefined
+			console.log(vars.sum(4, 6))
+			console.log(vars.multi(8, 6))
+		</script>
+	</body>
 </html>

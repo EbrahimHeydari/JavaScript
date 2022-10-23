@@ -1,46 +1,45 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+	<head>
+		<title>Disable right click</title>
+		<style>
+			.green {
+				color: green;
+			}
 
-<head>
-  <title> Disable right click</title>
-  <style>
-    .green {
-      color: green;
-    }
+			#GFG_UP {
+				font-size: 16px;
+				font-weight: bold;
+			}
 
-    #GFG_UP {
-      font-size: 16px;
-      font-weight: bold;
-    }
+			#GFG_DOWN {
+				color: green;
+				font-size: 20px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
 
-    #GFG_DOWN {
-      color: green;
-      font-size: 20px;
-      font-weight: bold;
-    }
-  </style>
-</head>
+	<body>
+		<h1>Desable Right click</h1>
 
-<body>
+		<p id="GFG_UP"></p>
 
-  <h1>Desable Right click</h1>
+		<button onclick="gfg_Run()">Disable</button>
 
-  <p id="GFG_UP"></p>
+		<p id="GFG_DOWN"></p>
 
-  <button onclick="gfg_Run()">Disable</button>
+		<script>
+			var el_up = document.getElementById('GFG_UP')
+			var el_down = document.getElementById('GFG_DOWN')
+			el_up.innerHTML = 'Click on the button to disable right click'
 
-  <p id="GFG_DOWN"></p>
-
-  <script>
-    var el_up = document.getElementById("GFG_UP")
-    var el_down = document.getElementById("GFG_DOWN")
-    el_up.innerHTML = "Click on the button to disable right click"
-
-    function gfg_Run() {
-      document.addEventListener('contextmenu', event => event.preventDefault())
-      el_down.innerHTML = "Right click disabled"
-    }		
-  </script>
-</body>
-
+			function gfg_Run() {
+				document.addEventListener('contextmenu', event =>
+					event.preventDefault()
+				)
+				el_down.innerHTML = 'Right click disabled'
+			}
+		</script>
+	</body>
 </html>

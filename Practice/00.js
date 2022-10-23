@@ -29,39 +29,59 @@ var binary = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
 var friends = new Array('Hojjat', 'Ali', 'Komeil')
 
 var me = {
-    name: ' Ebrahim',
-    family: ' heidary',
-    height: 180,
-    age: 19
+	name: ' Ebrahim',
+	family: ' heidary',
+	height: 180,
+	age: 19,
 }
 
 var languages = {
-    web: ['js', 'php', 'ruby'],
-    game: ['C++', 'C', 'java'],
-    data: ['python', 'R', 'matlab'],
-    desktop: ['java', 'C#', 'C++'],
-    mobile: ['swift', 'Dart', 'kotlin', 'python', 'java']
+	web: ['js', 'php', 'ruby'],
+	game: ['C++', 'C', 'java'],
+	data: ['python', 'R', 'matlab'],
+	desktop: ['java', 'C#', 'C++'],
+	mobile: ['swift', 'Dart', 'kotlin', 'python', 'java'],
 }
 
 var reshteha = {
-    nazari: ['ریاضی', 'تجربی', 'انسانی', 'معارف اسلامی'],
-    karodanesh: ['کامپیوتر', 'تاسیسات', 'تعمیر خودرو', 'الکترونیک', 'نجاری', 'لوله کشی', 'متالوژی'],
-    fannie: ['شبکه و نرم افزار', 'طراحی گرافیک', 'انیمیشن سازی', 'اراِئه مطالب', 'مهندسی برق']
+	nazari: ['ریاضی', 'تجربی', 'انسانی', 'معارف اسلامی'],
+	karodanesh: [
+		'کامپیوتر',
+		'تاسیسات',
+		'تعمیر خودرو',
+		'الکترونیک',
+		'نجاری',
+		'لوله کشی',
+		'متالوژی',
+	],
+	fannie: [
+		'شبکه و نرم افزار',
+		'طراحی گرافیک',
+		'انیمیشن سازی',
+		'اراِئه مطالب',
+		'مهندسی برق',
+	],
 }
 
 var phones = {
-    Samsung: ['A6 2018', 'J6 plus 2018', 'J5 2015', 'J2 Prime', 'J1 Ace'],
-    Houawi: ['Y-313', 'Y250', 'Y500', 'Y130', 'A53'],
-    Xiaomi: ['redmi 4A', 'redmi 6', 'POCO M3', 'POCO X3', ' mi A3'],
-    Nokia: ['Nokia 61', 'Nokia62', 'Nokia71', 'Nokia72']
+	Samsung: ['A6 2018', 'J6 plus 2018', 'J5 2015', 'J2 Prime', 'J1 Ace'],
+	Houawi: ['Y-313', 'Y250', 'Y500', 'Y130', 'A53'],
+	Xiaomi: ['redmi 4A', 'redmi 6', 'POCO M3', 'POCO X3', ' mi A3'],
+	Nokia: ['Nokia 61', 'Nokia62', 'Nokia71', 'Nokia72'],
 }
 
 var levels = {
-    dabestan: ['پایه اول', 'پایه دوم', 'پایه سوم', 'پایه چهارم', 'پایه پنجم', 'پایه ششم'],
-    first: ['پایه هفتم', 'پایه هشتم', 'پایه نهم',],
-    second: ['پایه دهم', 'پایه یازدهم', 'پایه دوازدهم']
+	dabestan: [
+		'پایه اول',
+		'پایه دوم',
+		'پایه سوم',
+		'پایه چهارم',
+		'پایه پنجم',
+		'پایه ششم',
+	],
+	first: ['پایه هفتم', 'پایه هشتم', 'پایه نهم'],
+	second: ['پایه دهم', 'پایه یازدهم', 'پایه دوازدهم'],
 }
-
 
 var zero = 0
 var one = 1
@@ -85,6 +105,6 @@ var ninety = 90
 var error = 404
 var PI = Math.PI
 var bilion = 1e9
-var maxInt = 78e19     // max integers 
+var maxInt = 78e19 // max integers
 
 // document.title = eh

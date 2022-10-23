@@ -1,126 +1,184 @@
 <!DOCTYPE html>
 <html lang="fa">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="css/style.css" />
+		<title>Echo Market</title>
+	</head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Echo Market</title>
-</head>
+	<body>
+		<header class="hdr">
+			<div class="title-container">
+				<a
+					href="index.html"
+					class="title-icon">
+					<img
+						src="icon/shop.png"
+						alt="shop" />
+				</a>
+				<h1 class="title-head">اِکــو مــارکــتـــ</h1>
+			</div>
 
-<body>
-    <header class="hdr">
-        <div class="title-container">
-            <a href="index.html" class="title-icon">
-                <img src="icon/shop.png" alt="shop">
-            </a>
-            <h1 class="title-head">اِکــو مــارکــتـــ</h1>
-        </div>
+			<form
+				method="get"
+				class="search">
+				<input
+					type="image"
+					src="icon/search.svg"
+					alt="Search" />
+				<input
+					type="search"
+					placeholder="جستجو به انگلیسی" />
+			</form>
 
-        <form method="get" class="search">
-            <input type="image" src="icon/search.svg" alt="Search" />
-            <input type="search" placeholder="جستجو به انگلیسی" />
-        </form>
+			<div class="hamburger">
+				<img
+					src="icon/Hamburger.png"
+					alt="menu"
+					id="menu" />
+			</div>
 
-        <div class="hamburger">
-            <img src="icon/Hamburger.png" alt="menu" id="menu">
-        </div>
+			<nav
+				class="navigation"
+				id="mobile">
+				<ul class="nav-list">
+					<li class="list-item">
+						<div class="mode">
+							<input
+								id="check"
+								type="checkbox" />
+							<label
+								id="click"
+								for="check"></label>
+						</div>
+					</li>
+					<li class="list-item">
+						<a href="index.html">صفحه اصلی</a>
+					</li>
+					<li class="list-item">
+						<a href="signup.html">ثبت نام</a>
+					</li>
+					<li class="list-item">
+						<a href="login.html">ورود</a>
+					</li>
+					<li class="list-item">
+						<a href="list.html">سبد خرید</a>
+					</li>
+					<li class="list-item">
+						<a href="shop.html">خرید کالا</a>
+					</li>
+					<li class="list-item">
+						<a href="comment.html">نظرات</a>
+					</li>
+					<li class="list-item">
+						<img
+							src="icon/close.svg"
+							alt="close"
+							id="close" />
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-        <nav class="navigation" id="mobile">
-            <ul class="nav-list">
-                <li class="list-item">
-                    <div class="mode">
-                        <input id="check" type="checkbox">
-                        <label id="click" for="check"></label>
-                    </div>
-                </li>
-                <li class="list-item">
-                    <a href="index.html">صفحه اصلی</a>
-                </li>
-                <li class="list-item">
-                    <a href="signup.html">ثبت نام</a>
-                </li>
-                <li class="list-item">
-                    <a href="login.html">ورود</a>
-                </li>
-                <li class="list-item">
-                    <a href="list.html">سبد خرید</a>
-                </li>
-                <li class="list-item">
-                    <a href="shop.html">خرید کالا</a>
-                </li>
-                <li class="list-item">
-                    <a href="comment.html">نظرات</a>
-                </li>
-                <li class="list-item">
-                    <img src="icon/close.svg" alt="close" id="close">
-                </li>
-            </ul>
-        </nav>
+		<main class="container">
+			<div class="box">
+				<form
+					name="form"
+					class="form4"
+					method="POST">
+					<div class="inbox">
+						<input
+							type="text"
+							name="name"
+							placeholder="نام"
+							required
+							autofocus />
+					</div>
+					<div class="inbox">
+						<input
+							type="text"
+							name="family"
+							placeholder="نام خانوادگی"
+							required />
+					</div>
+					<div class="inbox">
+						<input
+							type="email"
+							name="email"
+							placeholder="ایمیل"
+							required />
+					</div>
+					<div class="inbox">
+						<input
+							type="password"
+							name="password"
+							placeholder="رمز عبور"
+							required />
+					</div>
+					<div class="inbox">
+						<button type="submit">ثبت نام</button>
+					</div>
+					<input
+						type="hidden"
+						name="MM_insert"
+						value="form" />
+				</form>
+			</div>
+			<a href="login.html">قبلا ثبت نام کرده ام</a>
 
+			<div class="history">
+				<button onclick="history.back()">صفحه قبل</button>
+				<button onclick="history.forward()">صفحه بعد</button>
+			</div>
+		</main>
 
-    </header>
+		<aside class="side">
+			<h1>ارسال نظرات</h1>
+			<div class="tip">
+				<p>برای ارسال نظرات ابتدا باید <a href="signup.html">وارد</a> شوید</p>
+			</div>
+		</aside>
 
-    <main class="container">
-        <div class="box">
-            <form name="form" class="form4" method="POST">
-                <div class="inbox">
-                    <input type="text" name="name" placeholder="نام" required autofocus>
-                </div>
-                <div class="inbox">
-                    <input type="text" name="family" placeholder="نام خانوادگی" required>
-                </div>
-                <div class="inbox">
-                    <input type="email" name="email" placeholder="ایمیل" required>
-                </div>
-                <div class="inbox">
-                    <input type="password" name="password" placeholder="رمز عبور" required>
-                </div>
-                <div class="inbox">
-                    <button type="submit">ثبت نام</button>
-                </div>
-                <input type="hidden" name="MM_insert" value="form">
-            </form>
-        </div>
-        <a href="login.html">قبلا ثبت نام کرده ام</a>
+		<footer class="ftr">
+			<div class="copyraight">
+				<p>
+					تمامی حقوق مادی و معنوی این وبسایت متعلق به اکو مارکت می باشد &copy;
+				</p>
+			</div>
 
+			<div class="contain-icon">
+				<a href="https://www.facebook.com">
+					<img
+						src="icon/facebook.svg"
+						alt="social_facebook"
+						class="link-icon" />
+				</a>
+				<a href="https://www.twitter.com">
+					<img
+						src="icon/twitter.svg"
+						alt="social_twitter"
+						class="link-icon" />
+				</a>
+				<a href="https://www.youtube.com">
+					<img
+						src="icon/youtube.svg"
+						alt="social_youtube"
+						class="link-icon" />
+				</a>
+				<a href="https://www.linkedin.com">
+					<img
+						src="icon/linkedin.svg"
+						alt="social_linkedin"
+						class="link-icon" />
+				</a>
+			</div>
+		</footer>
 
-        <div class="history">
-            <button onclick="history.back()">صفحه قبل</button>
-            <button onclick="history.forward()">صفحه بعد</button>
-        </div>
-    </main>
-
-    <aside class="side">
-        <h1>ارسال نظرات</h1>
-        <div class="tip">
-            <p>برای ارسال نظرات ابتدا باید <a href="signup.html">وارد</a> شوید</p>
-        </div>
-    </aside>
-
-    <footer class="ftr">
-        <div class="copyraight">
-            <p>تمامی حقوق مادی و معنوی این وبسایت متعلق به اکو مارکت می باشد &copy;</p>
-        </div>
-
-        <div class="contain-icon">
-            <a href="https://www.facebook.com">
-                <img src="icon/facebook.svg" alt="social_facebook" class="link-icon" />
-            </a>
-            <a href="https://www.twitter.com">
-                <img src="icon/twitter.svg" alt="social_twitter" class="link-icon" />
-            </a>
-            <a href="https://www.youtube.com">
-                <img src="icon/youtube.svg" alt="social_youtube" class="link-icon" />
-            </a>
-            <a href="https://www.linkedin.com">
-                <img src="icon/linkedin.svg" alt="social_linkedin" class="link-icon" />
-            </a>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-
-</body>
-
+		<script src="js/main.js"></script>
+	</body>
 </html>
