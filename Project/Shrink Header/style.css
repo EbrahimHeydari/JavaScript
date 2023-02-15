@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+  height: 2000px;
+}
+
+.navlist {
+	overflow: hidden;
+	background-color: #0074d9;
+	padding: 90px 10px;
+	transition: 0.4s;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+}
+
+.navlist a {
+	float: left;
+	color: white;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 25px;
+	border-radius: 4px;
+}
+
+.navlist .logo {
+	font-size: 35px;
+	font-weight: bold;
+	transition: 0.4s;
+}
+
+.navlist a:hover {
+	color: #01fe06;
+}
+
+.navlist__right {
+	float: right;
+}
