@@ -1,0 +1,48 @@
+body {
+  display: grid;
+  font-family: cursive, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  height: 100vh;
+  place-items: center;
+}
+
+a {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+/* rainbow styles */
+.rainbow {
+  background: linear-gradient(to right, gold, orangered);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .5s;
+  padding-bottom: 5px;
+}
+
+.rainbow:hover {
+  background-size: 100% 3px;
+}
+
+/* passing styles */
+.passing::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #0aa19a, #044dbb);
+  bottom: -10px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.passing:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
