@@ -11,7 +11,7 @@
 <body>
   <!-- Open in file explorer -->
   <div class="video">
-    <video src="F:/Movie/Clip/1.mp4" controls></video>
+    <video src="D:/Movie/Clip/1.mp4" controls></video>
   </div>
   <div class="buttons">
     <button onclick="Go(-1)">Pervious</button>
@@ -23,6 +23,7 @@
     var video = document.querySelector('video')
     var playButton = document.getElementById('play')
     var index = 1
+    var total = 9
 
     playButton.addEventListener('dblclick', Pause)
 
@@ -30,10 +31,10 @@
     // رفتن به ویدئوی بعدی و قبلی
     function Go(value) {
       if (index < 1)
-        index = 7
-      else if (index > 7)
+        index = total
+      else if (index > total)
         index = 1
-      video.setAttribute('src', `F:/Movie/Clip/${index}.mp4`)
+      video.setAttribute('src', `D:/Movie/Clip/${index}.mp4`)
       index += value
     }
 

@@ -1,120 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>Edit Nodes</title>
 
-		<style>
-			body {
-				min-height: 100vh;
-			}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Edit Nodes</title>
 
-			button {
-				cursor: pointer;
-				padding: 10px;
-				border-radius: 7px;
-				border: 1px solid currentColor;
-				background-color: #074d69;
-				color: #fff;
-				transition: 0.3s;
-			}
+	<style>
+		body {
+			min-height: 100vh;
+		}
 
-			button:active {
-				transform: scale(0.9);
-			}
+		button {
+			cursor: pointer;
+			padding: 10px;
+			border-radius: 7px;
+			border: 1px solid currentColor;
+			background-color: #074d69;
+			color: #fff;
+			transition: 0.3s;
+		}
 
-			.buttons {
-				margin: 20px 0;
-			}
+		button:active {
+			transform: scale(0.9);
+		}
 
-			.container {
-				display: flex;
-				flex-flow: row wrap;
-				justify-content: space-evenly;
-			}
+		.buttons {
+			margin: 20px 0;
+		}
 
-			.box,
-			.circle {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: #fff;
-				margin: 10px;
-				width: 100px;
-				height: 100px;
-				cursor: pointer;
-				border-radius: 10px;
-				transition: 0.3s ease;
-			}
+		.container {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+		}
 
-			.box:active,
-			.circle:active {
-				transform: scale(1.2);
-			}
+		.box,
+		.circle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+			cursor: pointer;
+			border-radius: 10px;
+			transition: 0.3s ease;
+		}
 
-			.box {
-				background: linear-gradient(30deg, red, orange);
-			}
+		.box:active,
+		.circle:active {
+			transform: scale(1.2);
+		}
 
-			.circle {
-				border-radius: 50%;
-				background: linear-gradient(30deg, cyan, #074d69);
-			}
-		</style>
-	</head>
+		.box {
+			background: linear-gradient(30deg, red, orange);
+		}
 
-	<body>
-		<div class="buttons">
-			<button onclick="product()">product</button>
-			<button onclick="remove()">Remove</button>
-			<button onclick="removeAll()">Remove All</button>
-			<button onclick="replace()">replace</button>
-			<button onclick="replaceAll()">replace All</button>
-		</div>
+		.circle {
+			border-radius: 50%;
+			background: linear-gradient(30deg, cyan, #074d69);
+		}
+	</style>
+</head>
 
-		<div class="container"></div>
+<body>
+	<div class="buttons">
+		<button onclick="product()">product</button>
+		<button onclick="remove()">Remove</button>
+		<button onclick="removeAll()">Remove All</button>
+		<button onclick="replace()">replace</button>
+		<button onclick="replaceAll()">replace All</button>
+	</div>
 
-		<script>
-			var main = document.querySelector('.container')
-			var box = document.getElementsByClassName('box')
+	<div class="container"></div>
 
-			function product() {
-				var div = document.createElement('div')
-				var p = document.createElement('p')
-				var text = document.createTextNode('HTML / CSS')
-				main.appendChild(div)
-				div.appendChild(p)
-				p.appendChild(text)
-				div.setAttribute('class', 'box')
-			}
+	<script>
+		var main = document.querySelector('.container')
+		var box = document.getElementsByClassName('box')
 
-			function remove() {
+		function product() {
+			var div = document.createElement('div')
+			var p = document.createElement('p')
+			var text = document.createTextNode('HTML / CSS')
+			main.appendChild(div)
+			div.appendChild(p)
+			p.appendChild(text)
+			div.setAttribute('class', 'box')
+		}
+
+		function remove() {
+			main.removeChild(box[0])
+		}
+
+		function removeAll() {
+			var s = box.length
+			for (i = 0; i < s; i++) {
 				main.removeChild(box[0])
 			}
+		}
 
-			function removeAll() {
-				var s = box.length
-				for (i = 0; i < s; i++) {
-					main.removeChild(box[0])
-				}
+		function replace() {
+			var s = 1
+			var circle = document.getElementsByClassName('circle')
+			for (i = 0; i < s; i++) {
+				if (box[i].getAttribute('class') === 'box circle') s++
+				else box[i].classList.toggle('circle')
 			}
+		}
+		function replaceAll() {
+			var s = box.length
+			var circle = document.getElementsByClassName('circle')
+			for (i = 0; i < s; i++) box[i].classList.toggle('circle')
+		}
+	</script>
+</body>
 
-			function replace() {
-				var s = 1
-				var circle = document.getElementsByClassName('circle')
-				for (i = 0; i < s; i++) {
-					if (box[i].getAttribute('class') === 'box circle') s++
-					else box[i].classList.toggle('circle')
-				}
-			}
-			function replaceAll() {
-				var s = box.length
-				var circle = document.getElementsByClassName('circle')
-				for (i = 0; i < s; i++) box[i].classList.toggle('circle')
-			}
-		</script>
-	</body>
 </html>

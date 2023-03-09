@@ -12,7 +12,7 @@
 <body onload="ShowPath()">
   <!-- Open in file explorer -->
   <div class="image">
-    <img src="F:/Picture/Car/1.jpg" width="450" height="300" alt="image">
+    <img src="D:/Picture/Car/1.jpg" width="450" height="300" alt="image">
   </div>
 
   <div class="source">
@@ -57,10 +57,14 @@
 
 
 
+    // مثال (open it from file explorer)
     var index = 1
-    var img = document.querySelector('img')
-    var goto = document.getElementById('goto')
-    var event = addEventListener('click', ShowPath)
+    const baseUrl = 'D:/Picture/Car/'
+    const img = document.querySelector('img')
+    const goto = document.getElementById('goto')
+    const event = addEventListener('click', ShowPath)
+
+    img.src = `${baseUrl}${index}.jpg`
 
     goto.event
     document.getElementById('next').event
@@ -74,14 +78,14 @@
       if (index > 365) {
         index = 1
       }
-      img.setAttribute('src', 'F:/Picture/Car/' + index + '.jpg')
+      img.setAttribute('src', `${baseUrl}${index}.jpg`)
       index += value
     }
 
     // رفتن به عکس مورد نظر از طریق شماره عکس
     function GoTo() {
       index = Number(goto.value)
-      img.setAttribute('src', 'F:/Picture/Car/' + index + '.jpg')
+      img.setAttribute('src', `${baseUrl}${index}.jpg`)
       if (index > 365) {
         alert('This Number Not Valid!')
         throw 'This Number Not Valid!'

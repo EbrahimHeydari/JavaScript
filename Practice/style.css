@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Vazir";
+  font-family: Vazir;
   src: url("font/Vazir.woff") format("woff"),
     url("font/Vazir.ttf") format("truetype");
 }
@@ -14,7 +14,7 @@ html {
   box-sizing: inherit;
   outline: none;
   border: 0;
-  font-family: 'Vazir';
+  font-family: Vazir, cursive;
   padding: 0;
   margin: 0;
 }
@@ -69,7 +69,7 @@ button:active {
 input {
   padding: 5px;
   border-radius: 5px;
-
+  margin-top: 10px;
 }
 
 select {

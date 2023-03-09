@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Date Object</title>
   <script src="00.js"></script>
@@ -138,21 +139,11 @@
     // setTime()
     // تعیین تعداد ثانیه های سپری شده از اول ژانویه 1970
     // console.log(date.setTime(1623670883931))
-
-
-
-    // ساخت ساعت زنده
-    function Timer() {
-      let date = new Date().toLocaleTimeString('fa')
-      document.getElementById('time2').innerHTML = date
-    }
-    setInterval(Timer, 1000)
   </script>
 </head>
 
 <body>
-  <h1 id="time1"></h1>
-  <h1 id="time2"></h1>
+
 </body>
 
 </html>

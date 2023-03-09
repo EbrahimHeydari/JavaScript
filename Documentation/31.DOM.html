@@ -83,7 +83,7 @@
     var h1 = document.getElementsByClassName('h')
 
     // دسترسی به عناصر با شناسه خاص
-    var button = document.getElementById('btn')
+    var button = document.getElementById('hidden')
 
 
     // استایل دهی به سند
@@ -133,13 +133,13 @@
   </div>
   <input type="text" id="text" placeholder="Enter A Text">
   <div>
-    <button id="btn">Hidden</button>
+    <button id="hidden">Hidden</button>
     <button onclick="changeText()">Change Text</button>
     <button onclick="selectText()">Select Text</button>
     <p id="demo">Hello</p>
   </div>
   <script>
-    var button = document.getElementById('btn')
+    var button = document.getElementById('hidden')
 
     button.onclick = function () {
       button.style.display = 'none'
