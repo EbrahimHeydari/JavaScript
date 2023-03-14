@@ -15,13 +15,13 @@
   // رشته
   // توالی و ترکیبی از کاراکترها
 
-  var string = new String('Ebrahim Heidary')
+  var string = new String('Ebrahim Heydari')
   var string = string + ' From mashhad city'
   var fruits = 'banana,apple,orange'
-  var space = '       Ebrahim Heidary         '
+  var space = '       Ebrahim Heydari         '
   var intString = 50
   var me = `Ebrahim
-              Heidary`
+              Heydari`
   var force = '50'
   var demo = document.getElementById('demo')
 
@@ -69,8 +69,8 @@
   // عبارت جستجو شده را به صورت خروجی برمی گرداند
   // اگر عبارت درون رشته وجود نداشت (null) را بر می گرداند
   // این متد به بزرگی و کوچکی حروف حساس است
-  // console.log(string.match('heidary'))                     // null
-  // console.log(string.match('Heidary'))                     // Heidary
+  // console.log(string.match('heydari'))                     // null
+  // console.log(string.match('Heydari'))                     // Heydari
 
 
   // indexOf()
@@ -96,6 +96,13 @@
   // console.log(fruits.startsWith('apple'))
 
 
+  // endsWith()
+  // بررسی می کند که رشته با مقدار مورد نظر تمام می شود یا نه
+  // خروجی مقدار بولی است
+  // console.log(me.endsWith('Heydari'))
+  // console.log(fruits.endsWith('apple'))
+
+
   // repeat()
   // رشته را به مقدار مورد نظر تکرار می کند
   // خروجی به صورت رشته است
@@ -118,7 +125,7 @@
   // اگر برابر باشد 0 را بر می گرداند
   // اگر کوچکتر باشد 1- را بر می گرداند
   // console.log(string.localeCompare('Ali'))
-  // console.log(string.localeCompare('Ebrahim Heidary From mashhad city'))
+  // console.log(string.localeCompare('Ebrahim Heydari From mashhad city'))
   // console.log(string.localeCompare('Mahdi'))
 
 
@@ -150,7 +157,7 @@
   // آرگومان اول محل شروع
   // آرگومان دوم محل پایان
   // آگر آرگومان دوم نوشته نشود پایان، طول رشته در نظر گرفته می شود
-  // این متد  اعداد منفی را نمی پذیرد
+  // این متد اعداد منفی را نمی پذیرد
   // console.log(string.substr(20))
   // console.log(string.substr(8 , 20))
   // console.log(string.substr(20 , 8))

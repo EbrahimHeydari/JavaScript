@@ -2,8 +2,8 @@
 const br = '<br><br>'
 const spc = ' | '
 const Eb = 'Ebrahim '
-const He = 'Heidary '
-const eh = 'Ebrahim Heidary'
+const He = 'Heydari '
+const eh = 'Ebrahim Heydari'
 const he = 'male'
 const she = 'female'
 
@@ -30,7 +30,7 @@ var friends = new Array('Hojjat', 'Ali', 'Komeil')
 
 var me = {
 	name: ' Ebrahim',
-	family: ' heidary',
+	family: ' heydari',
 	height: 180,
 	age: 19,
 }

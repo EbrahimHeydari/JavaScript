@@ -4,12 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design Pattern</title>
+  <title>Design Patterns</title>
 </head>
 
 <body>
-  <h1>Design Patterns</h1>
-
   <script>
     // الگوهای طراحی
     // راه‌حل‌هایی هستند برای مشکلاتی که در طراحی و توسعه نرم‌افزارها بوجود میاد
@@ -223,15 +221,93 @@
       }
     })()
 
-    ItemCtrl.add({ id: 1, name: 'John' })
-    ItemCtrl.add({ id: 2, name: 'Mark' })
-    console.log(ItemCtrl.get(1))
-    console.log(ItemCtrl.get(2))
+    // ItemCtrl.add({ id: 1, name: 'John' })
+    // ItemCtrl.add({ id: 2, name: 'Mark' })
+    // console.log(ItemCtrl.get(1))
+    // console.log(ItemCtrl.get(2))
 
     /* به دلیل راحت تر بودن کار با الگوی دوم، اکثر توسعه دهندگان استفاده از آن را ترجیح می دهند
     اما الگوی استاندارد روش اول به شما اجازه می دهد علاوه بر دسترسی به تابع کار های دیگری نیز انجام دهید
     مثلا ما یک دستور console.log را نیز به آن اضافه کرده بودیم که در تابع اصلی وجود نداشت 
     بنابراین در نهایت استفاده از هر کدام آن ها به نیاز شما بستگی دارد  */
+
+
+    // FlyWeight Pattern
+    // این الگوی طراحی برای زمانی که میخوام حافظه رو موقع ایجاد تعداد زیادی شی شبیه به هم حفظ بکنیم، به کار میاد
+
+    class Book {
+      constructor(title, author, isbn) {
+        this.title = title
+        this.author = author
+        this.isbn = isbn
+      }
+    }
+
+    const books = new Map()
+
+    const createBook = (title, author, isbn) => {
+      const existingBook = books.has(isbn)
+
+      if (existingBook) {
+        return books.get(isbn)
+      }
+
+      const book = new Book(title, author, isbn)
+      books.set(isbn, book)
+
+      return book
+    }
+
+    const bookList = []
+
+    const addBook = (title, author, isbn, availability, sales) => {
+      const book = {
+        ...createBook(title, author, isbn),
+        sales,
+        availability,
+        isbn
+      }
+
+      bookList.push(book)
+      return book
+    }
+
+    addBook('Harry Potter', 'JK Rowling', 'AB123', false, 100)
+    addBook('Harry Potter', 'JK Rowling', 'AB123', true, 50)
+    addBook('To Kill a Mockingbird', 'Harper Lee', 'CD345', true, 10)
+    addBook('To Kill a Mockingbird', 'Harper Lee', 'CD345', false, 20)
+    addBook('The Great Gatsby', 'F. Scott Fitzgerald', 'EF567', false, 20)
+
+    // console.log(bookList.length)
+    // console.log(books.size)
+
+
+    // Factory Pattern
+    // زمانی که بخوایم از اطلاعات دریافتی یک آبجکت سفارشی شده برگردانیم از این الگو استفاده می کنیم
+
+    const createUser = ({ firstName, lastName, email }) => ({
+      firstName,
+      lastName,
+      email,
+      fullName() {
+        return `${this.firstName} ${this.lastName}`
+      }
+    })
+
+    const user1 = createUser({
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'john@gmail.com'
+    })
+
+    const user2 = createUser({
+      firstName: 'Jane',
+      lastName: 'Doe',
+      email: 'jane@gmail.com'
+    })
+
+    console.log(user1.fullName())
+    console.log(user2.fullName())
   </script>
 </body>
 

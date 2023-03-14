@@ -20,7 +20,8 @@
     document.querySelector('button').addEventListener('click', function () {
       (number.value < 0)
         ? demo.innerHTML = number.value * -1
-        : demo.innerHTML = Number(number.value).toLocaleString()
+        : demo.innerHTML = Number(number.value)
+          .toLocaleString('fa-IR', { style: 'currency', currency: 'IRR' })
     })
 
     // document.querySelector('button').addEventListener('click', function () {

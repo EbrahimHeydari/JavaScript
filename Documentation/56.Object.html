@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Object</title>
 </head>
+
 <body>
-  
+
   <script>
     // Object
-    // 
+    // نوع داده بسیار کاربردی در جاوااسکریپت است که داده ها درون آن به صورت (property/value) ذخیره می شود
+
+
+    // تبدیل آرایه به آبجکت
+    createObjectFromArray = ([key, value]) => ({
+      [key]: value
+    })
+
+    const object1 = createObjectFromArray(['name', 'value'])
+    console.log(object1)
   </script>
 </body>
+
 </html>
