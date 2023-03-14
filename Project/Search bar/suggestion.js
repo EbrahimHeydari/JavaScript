@@ -34,7 +34,7 @@ let suggestions = [
 	'full-stack developer',
 	'responsive design',
 	'user exprince',
-	'best practise',
+	'best practice',
 	'programming',
 	'javascript',
 	'bootstrap',
