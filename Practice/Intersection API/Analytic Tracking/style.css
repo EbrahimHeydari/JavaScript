@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, Sans Serif;
+}
+
+p {
+  line-height: 20px;
+  color: #333;
+}
+
+.page {
+  margin: 100px;
+}
