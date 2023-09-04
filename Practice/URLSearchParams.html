@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URLSearchParams Object</title>
+</head>
+
+<body>
+  <script>
+    // این آبجکت سازنده برای ایجاد کوئری پارمتر ها به صورت یکپارچه درون یک شی خیلی به کار میاد
+
+    // مثال
+    const logGithubUserData = async params => {
+      const res = await fetch(`https://api.github.com/search/users?${params}`)
+      const users = await res.json()
+
+      console.log(users)
+    }
+
+    const queryParams = new URLSearchParams({
+      q: 'Ebrahim'
+    })
+
+    const userData = logGithubUserData(queryParams)
+  </script>
+</body>
+
+</html>
