@@ -4,29 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <script src="00.js"></script>
-  <title>Math</title>
+  <title>Seperate Digits</title>
 </head>
 
 <body>
   <input type="number">
   <p id="demo"></p>
-  <button>Click me</button>
+  <button>Seperate Digits</button>
 
   <script>
     let number = document.querySelector('input')
     let demo = document.querySelector('#demo')
 
     document.querySelector('button').addEventListener('click', function () {
-      (number.value < 0)
-        ? demo.innerHTML = number.value * -1
-        : demo.innerHTML = Number(number.value)
-          .toLocaleString('fa-IR', { style: 'currency', currency: 'IRR' })
+        demo.innerHTML = Math.abs(number.value).toLocaleString()
     })
-
-    // document.querySelector('button').addEventListener('click', function () {
-    //     demo.innerHTML = Math.abs(number.value).toLocaleString()
-    // })
   </script>
 </body>
 

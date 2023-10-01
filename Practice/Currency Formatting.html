@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Currency Formatting</title>
+</head>
+
+<body>
+  <input type="number" id="amount" placeholder="Your amount" />
+  <input type="text" value="fa-IR" id="locale" placeholder="Your locale" />
+  <input type="text" value="IRR" id="currencyCode" placeholder="Your currency code" />
+
+  <button id="format">Format</button>
+
+  <p id="result"></p>
+</body>
+
+<script>
+  const amount = document.getElementById('amount')
+  const locale = document.getElementById('locale')
+  const currencyCode = document.getElementById('currencyCode')
+  const format = document.querySelector('button')
+  const result = document.getElementById('result')
+
+  const formatCurrency = (amount, currencyCode, locale) => {
+    const formatedValue = Number(amount).toLocaleString(locale, {
+      style: 'currency',
+      currency: currencyCode,
+    })
+
+    result.innerHTML = formatedValue
+  }
+
+  format.addEventListener('click', () => formatCurrency(amount.value, currencyCode.value, locale.value))
+</script>
+
+</html>
