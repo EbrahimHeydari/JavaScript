@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form Patterns</title>
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    input:invalid {
+      content: "only lowercase letters and numbrers";
+      color: orangered;
+      animation: shaking .3s forwards;
+    }
+
+    @keyframes shaking {
+      25% {
+        transform: translateX(5px);
+      }
+
+      50% {
+        transform: translateX(-5px);
+      }
+
+      75% {
+        transform: translateX(5px);
+      }
+
+      100% {
+        transform: translateX(-5px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form dir="rtl">
+    <input type="tel"
+      pattern="[a-z]+[0-9]+@+[a-z]+.com"
+      placeholder="شماره تلفنت رو وارد کن">
+  </form>
+
+  <!-- The pattern attribute works with the following input types: text, date, search, url, tel, email, and password. -->
+</body>
+
+</html>

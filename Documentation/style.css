@@ -28,9 +28,11 @@ div {
 }
 
 input {
-  padding: 5px;
+  padding: 10px;
   border: 1px solid darkcyan;
   border-radius: 10px;
+  font-size: 1rem;
+  min-width: 300px;
 }
 
 button {
