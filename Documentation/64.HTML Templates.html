@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>HTML templates</title>
+</head>
+
+<body>
+  <template id="paragraph">
+    <style>
+      p {
+        color: white;
+        background-color: cadetblue;
+        padding: 5px;
+      }
+    </style>
+    <p>
+      <slot name="my-text">My default text</slot>
+    </p>
+  </template>
+
+  <my-template></my-template>
+  <my-template>
+    <span slot="my-text">Custom text</span>
+  </my-template>
+  <my-template>
+    <ul slot="my-text">
+      <li>Let's have some different text!</li>
+      <li>In a list!</li>
+    </ul>
+  </my-template>
+
+  <script>
+    // HTML Templates
+    // از این قابلیت برای ساخت الگو های منعطف عناصر سفارشی که به shadow DOM متصل می شود، استفاده می کنیم.
+
+    // <template>
+    // از این تگ برای پیاده سازی الگوی مد نظرمون استفاده میشه
+    // <slot>
+    // از این تگ برای تعیین مقادیر متفاوت درون الگویی که ساختیم استفاده میشه
+    // این تگ با خصوصیت name درون <template> شناسایی میشه
+
+    customElements.define(
+      "my-template",
+      class extends HTMLElement {
+        constructor() {
+          super()
+          let template = document.getElementById("paragraph")
+          let templateContent = template.content
+
+          const shadowRoot = this.attachShadow({ mode: "open" })
+          shadowRoot.appendChild(templateContent.cloneNode(true))
+        }
+      },
+    )
+
+  </script>
+</body>
+
+</html>

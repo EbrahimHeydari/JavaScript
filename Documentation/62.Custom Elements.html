@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Elements</title>
+</head>
+
+<body>
+  <p is="word-count" color="green" size="50px">Hello World</p>
+  <p is="word-count">Hello Ebrahim</p>
+
+  <script>
+    // Custom Elements
+    // با استفاده از این قابلیت می تونیم عناصر html رو سفارشی سازی کنیم
+
+    // برای این کار نیازه یک کلاس بسازیم تا از عناصر اصلی ارث بری کنه
+    // بعد داخل اون کلاس تغییرات لازم رو اعمال  کنیم
+
+    // customElements.define(name, constructor, options)
+    // با استفاده از این تابع کلاس سفارشی خودمون رو درون مرورگر ثبت می کنیم
+    // name: نام عنصر سفارشی
+    // constructor:نام کلاس سفارشی
+    // options: یک آبجکت هست با خصوصیت extends که درونش عنصری که می خوایم شخصی سازی کنیم رو وارد می کنیم
+
+    // مثال
+
+    class WordCount extends HTMLParagraphElement {
+      static observedAttributes = ["size", "color"]
+
+      constructor() {
+        super()
+        this.style.color = 'darkcyan'
+        this.style.fontSize = '20px'
+        this.style.fontFamily = 'consolas'
+      }
+
+      connectedCallback() {
+        console.log('connected')
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        console.log(
+          `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+        )
+
+        this.style.color = newValue
+        this.style.fontSize = newValue
+      }
+    }
+
+    customElements.define("word-count", WordCount, { extends: "p" })
+
+  </script>
+</body>
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements -->
+
+</html>

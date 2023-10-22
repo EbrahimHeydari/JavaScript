@@ -1,0 +1,70 @@
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Shadow DOM</title>
+
+  <style>
+    * {
+      margin: 5px;
+    }
+
+    span {
+      color: darkcyan;
+      border: 1px solid orangered;
+    }
+  </style>
+</head>
+
+<body>
+  <template id="my-element">
+    <style>
+      span {
+        color: red;
+        border: 2px dotted black;
+      }
+    </style>
+    <span>I'm in the shadow DOM</span>
+  </template>
+
+  <div id="host"></div>
+  <span>I'm not in the shadow DOM</span>
+  <br />
+
+  <button id="upper" type="button">Uppercase span elements</button>
+  <button id="reload" type="button">Reload</button>
+
+  <script>
+    // Shadow DOM
+    // با استفاده از این قابلیت میتونیم عناصر سفارشی کپسوله شده از DOM اصلی بسازیم
+
+    // مفاهیم اصلی
+    // shadow host: عنصر DOM معمولی که Shadow DOM به آن متصل میشه
+    // shadow tree: درخت shadow DOM
+    // shadow boundary: جایی که shadow DOM تموم میشه
+    // shadow root: عنصر اصلی shadow 
+    
+    // attachShadow({ mode: 'string' })
+    // برای ساخت shadow DOM استفاده میشه
+    // پارامتر دریافتی اش یک آبجکت با خصوصیت mode هست که مقادیر open / closed رو می پذیره
+
+    const host = document.querySelector("#host")
+    const shadow = host.attachShadow({ mode: "open" })
+    const template = document.getElementById("my-element")
+    shadow.appendChild(template.content)
+
+    const upper = document.querySelector("button#upper")
+    upper.addEventListener("click", () => {
+      const spans = Array.from(host.shadowRoot.querySelectorAll("span"))
+      for (const span of spans) {
+        span.textContent = span.textContent.toUpperCase()
+      }
+    })
+
+    const reload = document.querySelector("#reload")
+    reload.addEventListener("click", () => document.location.reload())
+  </script>
+</body>
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM -->
+
+</html>
