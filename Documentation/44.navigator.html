@@ -45,6 +45,25 @@
     // console.log('cookie Enabled: ' + navigator.cookieEnabled)
 
 
+    // navigator.geolocation
+    // برای دریافت موقعیت مکانی کاربر استفاده میشه
+    // console.log('user location: ', navigator.geolocation)
+
+    // این آبجکت دو تابع برای دریافت موقعیت مکانی در اختیارمون قرار میده
+
+    // navigator.geolocation.getCurrentPosition(): 
+    // مکان فعلی کاربر را بازیابی می کند
+
+    // navigator.geolocation.watchPosition(): 
+    // یک تابع کنترل کننده را ثبت می کند که هر بار که موقعیت دستگاه تغییر می کند به طور خودکار فراخوانی می شود و مکان به روز شده را برمی گرداند
+
+
+
+    // navigator.javaEnabled()
+    // تشخیص فعال بودن جاوا در مرورگر کاربر
+    // console.log('java: ' + navigator.javaEnabled())
+
+
     // navigator.language
     // زبان مرورگر کاربر را نمایش می دهد
     // console.log('language: ' + navigator.language)
@@ -72,18 +91,14 @@
 
     // navigator.userAgent
     // اطلاعات دستگاه فعلی را نمایش میدهد
-    console.log('user agent:', navigator.userAgent)
+    // console.log('user agent:', navigator.userAgent)
 
 
-    // navigator.javaEnabled()
-    // تشخیص فعال بودن جاوا در مرورگر کاربر
-    // console.log('java: ' + navigator.javaEnabled())
+    // مثال های کاربردی از این آبجکت
 
-
-    // یک مثال کاربردی از این آبجکت
+    // فهمیدن نوع دستگاه کاربر
     const detectDevicetype = () =>
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
-
 
     document.querySelector('#demo').innerHTML = detectDevicetype()
 
