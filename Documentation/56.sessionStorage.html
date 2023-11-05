@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Storage</title>
+  <title>Session Storage</title>
 </head>
 
 <body>
   <script>
-    // localStorage
-    // یک مکان ذخیره‌سازی هست که توی مرورگر کاربر وجود داره که با جاوا اسکریپت می تونیم یه سری اطلاعات رو ذخیره و استفاده کنیم
-    // اطلاعاتی که درون این مکان ذخیره میشه دائمی هست.
-    // یعنی اگه کاربر تب مرورگر و یا حتی خود مرورگر رو ببنده، این اطلاعات حذف نمیشن
+    // sessionStorage
+    // یک مکان ذخیره‌سازی هست که توی مرورگر کاربر وجود داره که با جاوا اسکریپت می تونیم یه سری اطلاعات رو مختص به همان صفحه ذخیره و استفاده کنیم
+    // اطلاعاتی که درون این مکان ذخیره میشه دائمی نیست.
+    // یعنی اگه کاربر مرورگر و یا حتی فقط تب مرورگر رو ببنده، این اطلاعات حذف میشن
 
     // متد ها
     // setItem()
@@ -28,7 +28,7 @@
     // پارامتر دوم شامل مقدار این کلید هست
 
     // باید دقت داشته باشیم که باید رشته ذخیره کنیم. پس قبل از ذخیره آبجکت، باید اون رو تبدیل به رشته کنیم
-    // حداکثر فضایی که در اختیار داریم 10 مگابایت هست
+    // حداکثر فضایی که در اختیار داریم 5 مگابایت هست
     // اطلاعاتی که ذخیره میکنیم توسط مرورگر قابل دسترسی هست. پس باید حواسمون باشه اطلاعات حساس رو ذخیره نکنیم
 
     let person = {
@@ -38,7 +38,7 @@
 
     person = JSON.stringify(person)
 
-    localStorage.setItem('user', person)
+    sessionStorage.setItem('user', person)
 
 
     // getItem()
@@ -46,7 +46,7 @@
     // این متد یک پارامتر میگیره که اسم کلید اون آیتم مورد نظر ما هست
     // خروجی این متد یک رشته هست
 
-    let user = localStorage.getItem('user')
+    let user = sessionStorage.getItem('user')
     user = JSON.parse(user)
 
     console.log(user)
@@ -54,14 +54,14 @@
     // removeItem()
     // این متد برای حذف کردن یک آیتم بکار میره
     // این متد یک ورودی میگیره که شامل کلید آیتم مورد نظر ما هست
-    localStorage.removeItem('user')
+    // sessionStorage.removeItem('user')
 
-    console.log(localStorage.getItem('user'))
+    console.log(sessionStorage.getItem('user'))
 
     // clear()
     // این متد همه آیتم‌هایی که وجود داره رو پاک میکنه. این متد هیچ پارامتری نمیگیره
 
-    localStorage.clear()
+    sessionStorage.clear()
   </script>
 </body>
 
