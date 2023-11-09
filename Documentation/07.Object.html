@@ -5,13 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Object</title>
+  <script src="00.js"></script>
 </head>
 
 <body>
-
   <script>
     // Object
     // نوع داده بسیار کاربردی در جاوااسکریپت هست که داده ها درونش به صورت (property/value) ذخیره میشه
+
+    // Object in ES6
+    function person(Name, Age, Height) {
+      let name = Name
+      let age = Age
+      let height = Height
+      return { name, age, height }
+    }
+    console.log(person('Ali', 25, `180cm`))
 
 
     // تبدیل آرایه به آبجکت

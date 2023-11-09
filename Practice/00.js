@@ -67,7 +67,7 @@ var phones = {
 	Samsung: ['A6 2018', 'J6 plus 2018', 'J5 2015', 'J2 Prime', 'J1 Ace'],
 	Houawi: ['Y-313', 'Y250', 'Y500', 'Y130', 'A53'],
 	Xiaomi: ['redmi 4A', 'redmi 6', 'POCO M3', 'POCO X3', ' mi A3'],
-	Nokia: ['Nokia 61', 'Nokia62', 'Nokia71', 'Nokia72'],
+	Nokia: ['Nokia61', 'Nokia62', 'Nokia71', 'Nokia72'],
 }
 
 var levels = {

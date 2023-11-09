@@ -4,9 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>screen Object</title>
-  <script>
+</head>
 
+<body dir="auto">
+  <p id="1"></p>
+  <p id="2"></p>
+  <p id="3"></p>
+  <p id="4"></p>
+  <p id="5"></p>
+  <p id="6"></p>
+
+  <script>
     // window.screen
     // اطلاعاتی رو درباره صفحه ی کاربر (موبایل یا کامپیوتر و..) در اختیار ما قرار میده
     // می تونیم ازش بدون window هم استفاده کنیم
@@ -47,11 +57,14 @@
     // عمق پیکسلی صفحه نمایش
     console.log('availWidth: ' + screen.availWidth)
 
+
+    document.getElementById('1').innerHTML = 'ارتفاع کل: ' + screen.height
+    document.getElementById('2').innerHTML = 'عرض کل: ' + screen.width
+    document.getElementById('3').innerHTML = 'ارتفاع موجود: ' + screen.availHeight
+    document.getElementById('4').innerHTML = 'عرض موجود: ' + screen.availWidth
+    document.getElementById('5').innerHTML = 'عمق رنگ: ' + screen.colorDepth
+    document.getElementById('6').innerHTML = 'عمق پیکسل: ' + screen.pixelDepth
   </script>
-</head>
-
-<body>
-
 </body>
 
 </html>
