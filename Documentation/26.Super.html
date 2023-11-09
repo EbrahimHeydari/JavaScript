@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,13 @@
   <script src="00.js"></script>
   <script>
     // super()
-    // سازنده کلاس پدر را فراخوانی کرده و از کدهای آن می توان استفاده کرد
-    // حتی اگر کلاس والد دارای سازنده ای نباشد، اگر یک کلاس از آن ارث بری کرد، از این متد استفاده کنید
-    // اگر این متد فراموش شود، با خطا مواجه می شوید
+    // سازنده کلاس پدر رو فراخوانی میکنه و از کداش می تونیم استفاده کنیم
+    // حتی اگر کلاس والد دارای سازنده ای نباشه، اگر یک کلاس ازش ارث بری کنه، از این متد استفاده کنین
+    // اگر این متد فراموش بشه، با خطا مواجه میشین
 
 
     // super keyword
-    // زمانی که بخواهید از یک فیلد یا متد کلاس پدر در داخل کلاس سازنده کلاس فرزند استفاده کنید به کار می رود
+    // زمانی که بخواید از یک فیلد یا متد کلاس پدر در داخل کلاس سازنده کلاس فرزند استفاده کنین
 
     class phone {
       calculator
@@ -64,8 +65,8 @@
     // let nokia_2 = new nokia(true, false, false, true, false, false, true, 'Racing', true, true,)
 
     class samsung extends phone {
-      constructor(a, b, c, d, e, f, g, h, i, j) {     // مجبوریم در اینجا پارامتری قرار دهیم
-        super(a, b, c, d, e, f, g, h, i, j)        // همچنین در اینجا
+      constructor(a, b, c, d, e, f, g, h, i, j) {     // مجبوریم در اینجا پارامتری قرار بدیم
+        super(a, b, c, d, e, f, g, h, i, j)    // همچنین در اینجا
         super.ShowItem()
       }
     }
@@ -73,7 +74,9 @@
     // let j6 = new samsung(true, true, '4G', '8GB', '11MPX', '1280x720', true, 'Clash of Clans', true, true)
   </script>
 </head>
+
 <body>
 
 </body>
+
 </html>

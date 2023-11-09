@@ -9,19 +9,19 @@
     // اعداد
     // مقادیر عددی از نوع صحیح و اعشار
 
-    // NaN (Not a Number): به معنای عدد نبودن متغیر است
+    // NaN (Not a Number): به معنای عدد نبودن متغیر هست
 
     var intMax = 34e19            // 34000000000
     var intMin = 34e-7            // 0.0000034
     var float1 = 3.14
     var float2 = 3.65
 
-    // یک عدد را می توان در مبنای 16 تایی هم نوشت
+    // یک عدد رو می تونیم در مبنای 16 تایی هم بنویسیم
 
-    var hex1 = 0xff                        // 255 hexadecimal
-    var hex2 = 0x00                        // 0 hexadecimal
-    var hex3 = 0xf32                       // 3890 hexadecimal
-    var hex4 = 0xfffffff                   // 268435455 hexadecimal
+    var hex1 = 0xff               // 255 hexadecimal
+    var hex2 = 0x00               // 0 hexadecimal
+    var hex3 = 0xf32              // 3890 hexadecimal
+    var hex4 = 0xfffffff          // 268435455 hexadecimal
 
 
     // ویژگی ها و متدها
@@ -33,49 +33,49 @@
 
 
     // valueOf()
-    // مقدار اولیه یک شی عدد را بر می گرداند
+    // مقدار اولیه یک شی عدد رو بر میگردونه
     // console.log(intMin.valueOf())
     // console.log(hex4.valueOf())
 
 
     // isNaN()
-    // چک می کند که مقدار دریافتی (NaN) است یا خیر
-    // خروجی یک مقدار بولی است
+    // چک میکنه که مقدار دریافتی (NaN) هست یا خیر
+    // خروجی یک مقدار بولی هست
     // console.log(Number.isNaN('NaN'))
 
 
     // isInteger()
-    // بررسی می کند که مقدار دریافتی عدد صحیح است یا نه
-    // خروجی مقدار بولی است
+    // بررسی میکنه که مقدار دریافتی عدد صحیح هست یا نه
+    // خروجی مقدار بولی هست
     // console.log(Number.isInteger(age))
     // console.log(Number.isInteger(Math.PI))
 
 
     // toLocaleString()
-    // مقادیر عدد دریافتی را با ، از یکدیگر جدا می کند
+    // مقادیر عدد دریافتی رو با ، از همدیگه جدا میکنه
     console.log(Number(200000).toLocaleString())
     console.log(intMax.toLocaleString())
 
 
     // toExponential()
-    // عدد اعشاری را با نماد (e) به صورت رشته بر می گرداند
-    // console.log(float2.toExponential(0))                   // 4e+0
-    var eFloat = float2.toExponential(10)                  // 3.6500000000e+0
+    // عدد اعشاری رو با نماد (e) به صورت رشته بر میگردونه
+    // console.log(float2.toExponential(0))   // 4e+0
+    var eFloat = float2.toExponential(10)     // 3.6500000000e+0
     // console.log(`${eFloat} Type: ${typeof eFloat}`)
 
 
     // toFixed()
-    // تعداد ارقام اعشار متغیر را به صورت رشته تعیین می کند
-    // console.log(float2.toFixed(0))                         // 4
-    // console.log(float2.toFixed(2))                         // 3.65
-    // console.log(float2.toFixed(4))                         // 3.6500
-    // console.log(float2.toFixed(6))                         // 3.650000
+    // تعداد ارقام اعشار متغیر رو به صورت رشته تعیین میکنه
+    // console.log(float2.toFixed(0))             // 4
+    // console.log(float2.toFixed(2))             // 3.65
+    // console.log(float2.toFixed(4))             // 3.6500
+    // console.log(float2.toFixed(6))             // 3.650000
 
 
     // toPrecision()
-    // طول عدد را به صورت رشته مشخص می کند
-    // باقیمانده را با صفر پر می کند
-    // عدد صفر را به عنوان ورودی قبول نمی کند
+    // طول عدد رو به صورت رشته مشخص میکنه
+    // باقیمانده رو با صفر پر میکنه
+    // عدد صفر رو به عنوان ورودی قبول نمیکنه
     // console.log(float2.toPrecision())
     // console.log(float2.toPrecision(2))
     // console.log(float2.toPrecision(4))
@@ -83,13 +83,13 @@
 
 
     // MAX_VALUE
-    // بیشترین عدد ممکن را تعیین می کند
+    // بیشترین عدد ممکن رو تعیین میکنه
     var maxValue = Number.MAX_VALUE
     // console.log(maxValue)
 
 
     // MIN_VALUE
-    // کمترین عدد ممکن را تعیین می کند
+    // کمترین عدد ممکن رو تعیین میکنه
     var minValue = Number.MIN_VALUE
     // console.log(minValue)
 

@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="00.js"></script>
   <title>BOM Model</title>
+</head>
+
+<body>
+  <div>
+    <img src="icon/down.png" class="icon" alt="down" />
+  </div>
+  <div>
+    <button onclick="myWindow(300, 100)">show time in new window</button>
+  </div>
+  <div>
+    <button onclick="Close()">Close</button>
+  </div>
+  <div style="margin-bottom: 100000px">
+    <button onclick="reSize()">Resize</button>
+  </div>
+
+  <div>
+    <img src="icon/up.png" class="icon" alt="up" />
+  </div>
   <script>
     // مدل شئ گرای مرورگر
-    // به جاوااسکریپت اجازه می دهد تا به تمام اجزای درون مروگر دسترسی داشته باشد
+    // به تمام اجزای درون مروگر دسترسی داشته داره
 
-    // این مدل با کلمه ی زیر آغاز می شود
     // window
-    // استفاده از این کلمه اجباری نیست و جدیدا کسی از آن استفاده نمی کند
+    // این مدل با کلمه ی بالا آغاز میشه
+    // این شئ مهم ترین و ریشه ای ترین قسمت در BOM هست
+    // تمام اشیاء، توابع و متغیرهای سراسری به صورت خودکار عضوی از این شئ میشن
+    // متغیرهای سراسری، خصوصیات و توابع سراسری، متدهای این شئ محسوب میشه
 
-    // کلمه کلیدی this به تنهایی برابر با این شی است
+    // کلمه کلیدی this به تنهایی برابر با این شی هست
     console.log(this)
     console.log(window == this)
 
-    
+
     // اشیاء تشکیل دهنده مدل شئ گرای مرورگر
     // document
     // screen
@@ -26,9 +50,86 @@
     // cookie
     // Timing
     // popup alert
-  </script>
-</head>
-<body>
 
+
+    
+    // خصوصیات
+
+    // window.innerHeight
+    // ارتفاع داخلی پنجره رو به پیکسل می گیرد
+
+    // window.innerWidth
+    // عرض داخلی پنجره رو به پیکسل می گیرد
+
+
+
+    // متدها
+
+    // window.open()
+    // باز کردن پنجره ی جدید
+
+
+    // window.close()
+    // بستن پنجره ی فعلی 
+
+
+    // window.focus()
+    // تمرکز بر روی عنصر
+
+
+    // opener()
+    // ایجاد محتوا درون پنجره جدید
+
+
+    // blur()
+    // برداشتن تمرکز از روی عنصر
+
+
+    // window.moveTo(X (horizontal), Y (vertical))
+    // جابه جا کردن پنجره ی فعلی
+
+
+    // window.moveBy(X (horizontal), Y (vertical))
+    // جابه جایی پنجره ی جدید به مکانی از صفحه نمایش
+
+
+    // window.resizeTO(X (horizontal), Y (vertical))
+    // تغییر اندازه ی پنجره ی فعلی
+
+
+    // window.resizeBy(X (horizontal), Y (vertical))
+    // تغییر اندازه پنجره ی جدید
+
+
+    // window.scrollTo(X (horizontal), Y (vertical))
+    // اسکرول کردن پنجره فعلی
+
+
+    // window.scrollBy(X (horizontal), Y (vertical))
+    // اسکرول کردن پنجره جدید
+
+
+
+    // مثال کاربردی
+    const myWindow = (x, y) => {
+      newWin = window.open('13.Date().html', '_blank', 'width = 500px , height = 500px')
+      newWin.window.moveTo(x, y)
+    }
+
+    const scrolling = value => window.scrollTo(0, value)
+    const Close = () => newWin.close()
+
+    const reSize = () => {
+      var Win = window.open('13.Date().html', '_blank', 'width = 500px , height = 800px')
+      Win.resizeTo(300, 300)
+      Win.focus()
+    }
+
+    const icons = document.querySelectorAll('.icon')
+
+    icons[0].onclick = () => scrolling(900000)
+    icons[1].onclick = () => scrolling(-900000)
+  </script>
 </body>
+
 </html>

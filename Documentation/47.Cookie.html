@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>cookie</title>
-		<script src="00.js"></script>
-	</head>
-	<body>
-		<button onclick="checkCookie()">Check Cookie</button>
 
-		<script>
-			// کوکی ها
-			// مقادیری هستند که در مرورگر کاربر ذخیره و هنگام ورود مجدد کاربر از از مرورگر فراخوانی می شوند
-			// معمولا کوکی ها برای شناسایی کاربر به کار می روند
-			// حجم کوکی ها حداکثر 4 کیلوبایت است. اگر این مقدار را رد کند، محتوای قبل را حذف می کند تا بتواند 4 کیلوبایت را حفظ کند
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>cookie</title>
+	<script src="00.js"></script>
+</head>
 
-			// escape()
-			// مقادیر را کد گذاری (انکود) می کند
+<body>
+	<button onclick="checkCookie()">Check Cookie</button>
 
-			// unescape()
-			// مقادیر کد گذاری شده را قابل فهم (دیکود) می کند
+	<script>
+		// کوکی ها
+		// مقادیری هستن که در مرورگر کاربر ذخیره و موقع ورود مجدد کاربر از از مرورگر فراخوانی میشن
+		// معمولا کوکی ها برای شناسایی کاربر به کار میرن
+		// حجم کوکی ها حداکثر 4 کیلوبایت هست. اگر این مقدار رو رد کنه، محتوای قبل رو حذف میکنه تا بتواند 4 کیلوبایت رو حفظ کنه
 
-			// یک مثال ساده :)
+		// escape()
+		// مقادیر رو کد گذاری (انکود) میکنه
 
-			// تابع ساخت کوکی
-			function setCookie(cname, cvalue, exdays) {
-				var d = new Date()
-				d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
-				var expires = 'expires=' + d.toGMTString()
-				document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/'
-			}
+		// unescape()
+		// مقادیر کد گذاری شده رو قابل فهم (دیکود) میکنه
 
-			// تابع دریافت کوکی
-			function getCookie(cname) {
-				var name = cname + '='
-				var decodedCookie = decodeURIComponent(document.cookie)
-				var ca = decodedCookie.split(';')
+		// یک مثال ساده :)
 
-				for (var i = 0; i < ca.length; i++) {
-					var c = ca[i]
-					while (c.charAt(0) == ' ') {
-						c = c.substring(1)
-					}
+		// تابع ساخت کوکی
+		function setCookie(cname, cvalue, exdays) {
+			var d = new Date()
+			d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
+			var expires = 'expires=' + d.toGMTString()
+			document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/'
+		}
 
-					if (c.indexOf(name) == 0) {
-						return c.substring(name.length, c.length)
-					}
+		// تابع دریافت کوکی
+		function getCookie(cname) {
+			var name = cname + '='
+			var decodedCookie = decodeURIComponent(document.cookie)
+			var ca = decodedCookie.split(';')
+
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i]
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1)
 				}
-				return ''
-			}
 
-			// تابع بررسی کوکی
-			function checkCookie() {
-				var user = getCookie('username')
-				if (user != '') {
-					alert('Welcome again ' + user)
-				} else {
-					user = prompt('Please enter your name:', '')
-					if (user != '' && user != null) {
-						setCookie('username', user, 30) // انقضا تا 30 روز
-					}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length)
 				}
 			}
+			return ''
+		}
 
-			var iurl = 'https://www.google.com/illegal value.htm'
-			var enc1 = encodeURI(iurl) // فقط جاهای خالی
-			var enc2 = encodeURIComponent(iurl) // تمام کاراکتر های غیر استاندارد
+		// تابع بررسی کوکی
+		function checkCookie() {
+			var user = getCookie('username')
+			if (user != '') {
+				alert('Welcome again ' + user)
+			} else {
+				user = prompt('Please enter your name:', '')
+				if (user != '' && user != null) {
+					setCookie('username', user, 30) // انقضا تا 30 روز
+				}
+			}
+		}
 
-			var dcd1 = decodeURI(enc1)
-			var dcd2 = decodeURIComponent(enc2)
+		var iurl = 'https://www.google.com/illegal value.htm'
+		var enc1 = encodeURI(iurl) // فقط جاهای خالی
+		var enc2 = encodeURIComponent(iurl) // تمام کاراکتر های غیر استاندارد
+
+		var dcd1 = decodeURI(enc1)
+		var dcd2 = decodeURIComponent(enc2)
 
 			// console.log(enc1 , enc2)
 			// console.log(dcd1 , dcd2)
-		</script>
-	</body>
+	</script>
+</body>
+
 </html>

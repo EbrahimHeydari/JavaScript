@@ -10,38 +10,41 @@
 <body>
   <p id="demo"></p>
 
+  <button id="find-me">Show my location</button><br />
+  <p id="status"></p>
+  <a id="map-link" target="_blank"></a>
+
   <script>
 
-    // window.navigator
-    // اطلاعاتی را در رابطه با مرورگر کاربر در اختیار دارد
+    // navigator
+    // اطلاعاتی رو در رابطه با مرورگر کاربر در اختیار داره
 
 
     // دستورات
-    // این دستورات دارای اشکالات فراوانی هستند
-    // توصیه می شود تا جای ممکن از این دستورات استفاده نکنید
-    // برای دوری و رفع خطر باید این دستورات را بشناسید تا بتوانید عوامل مشکل زا را شناسایی کنید
+    // توصیه میشه تا جای ممکن از این دستورات استفاده نکنین
+    // برای دوری و رفع خطر باید این دستورات رو بشناسید تا بتوانید عوامل مشکل زا رو شناسایی کنین
     // #: دستورات مشکل زا و غیر کاربردی
 
 
 
     // navigator.appName            #
-    // نام مرورگر کاربر را نمایش می دهد
+    // نام مرورگر کاربر رو نمایش میده
     // console.log('app name: ' + navigator.appName)
 
 
     // navigator.appCodeName        #
-    // کد مرورگر کاربر را نمایش می دهد
+    // کد مرورگر کاربر رو نمایش میده
     // console.log('code name: ' + navigator.appCodeName)
 
 
     // navigator.appVersion
-    // اطلاعاتی در رابطه با نسخه مرورگر در اختیار شما قرار می دهد
+    // اطلاعاتی در رابطه با نسخه مرورگر در اختیار شما قرار میده
     // console.log('version: ' + navigator.appVersion)
 
 
     // navigator.cookieEnabled
-    // true: هنگامی که کوکی ها فعال باشند
-    // false: هنگامی که کوکی ها غیر فعال باشند
+    // true: موقعی که کوکی ها فعال باشن
+    // false: موقعی که کوکی ها غیر فعال باشن
     // console.log('cookie Enabled: ' + navigator.cookieEnabled)
 
 
@@ -52,10 +55,10 @@
     // این آبجکت دو تابع برای دریافت موقعیت مکانی در اختیارمون قرار میده
 
     // navigator.geolocation.getCurrentPosition(): 
-    // مکان فعلی کاربر را بازیابی می کند
+    // مکان فعلی کاربر رو بازیابی میکنه
 
     // navigator.geolocation.watchPosition(): 
-    // یک تابع کنترل کننده را ثبت می کند که هر بار که موقعیت دستگاه تغییر می کند به طور خودکار فراخوانی می شود و مکان به روز شده را برمی گرداند
+    // یک تابع کنترل کننده رو ثبت میکنه که هر بار که موقعیت دستگاه تغییر میکنه به طور خودکار فراخوانی میشه و مکان به روز شده رو برمیگردونه
 
 
 
@@ -65,32 +68,32 @@
 
 
     // navigator.language
-    // زبان مرورگر کاربر را نمایش می دهد
+    // زبان مرورگر کاربر رو نمایش میده
     // console.log('language: ' + navigator.language)
 
 
     // navigator.onLine
-    // آنلاین بودن مرورگر کاربر را نمایش می دهد
+    // آنلاین بودن مرورگر کاربر رو نمایش میده
     // console.log('online: ' + navigator.onLine)
 
 
     // navigator.platform
-    // سیستم عامل کاربر را نمایش می دهد
+    // سیستم عامل کاربر رو نمایش میده
     // console.log('platform: ' + navigator.platform)
 
 
     // navigator.product            #
-    // نوع موتور جستجو را نمایش می دهد
+    // نوع موتور جستجو رو نمایش میده
     // console.log('product: ' + navigator.product)
 
 
     // navigator.productSub         #
-    // header ارسال شده توسط سرور را نمایش می دهد
+    // header ارسال شده توسط سرور رو نمایش میده
     // console.log('product sub: ' + navigator.productSub)
 
 
     // navigator.userAgent
-    // اطلاعات دستگاه فعلی را نمایش میدهد
+    // اطلاعات دستگاه فعلی رو نمایش میده
     // console.log('user agent:', navigator.userAgent)
 
 
@@ -101,6 +104,38 @@
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
 
     document.querySelector('#demo').innerHTML = detectDevicetype()
+
+    // فهمیدن موقعیت مکانی کاربر
+
+    function geoFindMe() {
+      const status = document.querySelector("#status")
+      const mapLink = document.querySelector("#map-link")
+
+      mapLink.href = ""
+      mapLink.textContent = ""
+
+      function success(position) {
+        const latitude = position.coords.latitude
+        const longitude = position.coords.longitude
+
+        status.textContent = ""
+        mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`
+        mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`
+      }
+
+      function error() {
+        status.textContent = "Unable to retrieve your location"
+      }
+
+      if (!navigator.geolocation) {
+        status.textContent = "Geolocation is not supported by your browser"
+      } else {
+        status.textContent = "Locating…"
+        navigator.geolocation.getCurrentPosition(success, error)
+      }
+    }
+
+    document.querySelector("#find-me").addEventListener("click", geoFindMe)
 
   </script>
 </body>
