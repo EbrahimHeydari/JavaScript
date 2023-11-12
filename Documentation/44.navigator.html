@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../public/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>navigator Object</title>
 </head>
@@ -106,7 +107,6 @@
     document.querySelector('#demo').innerHTML = detectDevicetype()
 
     // فهمیدن موقعیت مکانی کاربر
-
     function geoFindMe() {
       const status = document.querySelector("#status")
       const mapLink = document.querySelector("#map-link")
@@ -136,7 +136,6 @@
     }
 
     document.querySelector("#find-me").addEventListener("click", geoFindMe)
-
   </script>
 </body>
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Disable Devtool Library</title>
+  <link rel="stylesheet" href="../../public/style.css">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <!-- <script src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script> -->
+</head>
+
+<body>
+  <button onclick=DisableDevtool()>Disable</button>
+  <button onclick=disableWithoutLibrary()>Disable Without Library</button>
+
+  <!-- می تونی از دستور npm i disable-devtool هم استفاده کنی -->
+
+
+  <!-- روش دوم بدون استفاده از کتابخانه -->
+  <script src="disable.js"></script>
+  <script>
+    const disableWithoutLibrary = () => {
+      NProgress.start()
+
+      document.onkeydown = function (e) {
+        if (event.keyCode == 123)
+          return false
+
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+          return false
+
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
+          return false
+
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+          return false
+
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+          return false
+      }
+
+      window.addEventListener("contextmenu", event => {
+        event.preventDefault()
+        return false
+      })
+    }
+  </script>
+</body>
+
+</html>

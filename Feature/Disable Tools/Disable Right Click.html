@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../public/style.css">
+
+	<head>
+		<title>Disable Right Click</title>
+	</head>
+
+<body>
+	<h1>Disable Right click</h1>
+
+	<button onclick="disableContextMenu()">Disable</button>
+
+	<p id="text"></p>
+
+	<script>
+		var text = document.getElementById('text')
+
+		function disableContextMenu() {
+			document.addEventListener('contextmenu', event =>
+				event.preventDefault()
+			)
+			text.innerHTML = 'Right click disabled'
+		}
+	</script>
+</body>
+
+</html>

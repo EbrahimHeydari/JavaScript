@@ -4,28 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="00.js"></script>
-  <title>BOM Model</title>
+  <link rel="stylesheet" href="../public/style.css">
+  <script src="../public/global.js"></script>
+  <title>Browser Object Model</title>
 </head>
 
 <body>
-  <div>
-    <img src="icon/down.png" class="icon" alt="down" />
-  </div>
+  <button class="down">Go Down</button>
+
   <div>
     <button onclick="myWindow(300, 100)">show time in new window</button>
   </div>
+
   <div>
     <button onclick="Close()">Close</button>
   </div>
+
   <div style="margin-bottom: 100000px">
     <button onclick="reSize()">Resize</button>
   </div>
 
-  <div>
-    <img src="icon/up.png" class="icon" alt="up" />
-  </div>
+  <button class="up">Go Up</button>
   <script>
     // مدل شئ گرای مرورگر
     // به تمام اجزای درون مروگر دسترسی داشته داره
@@ -48,11 +47,11 @@
     // history
     // navigator
     // cookie
-    // Timing
+    // timing
     // popup alert
 
 
-    
+
     // خصوصیات
 
     // window.innerHeight
@@ -125,10 +124,11 @@
       Win.focus()
     }
 
-    const icons = document.querySelectorAll('.icon')
+    const down = document.querySelector('.down')
+    const up = document.querySelector('.up')
 
-    icons[0].onclick = () => scrolling(900000)
-    icons[1].onclick = () => scrolling(-900000)
+    down.onclick = () => scrolling(900000)
+    up.onclick = () => scrolling(-900000)
   </script>
 </body>
 
