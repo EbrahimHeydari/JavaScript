@@ -107,6 +107,12 @@
     document.querySelector('#demo').innerHTML = detectDevicetype()
 
     // فهمیدن موقعیت مکانی کاربر
+    const options = {
+      maximumAge: 10000,
+      enableHighAccuracy: false,
+      timeout: 15000,
+    }
+
     function geoFindMe() {
       const status = document.querySelector("#status")
       const mapLink = document.querySelector("#map-link")
@@ -131,7 +137,7 @@
         status.textContent = "Geolocation is not supported by your browser"
       } else {
         status.textContent = "Locating…"
-        navigator.geolocation.getCurrentPosition(success, error)
+        navigator.geolocation.getCurrentPosition(success, error, options)
       }
     }
 

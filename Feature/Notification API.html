@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel="stylesheet" href="../public/style.css">
+  <title>Notification API</title>
+</head>
+
+<body>
+  <p id='demo'></p>
+
+  <button>Show Notification</button>
+
+  <script>
+    // This API only works on https
+
+    console.log(Notification.permission)
+    // result: default, granted, denied
+
+    if (Notification.permission === 'granted') {
+      showNotification()
+    }
+    else if (Notification.permission !== 'denied') {
+      Notification.requestPermission().then(permission => {
+        if (Notification.permission === 'granted') {
+          showNotification()
+        }
+      })
+    }
+
+    function showNotification() {
+      const notification = new Notification('New message from decode!', {
+        body: 'Hello, Would you like to see my virgool profile?',
+        icon: 'https://files.virgool.io/upload/users/543792/avatar/eeM4Nw.jpeg?width=256',
+        image: 'https://files.virgool.io/upload/users/543792/posts/gra5cqfuzmtf/mvannpfauyzw.jpg?width=256',
+        dir: 'auto',
+        lang: 'en-US', // BCP 47,
+        vibrate: [100, 50, 200],
+        badge: 'https://virgool.io/image/logo.webp?width=128',
+        tag: 'confirm-notification',
+      })
+
+      notification.onclick = (e) => {
+        location.href = 'https://virgool.io/@EbrahimHeydari'
+      }
+    }
+  </script>
+</body>
+
+</html>

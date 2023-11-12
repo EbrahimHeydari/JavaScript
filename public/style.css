@@ -19,15 +19,11 @@ html {
   font-family: Vazir, cursive;
 }
 
-::selection {
-  background-color: #e9880a;
-  color: white;
-}
-
 body {
   padding: 5px;
   height: 100vh;
   background-color: #e6e6e6;
+  user-select: none;
 }
 
 div {
