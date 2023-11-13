@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments API</title>
+</head>
+
+<body>
+
+  <script>
+    if (window.PaymentRequest) {
+      // if it is supported on the user's browser
+
+      // payment request object
+      const supportedPaymentMethods = [{
+        supportedMethods: ['basic-card']
+      }]
+
+      // payment details (cost & currency)
+      const paymentDetails = {
+        total: {
+          label: 'Total Cost',
+          amount: {
+            currency: 'GBP',
+            value: 30,
+          }
+        }
+      }
+
+      // custom options
+      const options = {}
+
+      // create Request
+      const paymentRequest = new PaymentRequest(
+        supportedPaymentMethods,
+        paymentDetails,
+        options
+      )
+
+      paymentRequest.show()
+        .then(payment => console.log(payment))
+        .catch(error => console.error(error))
+    }
+    else {
+      // Fallback to your other implementation
+    }
+  </script>
+</body>
+
+</html>
