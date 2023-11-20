@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measure dimensions of an Element</title>
+</head>
+<body>
+  <div class="roadmap-wrapper">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus ratione consectetur tempore, alias dolorum
+    facilis? Sunt ipsa animi nostrum nihil non tempora fugit labore, odio debitis voluptatum, qui in!
+  </div>
+  
+  <script>
+    const roadmapWrapper = document.querySelector('.roadmap-wrapper')
+    const dimensions = roadmapWrapper.getBoundingClientRect()
+
+    console.log(dimensions) // DOMRect { x: 8, y: 8, width: 784, height: 784, top: 8, right: 792, bottom: 792, left: 8 }
+  </script>
+</body>
+</html>

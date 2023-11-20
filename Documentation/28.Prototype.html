@@ -99,6 +99,30 @@
     //     console.log(msg.display())
     //   }
     // )
+
+
+    // prototype in inheritance
+    const roadmap = {
+      getRoadmapUrl() {
+        console.log(`https://roadmap.sh/${this.slug}`)
+      },
+    }
+
+    const javascript = {
+      name: 'JavaScript Roadmap',
+      description: 'Learn JavaScript',
+      slug: 'javascript',
+      greet() {
+        console.log(`${this.name} - ${this.description}`)
+      },
+    }
+
+    Object.setPrototypeOf(javascript, roadmap) // or javascript.__proto__ = roadmap;
+
+    roadmap.getRoadmapUrl()    // https://roadmap.sh/undefined
+
+    javascript.getRoadmapUrl() // https://roadmap.sh/javascript
+    javascript.greet() // JavaScript Roadmap - Learn JavaScript
   </script>
 </head>
 
