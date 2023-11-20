@@ -11,16 +11,21 @@
 <body>
   <script>
     // Set()
-    // نوعی شئ هست که مجموعه ای از داده ها رو در خود ذخیره میکنه
+    // مجموعه ای از مقادیر یکتا هست
     // این شئ مقادیر تکراری رو نمی پذیره
+    // میتونه بر اساس هر شی قابل پیمایش (iterable) ایجاد بشه که این شی در اکثر اوقات یک آرایه هست
+    // این ساختار داده در حلقه for of قابل استفاده هست
 
     let collect = new Set()
     collect.add('Ebrahim')             // افزودن داده
-    collect.add(true)
+    collect.add(false) 
     collect.add(19)
     collect.add('male')
-    collect.delete(true)               // حذف داده
-    collect.add(true)
+    collect.delete(false)               // حذف داده 
+    collect.add(false) 
+
+    console.log(collect.has(false))     // بررسی وجود داده
+
     // collect.clear()                  // پاک کردن تمام داده ها
     // console.log(collect)
     // console.log(collect.size)          // نمایش تعداد داده ها
@@ -28,16 +33,6 @@
     var numbers = [7, 6, 3, 3, 7, 1, 8, 9, 0, , 1, 2, , 45, 7, 9, 34,]
     let dontRepeat = new Set(numbers)
     // console.log(dontRepeat)
-
-    // Map()
-    // این شئ مقادیر کلید و مقدار رو در خود ذخیره میکنه
-    let person = new Map()
-    person.set('name', eh)            // افزودن کلید و مقدار
-    person.set('marital', false)
-    // person.clear()                   // پاک کردن داده ها
-
-    // console.log(person)
-    // console.log(person.size)         // نمایش تعداد داده ها
   </script>
 </body>
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set() & Map()</title>
+  <script src="../public/global.js"></script>
+</head>
+
+<body>
+  <script>
+    // Map()
+    // این شئ مقادیر کلید و مقدار رو در خود ذخیره میکنه
+    // تفاوتش با آبجکت ها اینه که مقادیری که به عنوان کلید استفاده میشن میتونن از هر نوع داده ای باشن
+    // این ساختار داده در حلقه for of قابل استفاده هست
+
+    let person = new Map()
+    person.set('name', eh)            // افزودن کلید و مقدار
+    person.set('marital', false)
+
+    console.log(person.get('name'))     // گرفتن مقدار
+    
+    console.log(person.has('marital'))     // بررسی وجود داده
+
+    person.delete('marital')              // حذف داده
+
+    // person.clear()                   // پاک کردن داده ها
+
+    // console.log(person)
+    // console.log(person.size)         // نمایش تعداد داده ها
+  </script>
+</body>
+
+</html>
