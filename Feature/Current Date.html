@@ -26,6 +26,16 @@
     }
 
     setInterval(ShowDate, 100)
+
+
+    const isBeforeDate = (dateA, dateB) => dateA < dateB
+
+    dateOne = new Date(2010, 10, 19)
+    dateTwo = new Date(2010, 10, 20)
+
+    checkDates = isBeforeDate(dateOne, dateTwo)
+
+    console.log(checkDates)
   </script>
 </body>
 

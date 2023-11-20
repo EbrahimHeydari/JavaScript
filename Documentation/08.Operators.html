@@ -118,9 +118,28 @@
     let empty = null
     let notDefined = undefined
     let isBoolean = false
-    console.log(empty ?? 'it is null')
-    console.log(notDefined ?? 'it is undefined')
-    console.log(isBoolean ?? 'world')
+    // console.log(empty ?? 'it is null')
+    // console.log(notDefined ?? 'it is undefined')
+    // console.log(isBoolean ?? 'it is false')
+
+
+    // console.log('empty value:', empty)
+    // console.log('notDefined value:', notDefined)
+    // console.log('isBoolean value:', isBoolean)
+
+
+    // Nullish assignment (??)
+    // اگر مقدار سمت چپ null | undefined باشه، مقدار سمت راست رو درون متغیر سمت راست ذخیره می کنه
+    // در غیر اینصورت مقدار سمت چپ رو بر میگردونه
+
+    // مثال
+    empty ??= 'it is null'
+    notDefined ??= 'it is undefined'
+    isBoolean ??= 'it is false'
+
+    console.log('empty value:', empty)
+    console.log('notDefined value:', notDefined)
+    console.log('isBoolean value:', isBoolean)
 
 
     // عملگر های بیتی
