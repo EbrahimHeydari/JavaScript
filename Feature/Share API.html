@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <title>Share API</title>
+  </head>
+
+  <body>
+    <p><button>Share MDN!</button></p>
+    <p class="result"></p>
+
+    <script>
+      const shareData = {
+        title: 'MDN',
+        text: 'Learn web development on MDN!',
+        url: 'https://developer.mozilla.org',
+      }
+
+      const btn = document.querySelector('button')
+      const resultPara = document.querySelector('.result')
+
+      // Share must be triggered by "user activation"
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.share(shareData)
+          resultPara.textContent = 'MDN shared successfully'
+        } catch (err) {
+          resultPara.textContent = `Error: ${err}`
+        }
+      })
+    </script>
+  </body>
+</html>
